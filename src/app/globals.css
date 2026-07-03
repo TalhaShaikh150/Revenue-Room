@@ -1,46 +1,72 @@
 @import "tailwindcss";
+@config "../../tailwind.config.js";
 
 @theme {
-  --color-brand: #0A0A0A;
-  --color-brand-surface: #141416;
-  --color-brand-raised: #1C1C1F;
-  --color-brand-light: #F4F2ED;
-  --color-accent: #068C64;
-  --color-text-primary: #F5F5F2;
-  --color-text-secondary: #9A9A9E;
-  
-  --font-sans: var(--font-sans), "Outfit", sans-serif;
-  --font-serif: var(--font-serif), "Cormorant Garamond", serif;
-}
+  --color-brand-bg: #0b0c0c;
+  --color-brand-lime: #d8fc4d;
+  --color-brand-card: #1e1e20;
+  --color-brand-gray: #8a8a8e;
+  --color-brand-border: #2a2a2c;
+  /* NEW: Resolving the missing tokens from the brief */
+  --color-accent: #d8fc4d; /* Mapping accent to the lime brand color */
+  --color-brand-surface: #1e1e20; /* Mapping surface to card color */
+  --color-brand-raised: #2a2a2c; /* Slightly lighter than card for hovers */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #8a8a8e;
 
-:root {
-  --background: #0A0A0A;
-  --foreground: #F5F5F2;
+  /* NEW: Missing animation for CTABanner */
+  --animate-pulse-slow: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
+  background-color: #0b0c0c;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6, .font-serif {
-  font-family: var(--font-serif);
+/* Diagonal line pattern for the green bar chart */
+.bar-pattern {
+  background: repeating-linear-gradient(
+      -45deg,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1) 2px,
+      transparent 2px,
+      transparent 6px
+  );
 }
 
-/* Subtle performance-friendly noise texture */
-.bg-noise {
-  position: relative;
-}
-
-.bg-noise::before {
-  content: "";
+/* Subtle glow for the bottom of the section */
+.bottom-glow {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  opacity: 0.03;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 250px;
+  background: radial-gradient(ellipse at center, rgba(216, 252, 77, 0.25) 0%, rgba(11, 12, 12, 0) 70%);
+  filter: blur(60px);
   pointer-events: none;
   z-index: 0;
+}
+
+/* The faint concentric background circles */
+.bg-circles {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 1200px;
+  background-image: 
+      radial-gradient(circle, transparent 20%, rgba(255,255,255,0.03) 20.2%, transparent 20.5%),
+      radial-gradient(circle, transparent 35%, rgba(255,255,255,0.03) 35.2%, transparent 35.5%),
+      radial-gradient(circle, transparent 50%, rgba(255,255,255,0.02) 50.2%, transparent 50.5%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Add the keyframe for pulse-slow if it's not already in standard tailwind */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
 }

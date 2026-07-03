@@ -1,42 +1,60 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
-import { Button } from "../ui/Button";
 
 export function Navbar() {
   return (
-    <motion.header
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className="absolute top-0 left-0 right-0 z-50 px-6 py-6 flex items-center justify-center w-full"
-    >
-      <div className="w-full max-w-6xl mx-auto flex items-center justify-between border-b border-white/10 pb-4">
-        {/* Logo */}
-        <Link href="/" className="text-xl font-bold tracking-tighter flex items-center gap-2">
-          <div className="w-4 h-4 rounded-full bg-text-primary" />
-          Asia.Agency
-        </Link>
-
-        {/* Links */}
-        <nav className="hidden md:flex items-center gap-6 text-[11px] uppercase tracking-widest font-semibold text-text-secondary">
-          <Link href="/about" className="hover:text-white transition-colors">About us</Link>
-          <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
-          <Link href="/works" className="hover:text-white transition-colors">Works</Link>
-          <Link href="/services" className="hover:text-white transition-colors flex items-center gap-1">
-            Services <span className="text-[8px]">v</span>
-          </Link>
-          <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
-          <Link href="/different" className="hover:text-white transition-colors">How we're different</Link>
-        </nav>
-
-        {/* CTA */}
-        <Button variant="outline" className="hidden md:flex py-1.5 px-4 text-xs font-semibold rounded-full border-white/20">
-          Contact us!
-        </Button>
+    <nav className="flex items-center justify-between py-4 px-8 w-full z-20">
+      {/* Logo */}
+      <div className="flex items-center gap-2">
+        <div className="w-2.5 h-2.5 bg-brand-lime"></div>
+        <span className="font-black text-xl tracking-tight">Revenue Room</span>
       </div>
-    </motion.header>
+
+      {/* Links */}
+      <div className="hidden md:flex items-center gap-8">
+        <Link
+          href="#"
+          className="text-[13px] text-brand-gray font-medium hover:text-white transition"
+        >
+          Company
+        </Link>
+        <Link
+          href="#"
+          className="text-[13px] text-brand-gray font-medium hover:text-white transition"
+        >
+          Works
+        </Link>
+        <Link
+          href="#"
+          className="text-[13px] text-brand-gray font-medium hover:text-white transition"
+        >
+          Pricing
+        </Link>
+        <Link
+          href="#"
+          className="text-[13px] text-brand-gray font-medium hover:text-white transition"
+        >
+          Resources
+        </Link>
+      </div>
+
+      {/* Right Actions */}
+      <div className="flex items-center gap-6">
+        {/* Available Status */}
+        <div className="flex items-center gap-2">
+          <div className="flex items-center justify-center w-3.5 h-3.5 rounded-full border border-brand-lime/30">
+            <div className="w-1.5 h-1.5 bg-brand-lime rounded-full"></div>
+          </div>
+          <span className="text-[12px] text-brand-gray font-medium">
+            Available
+          </span>
+        </div>
+        {/* Contact Button */}
+        <button className="bg-white text-black px-4 py-2 rounded-[10px] text-[13px] font-bold hover:bg-gray-100 transition">
+          Contact Now
+        </button>
+      </div>
+    </nav>
   );
 }
-

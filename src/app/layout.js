@@ -1,38 +1,24 @@
-import { Cormorant_Garamond, Outfit } from "next/font/google";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
+import { Plus_Jakarta_Sans } from "next/font/google";
+import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const outfit = Outfit({
+const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata = {
-  title: "Marketing Agency",
-  description: "Premium Marketing Agency",
+  title: "Revenue Room - Marketing Agency",
+  description: "Fueling the Next Generation of Brands",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${outfit.variable} ${cormorant.variable} h-full antialiased dark`}
-    >
-      <body className="min-h-full flex flex-col bg-brand text-text-primary selection:bg-accent selection:text-brand">
-        <Navbar />
-        <main className="flex-1 flex flex-col">
-          {children}
-        </main>
-        <Footer />
+    <html lang="en" className={plusJakarta.variable}>
+      <body className="min-h-screen relative overflow-x-hidden flex flex-col font-sans bg-brand-bg text-white">
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
 }
-
