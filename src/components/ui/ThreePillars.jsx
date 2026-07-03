@@ -3,9 +3,22 @@
 export function ThreePillars() {
   return (
     <section className="relative h-[100dvh] w-full flex flex-col justify-between overflow-hidden bg-brand-bg pt-[100px] pb-6 px-4">
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-0"
+      >
+        <source src="/hero1.mp4" type="video/mp4" />
+      </video>
+      {/* Dark overlay to keep content readable over the video */}
+      <div className="absolute inset-0 bg-brand-bg/60 pointer-events-none z-0" />
+
       {/* Background Elements */}
       <div className="bg-circles absolute inset-0 opacity-50 pointer-events-none"></div>
-      <div className="bottom-glow absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] pointer-events-none"></div>
+    
 
       {/* Star Icon Left */}
       <div className="absolute top-[25%] left-[10%] text-white/10 pointer-events-none z-0">
