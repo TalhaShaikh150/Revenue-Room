@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { ThreePillars } from "@/components/ui/ThreePillars";
+import { Hero} from "@/components/ui/Hero";
 import { AboutSection } from "@/components/ui/AboutSection";
 import { OfferingSection } from "@/components/ui/OfferingSection";
 import { ServicesGrid } from "@/components/ui/ServicesGrid";
@@ -8,6 +7,7 @@ import { PricingSection } from "@/components/ui/PricingSection";
 import { ResultsAccordion } from "@/components/ui/ResultsAccordion";
 import { CTABanner } from "@/components/ui/CTABanner";
 import StatsDashboard from "@/components/ui/StatsDashboard";
+import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section takes up 100vh naturally */}
-      <ThreePillars />
+      <Hero />
 
       {/* 
         NORMAL SCROLLING CONTENT

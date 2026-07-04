@@ -36,9 +36,7 @@ export default function StatsDashboard() {
           variants={cardVariants}
           className="lg:col-span-8 bg-[#0e0e10] border border-white/[0.06] rounded-[32px] p-8 md:p-10 relative overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.4)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] group"
         >
-          {/* Subtle noise texture */}
-          <div className="absolute inset-0 opacity-[0.02] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay"></div>
-          
+         
           <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
               <p className="text-white/40 text-[11px] font-bold uppercase tracking-[0.2em] mb-3">

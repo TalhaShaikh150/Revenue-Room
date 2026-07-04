@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={plusJakarta.variable}>
       <body className="min-h-screen relative overflow-x-hidden flex flex-col font-sans bg-brand-bg text-white">
+        
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

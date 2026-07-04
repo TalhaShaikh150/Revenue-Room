@@ -3,7 +3,7 @@
 import { ArrowRight, Play } from "lucide-react";
 import { motion } from "framer-motion";
 
-export function ThreePillars() {
+export function Hero() {
   // Stagger animation for the hero content loading in
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -27,7 +27,7 @@ export function ThreePillars() {
         muted 
         loop 
         playsInline 
-        className="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none mix-blend-luminosity scale-105"
+        className="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none mix-blend-luminosity scale-105"
       >
         <source src="/hero.mp4" type="video/mp4" />
       </video>
