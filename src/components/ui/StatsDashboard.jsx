@@ -45,7 +45,7 @@ export function StatsDashboard() {
         <motion.div
           variants={cardVariants}
           style={hardwareLayer}
-          className="lg:col-span-8 bg-[#0e0e10] border border-white/5 rounded-[32px] p-6 md:p-10 relative overflow-hidden group"
+          className="lg:col-span-8 bg-[#0e0e10] border border-white/5 rounded-[32px] p-6 md:p-10 relative overflow-hidden group min-h-[280px] md:min-h-[320px]"
         >
           <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-20">
             <div>

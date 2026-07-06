@@ -56,7 +56,7 @@ export function OfferingSection() {
               className="relative p-8 md:p-10 lg:p-12 flex flex-col group bg-[#0e0e10] border border-white/5 rounded-[32px] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(216,252,77,0.1)]"
             >
               {/* Prominent SVG Glowing Curve Animation (Matches Footer) */}
-              <div className="absolute bottom-0 left-0 w-full h-[150px] pointer-events-none overflow-hidden rounded-b-[32px]">
+              <div className="absolute bottom-[-24px] left-0 w-full h-[150px] pointer-events-none overflow-hidden rounded-b-[32px]">
                 <svg viewBox="0 0 300 100" preserveAspectRatio="none" className="w-full h-full overflow-visible">
                   <defs>
                     <linearGradient id={`card-glow-${index}`} x1="0" y1="0" x2="1" y2="0">
@@ -75,7 +75,7 @@ export function OfferingSection() {
                     strokeWidth="8"
                     strokeLinecap="round"
                     vectorEffect="nonScalingStroke"
-                    className="blur-[10px] opacity-60 group-hover:opacity-100 transition-opacity duration-700"
+                    className="blur-[10px] opacity-20 md:opacity-60 group-hover:opacity-60 md:group-hover:opacity-100 transition-opacity duration-700"
                     initial={{ pathLength: 0 }}
                     whileInView={{ pathLength: 1 }}
                     viewport={{ once: true }}
@@ -90,7 +90,7 @@ export function OfferingSection() {
                     strokeWidth="4"
                     strokeLinecap="round"
                     vectorEffect="nonScalingStroke"
-                    className="blur-[4px] opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+                    className="blur-[4px] opacity-30 md:opacity-80 group-hover:opacity-80 md:group-hover:opacity-100 transition-opacity duration-700"
                     initial={{ pathLength: 0 }}
                     whileInView={{ pathLength: 1 }}
                     viewport={{ once: true }}
@@ -105,7 +105,7 @@ export function OfferingSection() {
                     strokeWidth="1.5"
                     strokeLinecap="round"
                     vectorEffect="nonScalingStroke"
-                    className="opacity-100"
+                    className="opacity-50 md:opacity-100 group-hover:opacity-100 transition-opacity duration-700"
                     initial={{ pathLength: 0 }}
                     whileInView={{ pathLength: 1 }}
                     viewport={{ once: true }}

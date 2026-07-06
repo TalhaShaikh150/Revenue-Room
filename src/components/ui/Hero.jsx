@@ -110,9 +110,10 @@ export function Hero() {
                   type="email" 
                   required
                   placeholder="Enter your email and we'll start working on your growth — tonight" 
-                  className="flex-1 bg-transparent border-none outline-none text-black placeholder:text-black/50 text-[15px] font-medium w-full truncate"
+                  className="flex-1 bg-transparent border-none outline-none text-black
+                   placeholder:text-black/50 text-[15px] font-medium w-full truncate"
               />
-              <button type="submit" aria-label="Submit email" className="shrink-0 bg-brand-lime text-black px-8 py-3.5 rounded-full text-[15px] font-bold hover:scale-[1.02] transition-all duration-300 flex items-center gap-2">
+              <button type="submit" aria-label="Submit email" className="shrink-0 bg-brand-lime text-black px-8 py-3.5 rounded-full text-[15px] font-bold hover:scale-[1.02] transition-all duration-300 flex items-center ">
                   Let's go 
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>

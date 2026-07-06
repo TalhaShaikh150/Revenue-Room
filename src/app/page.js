@@ -4,8 +4,11 @@ import { VideoSection } from "@/components/ui/VideoSection";
 import { AboutSection } from "@/components/ui/AboutSection";
 import { OfferingSection } from "@/components/ui/OfferingSection";
 import { ServicesGrid } from "@/components/ui/ServicesGrid";
-import { PricingSection } from "@/components/ui/PricingSection";
-import { ResultsAccordion } from "@/components/ui/ResultsAccordion";
+import { CaseStudiesSection } from "@/components/ui/CaseStudiesSection";
+import { WhyMattersSection } from "@/components/ui/WhyMattersSection";
+import { WastedSpendSection } from "@/components/ui/WastedSpendSection";
+
+import { FAQSection } from "@/components/ui/FAQSection";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { StatsDashboard } from "@/components/ui/StatsDashboard";
 import { Footer } from "@/components/layout/Footer";
@@ -36,9 +39,11 @@ export default function Home() {
         <div className="flex flex-col gap-8 md:gap-16">
           <AboutSection />
           <OfferingSection />
+          <CaseStudiesSection />
+          <WhyMattersSection />
+          <WastedSpendSection />
           <ServicesGrid />
-          <ResultsAccordion />
-          <PricingSection />
+          <FAQSection />
           <CTABanner />
           <Footer />
         </div>
