@@ -70,3 +70,9 @@ body {
   0%, 100% { opacity: 1; }
   50% { opacity: .5; }
 }
+
+/* CSS animation for StatsDashboard active dots (replaces Framer Motion Infinity loop) */
+@keyframes dot-pulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}

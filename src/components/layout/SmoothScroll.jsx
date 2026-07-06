@@ -5,6 +5,11 @@ import Lenis from "lenis";
 
 export function SmoothScroll({ children }) {
   useEffect(() => {
+    // Skip Lenis on mobile — native scroll is faster and smoother
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      return;
+    }
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -17,14 +22,15 @@ export function SmoothScroll({ children }) {
       infinite: false,
     });
 
+    let rafId;
     function raf(time) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafId = requestAnimationFrame(raf);
     }
-
-    requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(rafId); // Properly cancel the loop
       lenis.destroy();
     };
   }, []);

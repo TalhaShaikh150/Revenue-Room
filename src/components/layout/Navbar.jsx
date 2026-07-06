@@ -14,15 +14,18 @@ export function Navbar() {
   const smoothEase = [0.16, 1, 0.3, 1];
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      // Morphs only AFTER passing 90% of the Hero viewport
-      if (window.scrollY > window.innerHeight * 0.9) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > window.innerHeight * 0.9);
+          ticking = false;
+        });
+        ticking = true;
       }
     };
-    window.addEventListener("scroll", handleScroll);
+    // passive: true = critical for mobile scroll performance
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -64,12 +67,12 @@ export function Navbar() {
                 // Extremely fast exit so the text disappears before the pill crushes it
                 exit={{ opacity: 0, transition: { duration: 0.1 } }}
                 // min-w forces the content to never squish
-                className="absolute inset-0 flex items-center justify-between px-6 min-w-[300px] md:min-w-[800px] w-full h-full"
+                className="absolute inset-0 flex items-center justify-between px-4 md:px-6 min-w-[280px] md:min-w-[800px] w-full h-full"
               >
                 {/* Minimal Logo */}
                 <Link href="/" className="flex items-center gap-2 group shrink-0">
                   <div className="w-2 h-2 bg-brand-lime group-hover:scale-125 transition-transform duration-300"></div>
-                  <span className="font-bold text-[15px] tracking-tight text-white">
+                  <span className="font-bold text-[14px] md:text-[15px] tracking-tight text-white">
                     Revenue Room
                   </span>
                 </Link>
@@ -96,10 +99,18 @@ export function Navbar() {
                   ))}
                 </div>
 
-                {/* Right CTA */}
-                <button className="bg-white text-black px-5 py-2 rounded-full text-[12px] font-bold hover:bg-brand-lime transition-colors duration-300 shrink-0">
-                  Contact Us
-                </button>
+                {/* Right CTA and Mobile Menu */}
+                <div className="flex items-center gap-2 shrink-0">
+                  <button className="hidden sm:block bg-white text-black px-5 py-2 rounded-full text-[12px] font-bold hover:bg-brand-lime transition-colors duration-300">
+                    Contact Us
+                  </button>
+                  <button 
+                    onClick={() => setMenuOpen(true)}
+                    className="md:hidden flex items-center justify-center w-9 h-9 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
+                  >
+                    <Menu className="w-4 h-4 text-white" />
+                  </button>
+                </div>
               </motion.div>
             )}
 

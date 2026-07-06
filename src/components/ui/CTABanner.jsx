@@ -4,41 +4,71 @@ import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
 
 export function CTABanner() {
-  return (
-    <section className="py-32 px-6 relative z-10 overflow-hidden">
-      {/* Background gradient blob */}
-      <div className="absolute inset-0 bg-brand-surface -z-20" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[150%] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/20 via-brand-surface to-brand-surface opacity-80 blur-3xl -z-10 animate-pulse-slow" />
+  const smoothEase = [0.16, 1, 0.3, 1];
 
-      <div className="container mx-auto max-w-4xl text-center">
+  return (
+    <section className="py-32 md:py-40 px-6 relative z-10 bg-brand-bg flex flex-col items-center justify-center border-t border-brand-border">
+      <div className="container mx-auto max-w-3xl text-center">
+        
+        {/* Subtle Eyebrow */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: smoothEase }}
+          className="mb-6"
         >
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">
+          <span className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
+            Initiate Growth
+          </span>
+        </motion.div>
+
+        {/* Clean, Stark Headline */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: smoothEase, delay: 0.1 }}
+        >
+          <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-tight text-white mb-6">
             Ready to scale?
           </h2>
-          <p className="text-xl md:text-2xl text-text-secondary mb-12 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-text-secondary mb-12 max-w-xl mx-auto leading-relaxed">
             Stop wasting time with generic agencies. Partner with a team that treats your revenue like their own.
           </p>
+        </motion.div>
 
-          {/* Pill input-as-CTA (Pattern H) */}
-          <div className="relative max-w-lg mx-auto flex items-center bg-brand-raised border border-white/10 rounded-full p-2 transition-shadow hover:shadow-lg hover:shadow-accent/10 focus-within:border-accent/50 focus-within:shadow-accent/20">
-            <div className="pl-4 pr-2 text-text-secondary">
-              <Mail size={20} />
+        {/* Minimalist Input Pill */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: smoothEase, delay: 0.2 }}
+        >
+          <form 
+            onSubmit={(e) => e.preventDefault()} 
+            className="relative max-w-md mx-auto flex items-center bg-[#121214] border border-brand-border rounded-full p-1.5 transition-all duration-300 focus-within:border-white/30 focus-within:bg-[#161619]"
+          >
+            <div className="pl-5 pr-2 text-text-secondary">
+              <Mail size={18} strokeWidth={2} />
             </div>
+            
             <input 
               type="email" 
-              placeholder="Enter your email" 
-              className="flex-1 bg-transparent border-none outline-none text-text-primary placeholder:text-text-secondary/50 py-3"
+              placeholder="Enter your email address" 
+              required
+              className="flex-1 bg-transparent border-none outline-none text-white placeholder:text-text-secondary/70 py-3 text-base w-full"
             />
-            <button className="bg-accent text-brand font-bold py-3 px-8 rounded-full hover:brightness-110 transition-all transform active:scale-95">
+            
+            <button 
+              type="submit" 
+              className="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-accent transition-colors duration-300"
+            >
               Let's Talk
             </button>
-          </div>
+          </form>
         </motion.div>
+
       </div>
     </section>
   );
