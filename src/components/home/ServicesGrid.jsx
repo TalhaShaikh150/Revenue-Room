@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Code2, LineChart, Megaphone, MousePointerClick, LayoutTemplate, Bot, Users, Video } from "lucide-react";
-import { Card } from "./Card";
+import { Card } from "@/components/ui/Card";
 
 // Defined outside component — not recreated on re-renders
 const SERVICES = [

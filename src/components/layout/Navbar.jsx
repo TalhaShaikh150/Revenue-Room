@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -9,6 +10,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const pathname = usePathname();
 
   // Cinematic smooth easing curve
   const smoothEase = [0.16, 1, 0.3, 1];
@@ -41,6 +43,13 @@ export function Navbar() {
     };
   }, [menuOpen]);
 
+  // A link is "active" if the current path matches exactly or starts with the href (for nested routes)
+  const isActive = (href) => pathname === href || (href !== "/" && pathname.startsWith(href));
+
+  // A parent dropdown is active if any of its sub-items is active
+  const isParentActive = (item) =>
+    item.hasDropdown && item.subItems?.some((sub) => isActive(sub.href));
+
   const navItems = [
     {
       label: "Services",
@@ -56,6 +65,7 @@ export function Navbar() {
     },
     { label: "Courses", href: "/courses" },
     { label: "Consulting", href: "/consulting" },
+    { label: "Blogs", href: "/blogs" },
     { label: "Who We Are", href: "/about" },
     { label: "Case Studies", href: "/case-studies" },
   ];
@@ -108,44 +118,62 @@ export function Navbar() {
 
                 {/* Center Links */}
                 <div className="hidden md:flex items-center gap-1">
-                  {navItems.map((item, index) => (
-                    <div
-                      key={item.label}
-                      className="relative group h-[60px] flex items-center"
-                      onMouseEnter={() => setHoveredIndex(index)}
-                      onMouseLeave={() => setHoveredIndex(null)}
-                    >
-                      <Link
-                        href={item.href}
-                        className="relative px-3 lg:px-4 py-2 text-[12px] font-medium text-white/70 hover:text-white transition-colors flex items-center gap-1"
+                  {navItems.map((item, index) => {
+                    const active = isParentActive(item) || isActive(item.href);
+                    return (
+                      <div
+                        key={item.label}
+                        className="relative group h-[60px] flex items-center"
+                        onMouseEnter={() => setHoveredIndex(index)}
+                        onMouseLeave={() => setHoveredIndex(null)}
                       >
-                        {item.label}
-                        {item.hasDropdown && (
-                          <svg className="w-3 h-3 opacity-70 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                          </svg>
+                        <Link
+                          href={item.href}
+                          className={`relative px-3 lg:px-4 py-2 text-[12px] font-medium transition-colors flex items-center gap-1 ${
+                            active ? "text-brand-lime" : "text-white/70 hover:text-white"
+                          }`}
+                        >
+                          {item.label}
+                          {item.hasDropdown && (
+                            <svg className="w-3 h-3 opacity-70 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          )}
+                          {/* Active underline dot indicator removed */}
+                          {hoveredIndex === index && (
+                            <motion.div
+                              layoutId="nav-hover-pill"
+                              className="absolute inset-0 bg-white/10 rounded-full -z-10"
+                              transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                            />
+                          )}
+                        </Link>
+                        
+                        {/* Dropdown Menu */}
+                        {item.hasDropdown && item.subItems && (
+                          <div className="absolute top-[50px] left-0 w-64 bg-[#111212]/95 backdrop-blur-xl border border-white/10 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 overflow-hidden shadow-2xl py-3 z-50">
+                            {item.subItems.map((subItem) => {
+                              const subActive = isActive(subItem.href);
+                              return (
+                                <Link
+                                  key={subItem.label}
+                                  href={subItem.href}
+                                  className={`flex items-center gap-2.5 px-5 py-2.5 text-[11px] font-bold tracking-wider transition-colors ${
+                                    subActive
+                                      ? "text-brand-lime bg-brand-lime/5"
+                                      : "text-white/70 hover:text-brand-lime hover:bg-white/5"
+                                  }`}
+                                >
+                                  <span className={`w-1.5 h-1.5 rounded-full shrink-0 transition-colors ${subActive ? "bg-brand-lime" : "bg-white/20"}`} />
+                                  {subItem.label}
+                                </Link>
+                              );
+                            })}
+                          </div>
                         )}
-                        {hoveredIndex === index && (
-                          <motion.div
-                            layoutId="nav-hover-pill"
-                            className="absolute inset-0 bg-white/10 rounded-full -z-10"
-                            transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                          />
-                        )}
-                      </Link>
-                      
-                      {/* Dropdown Menu */}
-                      {item.hasDropdown && item.subItems && (
-                        <div className="absolute top-[50px] left-0 w-64 bg-[#111212]/95 backdrop-blur-xl border border-white/10 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 overflow-hidden shadow-2xl py-3 z-50">
-                          {item.subItems.map((subItem) => (
-                            <Link key={subItem.label} href={subItem.href} className="block px-5 py-2.5 text-[11px] font-bold tracking-wider text-white/70 hover:text-brand-lime hover:bg-white/5 transition-colors">
-                              {subItem.label}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ))}
+                      </div>
+                    );
+                  })}
                 </div>
 
                 {/* Right CTA and Mobile Menu */}
@@ -196,8 +224,6 @@ export function Navbar() {
               
               {/* IMAGE LOGO SLOT */}
               <div className="flex items-center gap-3">
-                {/* Replace this div with your client's actual logo image */}
-                {/* <img src="/logo.svg" alt="Revenue Room" className="h-8 w-auto" /> */}
                 <div className="w-8 h-8 bg-brand-lime flex items-center justify-center text-black font-black text-lg rounded-sm">R</div>
                 <span className="text-white font-bold text-xl tracking-tight">Revenue Room</span>
               </div>
@@ -218,7 +244,14 @@ export function Navbar() {
               <div className="flex flex-col gap-4 md:gap-6 w-full max-w-xl">
                 {navItems.map((item, i) => (
                   <div key={item.label} className="overflow-hidden w-full">
-                    <MobileNavItem item={item} setMenuOpen={setMenuOpen} smoothEase={smoothEase} i={i} />
+                    <MobileNavItem 
+                      item={item} 
+                      setMenuOpen={setMenuOpen} 
+                      smoothEase={smoothEase} 
+                      i={i} 
+                      isActive={isActive}
+                      isParentActive={isParentActive}
+                    />
                   </div>
                 ))}
               </div>
@@ -257,8 +290,10 @@ export function Navbar() {
   );
 }
 
-const MobileNavItem = ({ item, setMenuOpen, smoothEase, i }) => {
+const MobileNavItem = ({ item, setMenuOpen, smoothEase, i, isActive, isParentActive }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const itemActive = isParentActive(item) || isActive(item.href);
 
   return (
     <motion.div
@@ -272,7 +307,9 @@ const MobileNavItem = ({ item, setMenuOpen, smoothEase, i }) => {
         <div className="flex flex-col w-full">
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white/70 hover:text-white transition-colors flex items-center justify-between w-full text-left py-2 md:py-0"
+            className={`text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight transition-colors flex items-center justify-between w-full text-left py-2 md:py-0 ${
+              itemActive ? "text-brand-lime" : "text-white/70 hover:text-white"
+            }`}
           >
             {item.label}
             <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
@@ -289,16 +326,21 @@ const MobileNavItem = ({ item, setMenuOpen, smoothEase, i }) => {
                 className="overflow-hidden"
               >
                 <div className="flex flex-col gap-4 pl-4 border-l-2 border-white/10 mt-6 mb-2 py-2">
-                  {item.subItems.map(subItem => (
+                  {item.subItems.map(subItem => {
+                    const subActive = isActive(subItem.href);
+                    return (
                      <Link 
                        key={subItem.label}
                        href={subItem.href} 
                        onClick={() => setMenuOpen(false)}
-                       className="text-xl md:text-2xl font-medium tracking-wide text-white/60 hover:text-brand-lime transition-colors block"
+                       className={`text-xl md:text-2xl font-medium tracking-wide transition-colors flex items-center gap-3 ${
+                         subActive ? "text-brand-lime" : "text-white/60 hover:text-brand-lime"
+                       }`}
                      >
+                       <span className={`w-2 h-2 rounded-full shrink-0 transition-colors ${subActive ? "bg-brand-lime" : "bg-white/20"}`} />
                        {subItem.label}
                      </Link>
-                  ))}
+                  )})}
                 </div>
               </motion.div>
             )}
@@ -308,7 +350,9 @@ const MobileNavItem = ({ item, setMenuOpen, smoothEase, i }) => {
         <Link 
           href={item.href} 
           onClick={() => setMenuOpen(false)}
-          className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white/70 hover:text-white transition-colors block py-2 md:py-0 w-full"
+          className={`text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight transition-colors block py-2 md:py-0 w-full ${
+            itemActive ? "text-brand-lime" : "text-white/70 hover:text-white"
+          }`}
         >
           {item.label}
         </Link>

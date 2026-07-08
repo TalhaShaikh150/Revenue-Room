@@ -1,6 +1,26 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
+
+import { ServiceHero } from "@/components/services/shared/Hero";
+import { ServiceFeatures } from "@/components/services/shared/Features";
+import { ServiceProcess } from "@/components/services/shared/Process";
+import { ServiceBenefits } from "@/components/services/shared/Benefits";
+import { ServiceCTA } from "@/components/services/shared/CTA";
+
+import { ServiceTestimonial } from "@/components/services/shared/Testimonial";
+import { ServiceFAQ } from "@/components/services/shared/FAQ";
+import { ServicePricing } from "@/components/services/shared/Pricing";
+
+import {
+  LineChart,
+  MousePointerClick,
+  Bot,
+  Target,
+  ShieldCheck,
+  Zap,
+} from "lucide-react";
+
 export const metadata = {
   title: "SEO, Google & AI Search Advertising | Revenue Room Digital",
   description:
@@ -30,21 +50,202 @@ export const metadata = {
   },
 };
 
+const FEATURES = [
+  {
+    title: "Technical & Content SEO",
+    description:
+      "We rebuild your organic foundation so Google naturally prioritises your site. From site speed to high-intent content clusters, we drive traffic that converts.",
+    icon: <LineChart className="w-6 h-6" aria-hidden="true" />,
+  },
+  {
+    title: "Google Ads (PPC)",
+    description:
+      "Laser-targeted campaigns on Search, Display, and YouTube. We cut wasted spend and focus entirely on cost-per-acquisition (CPA) and ROI.",
+    icon: <MousePointerClick className="w-6 h-6" aria-hidden="true" />,
+  },
+  {
+    title: "AI Search Placements",
+    description:
+      "Get ahead of the curve. We optimise your brand for generative AI search engines (like ChatGPT and Google's AI Overviews) to capture future-ready demand.",
+    icon: <Bot className="w-6 h-6" aria-hidden="true" />,
+  },
+];
+
+const PROCESS_STEPS = [
+  {
+    title: "Deep Dive Audit",
+    description:
+      "We analyse your current search visibility, backlink profile, and ad account structure to find immediate revenue leaks and growth opportunities.",
+  },
+  {
+    title: "Strategy & Architecture",
+    description:
+      "We map out high-intent keywords and structure your ad campaigns and landing pages to match exact user intent.",
+  },
+  {
+    title: "Execution & Scaling",
+    description:
+      "Our 24/7 team launches the campaigns, fixes technical SEO issues, and begins publishing authoritative, conversion-focused content.",
+  },
+  {
+    title: "Continuous Optimisation",
+    description:
+      "Search algorithms never sleep, and neither do we. We constantly refine bids, A/B test ad copy, and build powerful backlinks.",
+  },
+];
+
+const BENEFITS = [
+  {
+    title: "Dominate the Entire Search Page",
+    description:
+      "Why choose between organic and paid? We align SEO and Google Ads so you capture maximum real estate for your most profitable keywords.",
+  },
+  {
+    title: "Zero Wasted Spend",
+    description:
+      "We audit your search terms daily, negative-matching irrelevant clicks so your budget only goes towards users ready to buy.",
+  },
+  {
+    title: "Future-Proofed for AI",
+    description:
+      "As search evolves into conversational AI, we ensure your brand is cited as the definitive answer, keeping you steps ahead of competitors.",
+  },
+];
+
+const FAQS = [
+  {
+    question: "How long does it take to see SEO results?",
+    answer: "While paid ads can generate traffic within 24 hours, SEO is a mid-to-long-term strategy. Typically, our clients begin to see noticeable upward momentum in 3 to 4 months, with compound growth accelerating from month 6 onwards. We focus on 'quick wins' in the first 30 days by fixing technical errors."
+  },
+  {
+    question: "Do I need both SEO and Google Ads?",
+    answer: "Using both strategies simultaneously is the fastest way to scale. Google Ads secures immediate revenue while SEO builds your long-term organic foundation. Once your SEO rankings solidify, you can choose to reduce ad spend or double down for total market dominance."
+  },
+  {
+    question: "What is AI Search Advertising?",
+    answer: "With search engines integrating AI (like Google's AI Overviews), user behavior is changing. We optimize your content to be cited by these AI engines, ensuring you capture demand from users searching via natural language and conversational queries."
+  },
+  {
+    question: "Are there long-term contracts?",
+    answer: "We believe in earning your business every month. Our engagements typically start with a 3-month commitment to allow time for implementation and data gathering, followed by a rolling monthly agreement."
+  }
+];
+
+const PRICING_PLANS = [
+  {
+    name: "Growth",
+    description: "Perfect for local businesses looking to establish dominance.",
+    price: "$1,500",
+    period: "/ month",
+    isPopular: false,
+    features: [
+      "Technical SEO Audit & Fixes",
+      "Local SEO Optimization",
+      "Google Ads Management (Up to $5k spend)",
+      "Monthly Reporting & Strategy Call"
+    ]
+  },
+  {
+    name: "Scale",
+    description: "For aggressive brands ready to capture nationwide demand.",
+    price: "$3,500",
+    period: "/ month",
+    isPopular: true,
+    features: [
+      "Everything in Growth",
+      "Extensive Content Creation (4 Blogs/mo)",
+      "High-Authority Link Building",
+      "Google Ads Management (Up to $20k spend)",
+      "AI Search Placement Optimization",
+      "Bi-Weekly Strategy Calls"
+    ]
+  },
+  {
+    name: "Enterprise",
+    description: "Custom solutions for large-scale operations and e-commerce.",
+    price: "Custom",
+    period: "",
+    isPopular: false,
+    features: [
+      "Everything in Scale",
+      "Unlimited Content Scaling",
+      "Custom Data Integration pipelines",
+      "Multi-channel Ad Management",
+      "Dedicated Account Director",
+      "Slack Channel Access"
+    ]
+  }
+];
+
 export default function SeoGoogleAiSearchPage() {
   return (
-    <main className="bg-brand-bg min-h-screen">
+    <main className="bg-brand-bg min-h-screen flex flex-col">
       <Navbar />
-      <div className="pt-32 pb-24 px-4 max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-          SEO, Google &amp; AI Search Advertising
-        </h1>
-        <p className="text-lg text-gray-400 max-w-3xl">
-          Dominate search results and turn intent into revenue with our
-          full-stack search marketing services — from technical SEO and content
-          strategy to Google Ads and the latest AI-powered search placements.
-        </p>
+
+      <ServiceHero
+        subtitle="Search Marketing"
+        title={
+          <>
+            Dominate Search. <br />
+            <span className="text-transparent [-webkit-text-stroke:1px_#ffffff] md:[-webkit-text-stroke:1.5px_#ffffff] opacity-80">
+              Capture
+            </span>{" "}
+            <span className="text-transparent [-webkit-text-stroke:1px_#d8fc4d] md:[-webkit-text-stroke:1.5px_#d8fc4d] drop-shadow-[0_0_15px_rgba(216,252,77,0.3)]">
+              Demand.
+            </span>
+          </>
+        }
+        description="Turn high-intent searches into revenue. We combine technical SEO, precision Google Ads, and next-gen AI search strategies to ensure your brand shows up exactly when your customers are ready to buy."
+        highlights={[
+          "Technical & Content SEO",
+          "Google Search Ads (PPC)",
+          "AI Search Overviews (SGE)",
+          "Data-Driven Conversion"
+        ]}
+      />
+
+
+      <ServiceFeatures
+        subtitle="Our Arsenal"
+        title="Full-Stack Search Supremacy"
+        features={FEATURES}
+      />
+
+      <ServiceTestimonial 
+        quote="Revenue Room Digital completely transformed our search visibility. Within 6 months, our organic traffic tripled, and our Google Ads CPA dropped by 40%. They are a true growth partner."
+        author="Sarah Jenkins"
+        role="Marketing Director"
+        company="Fintech Solutions Australia"
+      />
+
+      <ServiceBenefits
+        subtitle="The Advantage"
+        title="Why our search campaigns win."
+        benefits={BENEFITS}
+        imageSrc="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
+        imageAlt="Data analytics and search marketing dashboards"
+      />
+      
+      <ServiceProcess
+        subtitle="The Blueprint"
+        title="How we scale your search revenue."
+        steps={PROCESS_STEPS}
+      />
+
+      <ServicePricing plans={PRICING_PLANS} serviceId="seo" />
+
+      <ServiceFAQ faqs={FAQS} />
+
+      <ServiceCTA 
+        serviceId="seo" 
+        title="Ready to Dominate Search Results?"
+        description="Let's build a data-driven search strategy that captures high-intent traffic and turns clicks into revenue."
+      />
+
+      {/* Wrapping in relative z-10 so it stacks properly above the white background of ServiceProcess */}
+      <div className="relative z-10 bg-brand-bg flex flex-col pt-16">
+        <Footer />
       </div>
-      <Footer />
     </main>
   );
 }

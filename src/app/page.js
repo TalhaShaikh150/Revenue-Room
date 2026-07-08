@@ -1,16 +1,16 @@
 import { Navbar } from "@/components/layout/Navbar";
-import { Hero } from "@/components/ui/Hero";
-import { VideoSection } from "@/components/ui/VideoSection";
-import { AboutSection } from "@/components/ui/AboutSection";
-import { OfferingSection } from "@/components/ui/OfferingSection";
-import { ServicesGrid } from "@/components/ui/ServicesGrid";
-import { CaseStudiesSection } from "@/components/ui/CaseStudiesSection";
-import { WhyMattersSection } from "@/components/ui/WhyMattersSection";
-import { WastedSpendSection } from "@/components/ui/WastedSpendSection";
+import { Hero } from "@/components/home/Hero";
+import { VideoSection } from "@/components/home/VideoSection";
+import { AboutSection } from "@/components/home/AboutSection";
+import { OfferingSection } from "@/components/home/OfferingSection";
+import { ServicesGrid } from "@/components/home/ServicesGrid";
+import { CaseStudiesSection } from "@/components/home/CaseStudiesSection";
+import { WhyMattersSection } from "@/components/home/WhyMattersSection";
+import { WastedSpendSection } from "@/components/home/WastedSpendSection";
 
-import { FAQSection } from "@/components/ui/FAQSection";
-import { CTABanner } from "@/components/ui/CTABanner";
-import { StatsDashboard } from "@/components/ui/StatsDashboard";
+import { FAQSection } from "@/components/home/FAQSection";
+import { CTABanner } from "@/components/home/CTABanner";
+import { StatsDashboard } from "@/components/home/StatsDashboard";
 import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {

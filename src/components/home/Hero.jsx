@@ -101,7 +101,7 @@ export function Hero() {
               </button>
           </form>
 
-          {/* Email Capture Form - DESKTOP (Visible from sm   upwards) */}
+          {/* Email Capture Form - DESKTOP (Visible from sm upwards) */}
           <form className="relative w-full hidden sm:flex items-center bg-[#fcfcfc] rounded-full p-1.5 shadow-[0_0_40px_rgba(216,252,77,0.15)] group focus-within:shadow-[0_0_40px_rgba(216,252,77,0.3)] transition-shadow duration-500">
               <div className="pl-6 pr-3 text-black/50">
                  <Moon className="w-5 h-5" />
