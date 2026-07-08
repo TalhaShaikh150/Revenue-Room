@@ -1,31 +1,51 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, LineChart, Megaphone, MousePointerClick } from "lucide-react";
+import { ArrowRight, Code2, LineChart, Megaphone, MousePointerClick, LayoutTemplate, Bot, Users, Video } from "lucide-react";
 import { Card } from "./Card";
 
 // Defined outside component — not recreated on re-renders
 const SERVICES = [
   { 
-    title: "Web Development", 
-    description: "High-performance marketing sites.",
-    Icon: Code2,
-  },
-  { 
-    title: "Search Engine Optimization", 
+    title: "SEO", 
     description: "Dominate organic search results with data-backed architecture.",
     Icon: LineChart,
     flagship: true
   },
   { 
-    title: "Paid Social Media", 
+    title: "Paid Social", 
     description: "Meta, TikTok, and LinkedIn scaling.",
     Icon: Megaphone,
   },
   { 
-    title: "Paid Search (PPC)", 
-    description: "Google Ads & YouTube.",
+    title: "Google Search", 
+    description: "Precision-targeted Google Ads & YouTube campaigns.",
     Icon: MousePointerClick,
+  },
+  { 
+    title: "Web Development", 
+    description: "High-performance, modern marketing sites.",
+    Icon: Code2,
+  },
+  { 
+    title: "Landing Pages", 
+    description: "High-converting bespoke landing pages designed for scale.",
+    Icon: LayoutTemplate,
+  },
+  { 
+    title: "AI Search Advertising", 
+    description: "Next-gen AI-driven search and discovery campaigns.",
+    Icon: Bot,
+  },
+  { 
+    title: "Organic Account Management", 
+    description: "Building loyal brand communities and engagement.",
+    Icon: Users,
+  },
+  { 
+    title: "Video Editing", 
+    description: "Premium short and long-form video content production.",
+    Icon: Video,
   },
 ];
 
@@ -54,53 +74,43 @@ export function ServicesGrid() {
               Core Expertise
             </span>
           </div>
-          <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-6">
+          <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-8">
             Revenue-Driving <br /> <span className="text-accent">Capabilities.</span>
           </h2>
-          <a href="/agency" className="text-text-secondary hover:text-accent hover:underline decoration-accent underline-offset-8 transition-colors">
-            View full agency breakdown &rarr;
-          </a>
         </div>
 
-        {/* 2x2 Grid */}
+        {/* 3x2 Grid */}
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto"
         >
-          {SERVICES.map((service, i) => {
+          {SERVICES.slice(0, 6).map((service, i) => {
             const { Icon } = service;
             return (
-              <motion.div key={i} variants={itemVariants}>
+              <motion.div key={i} variants={itemVariants} className="h-full">
               <Card 
-                elevated={service.flagship}
-                tilted={service.flagship}
-                className="h-72 p-8 flex flex-col justify-between group cursor-pointer border border-brand-border/50 hover:border-accent/30 transition-colors"
+                className="h-full min-h-[300px] flex flex-col justify-between group cursor-pointer border border-white/5 hover:border-accent/40 transition-colors"
               >
                 <div className="flex justify-between items-start">
-                  <div className={`p-3 rounded-xl bg-brand-card border border-brand-border group-hover:bg-accent group-hover:text-black transition-colors ${service.flagship ? 'bg-accent/10 text-accent border-accent/20' : 'text-text-secondary'}`}>
+                  <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:bg-accent group-hover:text-black text-white/70 transition-colors">
                     <Icon className="w-6 h-6" aria-hidden="true" />
                   </div>
-                  {service.flagship && (
-                    <span className="bg-accent text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                      Flagship
-                    </span>
-                  )}
                 </div>
 
-                <div>
-                  <h3 className="text-2xl md:text-3xl font-black tracking-tight mb-2 group-hover:text-accent transition-colors">
+                <div className="mt-8">
+                  <h3 className="text-2xl font-black tracking-tight mb-3 group-hover:text-accent transition-colors text-white">
                     {service.title}
                   </h3>
-                  <p className="text-text-secondary">
+                  <p className="text-white/60 leading-relaxed text-sm pr-4">
                     {service.description}
                   </p>
                 </div>
 
                 {/* Animated Arrow Bottom Corner */}
-                <div className="absolute bottom-8 right-8 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                <div className="absolute top-8 right-8 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
                    <ArrowRight className="text-accent w-6 h-6" />
                 </div>
               </Card>
@@ -108,6 +118,15 @@ export function ServicesGrid() {
             );
           })}
         </motion.div>
+
+        {/* CTA Buttons */}
+        <div className="mt-16 flex flex-col items-center gap-6">
+          <a href="#services" className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-bold uppercase tracking-widest text-[12px] hover:bg-white/10 transition-colors duration-300 group">
+            View All Services
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </a>
+                    
+        </div>
       </div>
     </section>
   );

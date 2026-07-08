@@ -4,44 +4,20 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 
-// Added more case studies and switched to standard dark theme colors
 const caseStudies = [
-  {
-    title: "NIMBLE FINTECH",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=600&h=800",
-  },
-  {
-    title: "VILL AES",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600&h=800",
-  },
-  {
-    title: "TITLES CO",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600&h=800",
-  },
-  {
-    title: "MUSCLE CHEF",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=600&h=800",
-  },
-  {
-    title: "RENT IT OUT",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600&h=800",
-  },
-  {
-    title: "ORIGINAL UGG",
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=600&h=800",
-  },
-  {
-    title: "GLOBAL TECH",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600&h=800",
-  },
-  {
-    title: "E-COMMERCE PRO",
-    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=600&h=800",
-  }
+  { image: "/case1.png" },
+  { image: "/case2.png" },
+  { image: "/case3.png" },
+  { image: "/case5.png" },
+  { image: "/case6.png" },
+  { image: "/case7.png" },
+  { image: "/case8.png" },
+  { image: "/case9.png" },
+  { image: "/case10.png" },
 ];
 
-// Duplicate the array to create a seamless infinite loop
-const doubledStudies = [...caseStudies, ...caseStudies];
+// Duplicate the array to create a seamless infinite loop (more copies for smaller items)
+const doubledStudies = [...caseStudies, ...caseStudies, ...caseStudies, ...caseStudies];
 
 export function CaseStudiesSection() {
   const [isHovered, setIsHovered] = useState(false);
@@ -72,14 +48,15 @@ export function CaseStudiesSection() {
         </div>
       </div>
 
-      {/* Infinite Smooth Scrolling Carousel */}
+      {/* Infinite Smooth Scrolling Carousels */}
       <div 
-        className="w-full relative z-10 flex overflow-hidden"
+        className="w-full relative z-10 flex flex-col gap-6 overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
+        {/* Row 1 - Scrolling Left */}
         <motion.div 
-          className="flex gap-4 md:gap-6 px-2 md:px-3 w-max"
+          className="flex px-2 md:px-3 w-max"
           animate={{ x: ["0%", "-50%"] }}
           transition={{ 
             duration: isHovered ? 60 : 30, // Slows down when hovered
@@ -89,25 +66,30 @@ export function CaseStudiesSection() {
         >
           {doubledStudies.map((study, idx) => (
             <div 
-              key={idx}
-              className="shrink-0 w-[240px] md:w-[320px] h-[400px] md:h-[480px] bg-[#0e0e10] border border-white/5 rounded-[24px] overflow-hidden relative group cursor-pointer"
+              key={`row1-${idx}`}
+              className="shrink-0 w-[140px] md:w-[180px] h-[100px] md:h-[120px] pr-8 md:pr-12 flex items-center justify-center transition-all duration-300 cursor-pointer"
             >
-              {/* Title */}
-              <div className="absolute top-6 left-6 z-20 w-[80%]">
-                 <h3 className="text-white font-black text-xl md:text-2xl leading-tight uppercase tracking-tight drop-shadow-lg group-hover:text-brand-lime transition-colors duration-300">
-                   {study.title}
-                 </h3>
-              </div>
+              <img src={study.image} alt="Case Study" className="w-full h-full object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            </div>
+          ))}
+        </motion.div>
 
-              {/* Product / App Image */}
-              <div className="absolute bottom-0 left-0 w-full h-[80%] group-hover:scale-105 transition-transform duration-700 ease-out z-10 rounded-b-[24px] overflow-hidden">
-                 <img src={study.image} alt={study.title} className="w-full h-full object-cover" />
-                 {/* Fade gradient so the top of the image seamlessly blends into the dark card background */}
-                 <div className="absolute inset-0 bg-gradient-to-b from-[#0e0e10] via-transparent to-transparent opacity-80"></div>
-              </div>
-
-              {/* Subtle inner shadow for depth */}
-              <div className="absolute inset-0 shadow-[inset_0_0_50px_rgba(0,0,0,0.5)] pointer-events-none z-30 rounded-[24px]"></div>
+        {/* Row 2 - Scrolling Right */}
+        <motion.div 
+          className="flex px-2 md:px-3 w-max"
+          animate={{ x: ["-50%", "0%"] }}
+          transition={{ 
+            duration: isHovered ? 60 : 30,
+            ease: "linear", 
+            repeat: Infinity 
+          }}
+        >
+          {[...doubledStudies].reverse().map((study, idx) => (
+            <div 
+              key={`row2-${idx}`}
+              className="shrink-0 w-[140px] md:w-[180px] h-[100px] md:h-[120px] pr-8 md:pr-12 flex items-center justify-center transition-all duration-300 cursor-pointer"
+            >
+              <img src={study.image} alt="Case Study" className="w-full h-full object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
             </div>
           ))}
         </motion.div>
