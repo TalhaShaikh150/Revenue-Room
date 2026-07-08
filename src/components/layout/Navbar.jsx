@@ -42,25 +42,22 @@ export function Navbar() {
   }, [menuOpen]);
 
   const navItems = [
-    { 
-      label: "Agency Services", 
-      href: "#services", 
+    {
+      label: "Services",
+      href: "/services/seo-google-ai-search-advertising",
       hasDropdown: true,
       subItems: [
-        { label: "SEO", href: "#seo" },
-        { label: "PAID SOCIAL", href: "#paid-social" },
-        { label: "GOOGLE SEARCH", href: "#google-search" },
-        { label: "WEB DEVELOPMENT", href: "#web-development" },
-        { label: "LANDING PAGES", href: "#landing-pages" },
-        { label: "AI SEARCH ADVERTISING", href: "#ai-search" },
-        { label: "ORGANIC ACCOUNT MANAGEMENT", href: "#organic-social" },
-        { label: "VIDEO EDITTING", href: "#video-editing" },
-      ]
+        { label: "SEO / Google / AI Search", href: "/services/seo-google-ai-search-advertising" },
+        { label: "Paid Social", href: "/services/paid-social-media-advertising" },
+        { label: "Web Dev & Landing Pages", href: "/services/web-development-landing-pages" },
+        { label: "Organic Account Management", href: "/services/organic-social-media-management" },
+        { label: "Video Editing", href: "/services/video-editing-production" },
+      ],
     },
-    { label: "Courses", href: "#courses" },
-    { label: "Consulting", href: "#consulting" },
-    { label: "Who we are", href: "#who-we-are" },
-    { label: "Case studies", href: "#case-studies" },
+    { label: "Courses", href: "/courses" },
+    { label: "Consulting", href: "/consulting" },
+    { label: "Who We Are", href: "/about" },
+    { label: "Case Studies", href: "/case-studies" },
   ];
 
   return (
@@ -153,9 +150,9 @@ export function Navbar() {
 
                 {/* Right CTA and Mobile Menu */}
                 <div className="flex items-center gap-2 shrink-0">
-                  <button className="hidden sm:block bg-white text-black px-5 py-2 rounded-full text-[12px] font-bold hover:bg-brand-lime transition-colors duration-300">
+                  <Link href="/contact" className="hidden sm:block bg-white text-black px-5 py-2 rounded-full text-[12px] font-bold hover:bg-brand-lime transition-colors duration-300">
                     Sign Up
-                  </button>
+                  </Link>
                   <button 
                     onClick={() => setMenuOpen(true)}
                     className="md:hidden flex items-center justify-center w-9 h-9 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
@@ -235,8 +232,8 @@ export function Navbar() {
               >
                 <div>
                   <h4 className="text-brand-lime text-[11px] font-bold uppercase tracking-widest mb-3">Start a project</h4>
-                  <a href="mailto:hello@revenueroom.com" className="text-white text-lg font-medium hover:text-brand-lime transition-colors">
-                    hello@revenueroom.com
+                  <a href="mailto:hello@revenueroomdigital.com.au" className="text-white text-lg font-medium hover:text-brand-lime transition-colors">
+                    hello@revenueroomdigital.com.au
                   </a>
                 </div>
 
