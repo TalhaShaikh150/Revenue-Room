@@ -44,9 +44,12 @@ export default function Home() {
           <WastedSpendSection />
           <ServicesGrid />
           <FAQSection />
-          <CTABanner />
-          <Footer />
         </div>
+        
+        {/* CTABanner outside the gap container so it has no margin */}
+        <CTABanner />
+        
+        <Footer />
       </div>
     </main>
   );
