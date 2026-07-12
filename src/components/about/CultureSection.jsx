@@ -1,40 +1,28 @@
-"use client";
-
-import { motion } from "framer-motion";
+// SERVER COMPONENT — no "use client" needed
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { FadeInX } from "@/components/ui/Motion";
 
 export function CultureSection() {
-  const smoothEase = [0.22, 1, 0.36, 1];
-
   return (
     <section className="relative w-full py-16 md:py-32 px-4 md:px-8 bg-brand-bg">
       <div className="max-w-[1300px] mx-auto w-full">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
-          <motion.div 
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: smoothEase }}
-            className="order-2 lg:order-1 relative rounded-[32px] overflow-hidden h-[400px] md:h-[600px] shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
-          >
-            <img 
+          <FadeInX x={-40} delay={0} className="order-2 lg:order-1 relative rounded-[32px] overflow-hidden h-[400px] md:h-[600px] shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
+            <Image 
               src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?auto=format&fit=crop&q=80&w=1200" 
               alt="Office Culture" 
-              className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
             />
             {/* Subtle overlay */}
             <div className="absolute inset-0 bg-brand-lime/10 mix-blend-overlay pointer-events-none" />
-          </motion.div>
+          </FadeInX>
 
-          <motion.div 
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1, ease: smoothEase }}
-            className="order-1 lg:order-2"
-          >
+          <FadeInX x={40} delay={0.1} className="order-1 lg:order-2">
             <h2 className="text-white text-4xl md:text-5xl lg:text-[64px] font-black uppercase tracking-tighter leading-[1.1] mb-6">
               Built in <span className="text-brand-lime">Sydney.</span> <br/>
               Scaling <span className="text-white">Globally.</span>
@@ -49,7 +37,7 @@ export function CultureSection() {
               Join The Team
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
-          </motion.div>
+          </FadeInX>
 
         </div>
       </div>

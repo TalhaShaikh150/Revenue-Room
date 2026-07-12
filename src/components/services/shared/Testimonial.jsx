@@ -1,7 +1,7 @@
-"use client";
-
-import { motion } from "framer-motion";
+// SERVER COMPONENT — no "use client" needed
+import Image from "next/image";
 import { Quote } from "lucide-react";
+import { FadeIn, FadeInX, FadeInScale } from "@/components/ui/Motion";
 
 export function ServiceTestimonial({ 
   quote, 
@@ -19,34 +19,24 @@ export function ServiceTestimonial({
       <div className="max-w-[1300px] mx-auto px-4 md:px-8 relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
         
         {/* Author Visual */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="shrink-0 relative"
-        >
-          <div className="w-48 h-48 md:w-64 md:h-64 rounded-full p-2 border border-white/10 bg-white/5 relative z-10">
-            <img 
+        <FadeInScale className="shrink-0 relative">
+          <div className="w-48 h-48 md:w-64 md:h-64 rounded-full p-2 border border-white/10 bg-white/5 relative z-10 overflow-hidden">
+            <Image 
               src={avatarSrc} 
               alt={author} 
-              className="w-full h-full object-cover rounded-full filter grayscale hover:grayscale-0 transition-all duration-700"
+              fill
+              sizes="(max-width: 768px) 192px, 256px"
+              className="object-cover rounded-full filter grayscale hover:grayscale-0 transition-all duration-700 p-2"
             />
           </div>
           {/* Decorative floating quote */}
           <div className="absolute -top-6 -right-6 md:-top-10 md:-right-10 w-16 h-16 md:w-24 md:h-24 bg-[#0a0a0c] rounded-full flex items-center justify-center border border-white/10 z-20 shadow-2xl">
             <Quote className="w-8 h-8 md:w-10 md:h-10 text-brand-lime fill-brand-lime/20" />
           </div>
-        </motion.div>
+        </FadeInScale>
 
         {/* Quote Content */}
-        <motion.div 
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left"
-        >
+        <FadeInX x={30} delay={0.2} className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
           <blockquote className="text-2xl md:text-4xl lg:text-[40px] font-medium text-white mb-10 leading-[1.3] md:leading-[1.2] tracking-tight">
             "{quote}"
           </blockquote>
@@ -60,7 +50,7 @@ export function ServiceTestimonial({
               </div>
             </div>
           </div>
-        </motion.div>
+        </FadeInX>
 
       </div>
     </section>

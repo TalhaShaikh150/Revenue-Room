@@ -1,10 +1,9 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+// SERVER COMPONENT — no "use client" needed
+import Image from "next/image";
+import { FadeIn, FadeInX, FadeInScale } from "@/components/ui/Motion";
 import Link from "next/link";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 
-// Pre-defined premium Unsplash images to instantly upgrade all service pages
 const BENTO_IMAGES = [
   "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
   "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
@@ -19,21 +18,8 @@ export function ServiceFeatures({
   description = "We don't just execute tasks. We deploy proven architectural frameworks designed to capture market share, reduce wasted spend, and scale your revenue predictably.",
   features 
 }) {
-  const smoothEase = [0.16, 1, 0.3, 1];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { staggerChildren: 0.15 } },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: smoothEase } },
-  };
-
   return (
     <section className="py-24 md:py-32 px-4 md:px-8 relative z-10 bg-[#050505] overflow-hidden">
-      
       <div className="max-w-[1300px] mx-auto relative z-10">
         
         {/* Header Section */}
@@ -64,29 +50,20 @@ export function ServiceFeatures({
         </div>
 
         {/* Bento Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
           {features.map((feature, i) => {
-            // Make the first item span 2 columns if there are 3 items, or adjust dynamically
             const isLarge = i === 0 && features.length % 2 !== 0;
             const imgUrl = feature.image || BENTO_IMAGES[i % BENTO_IMAGES.length];
 
             return (
-              <motion.div 
-                key={i} 
-                variants={itemVariants}
-                className={`group relative flex flex-col justify-end p-8 md:p-10 min-h-[400px] rounded-[32px] overflow-hidden bg-[#0a0a0c] border border-white/10 cursor-pointer ${isLarge ? 'md:col-span-2 lg:col-span-2' : ''}`}
-              >
-                {/* Background Image */}
-                <img 
+              <FadeIn key={i} delay={i * 0.1} className={`group relative flex flex-col justify-end p-8 md:p-10 min-h-[400px] rounded-[32px] overflow-hidden bg-[#0a0a0c] border border-white/10 cursor-pointer ${isLarge ? 'md:col-span-2 lg:col-span-2' : ''}`}>
+                {/* Optimized Background Image */}
+                <Image 
                   src={imgUrl} 
-                  alt={feature.title} 
-                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700 mix-blend-luminosity"
+                  alt={feature.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700 mix-blend-luminosity"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent" />
                 
@@ -111,19 +88,13 @@ export function ServiceFeatures({
                     </div>
                   )}
                 </div>
-              </motion.div>
+              </FadeIn>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* CTA Block */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4, ease: smoothEase }}
-          className="mt-12 p-8 md:p-12 bg-brand-lime rounded-[32px] flex flex-col md:flex-row items-center justify-between gap-8 group cursor-pointer"
-        >
+        <FadeIn delay={0.4} className="mt-12 p-8 md:p-12 bg-brand-lime rounded-[32px] flex flex-col md:flex-row items-center justify-between gap-8 group cursor-pointer">
           <div>
             <h4 className="text-2xl md:text-3xl font-black text-black mb-3 tracking-tighter uppercase">Ready to bypass the guesswork?</h4>
             <p className="text-black/70 font-medium max-w-md">
@@ -134,7 +105,7 @@ export function ServiceFeatures({
           <Link href="/contact" className="shrink-0 flex items-center justify-center w-16 h-16 rounded-full bg-black text-brand-lime group-hover:scale-110 transition-transform duration-500">
             <ArrowRight className="w-6 h-6 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
           </Link>
-        </motion.div>
+        </FadeIn>
 
       </div>
     </section>

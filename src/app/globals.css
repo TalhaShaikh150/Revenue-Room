@@ -16,6 +16,7 @@
 
   /* NEW: Missing animation for CTABanner */
   --animate-pulse-slow: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  /* We will use explicit classes for marquee to guarantee it works */
 }
 
 body {
@@ -75,4 +76,28 @@ body {
 @keyframes dot-pulse {
   0%, 100% { opacity: 0.2; }
   50% { opacity: 1; }
+}
+
+/* CSS Marquee Animations */
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 40s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 40s linear infinite;
+}
+
+/* Utility to pause animations on hover */
+.hover-pause-children:hover > * {
+  animation-play-state: paused !important;
 }

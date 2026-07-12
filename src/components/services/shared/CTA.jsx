@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -11,10 +12,12 @@ export function ServiceCTA({ serviceId = "general", title = "Ready to Dominate Y
           
           {/* High-quality background image */}
           <div className="absolute inset-0 z-0">
-            <img 
+            <Image 
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
               alt="Premium office" 
-              className="w-full h-full object-cover mix-blend-luminosity opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-1000"
+              fill
+              sizes="(max-width: 1300px) 100vw, 1300px"
+              className="object-cover mix-blend-luminosity opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-1000"
             />
             {/* Dark gradient mask */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-[#0a0a0c]/80 to-[#0a0a0c]/40" />

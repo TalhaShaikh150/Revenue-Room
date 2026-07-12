@@ -1,6 +1,5 @@
-"use client";
-
-import { motion } from "framer-motion";
+// SERVER COMPONENT — no "use client" needed
+import { FadeIn } from "@/components/ui/Motion";
 
 const steps = [
   {
@@ -42,24 +41,15 @@ export function ConsultingProcess() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, index) => (
-            <motion.div
-              key={step.number}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative p-8 rounded-2xl bg-white/[0.02] border border-white/5 overflow-hidden group hover:border-brand-lime/30 transition-colors"
-            >
-              <div className="text-6xl font-black text-white/5 mb-6 group-hover:text-brand-lime/10 transition-colors">
-                {step.number}
+            <FadeIn key={step.number} delay={index * 0.1}>
+              <div className="relative p-8 rounded-2xl bg-white/[0.02] border border-white/5 overflow-hidden group hover:border-brand-lime/30 transition-colors h-full">
+                <div className="text-6xl font-black text-white/5 mb-6 group-hover:text-brand-lime/10 transition-colors">
+                  {step.number}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
+                <p className="text-white/50 text-sm leading-relaxed">{step.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">
-                {step.title}
-              </h3>
-              <p className="text-white/50 text-sm leading-relaxed">
-                {step.description}
-              </p>
-            </motion.div>
+            </FadeIn>
           ))}
         </div>
       </div>

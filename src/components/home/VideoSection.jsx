@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { Volume2, VolumeX, Pause, Play } from "lucide-react";
 
 export function VideoSection() {
@@ -9,18 +9,6 @@ export function VideoSection() {
   const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
   const [isPlaying, setIsPlaying] = useState(true);
-
-  // Parallax effect using Framer Motion
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-
-  // Moves the video container slightly for the parallax feel
-  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
-
-  // Slight scale effect for when it comes into view
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 0.95]);
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -42,8 +30,7 @@ export function VideoSection() {
 
   return (
     <section ref={containerRef} className="relative w-full h-[60vh] md:h-[90vh] py-8 md:py-12 px-4 md:px-8 overflow-hidden flex items-center justify-center bg-brand-bg">
-      <motion.div 
-        style={{ y, scale }}
+      <div 
         className="relative w-full max-w-[1400px] h-full rounded-[24px] md:rounded-[40px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 bg-[#1a1a1c]"
       >
         {/* Placeholder Video */}
@@ -54,6 +41,7 @@ export function VideoSection() {
           muted 
           loop 
           playsInline 
+          preload="none"
           className="absolute inset-0 w-full h-full object-cover opacity-80"
         >
           {/* ADD YOUR VIDEO FILE HERE */}
@@ -87,7 +75,7 @@ export function VideoSection() {
             )}
           </button>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

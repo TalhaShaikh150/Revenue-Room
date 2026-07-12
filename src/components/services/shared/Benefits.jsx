@@ -1,11 +1,8 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
+import { FadeIn, FadeInX, FadeInScale } from "@/components/ui/Motion";
+import Image from "next/image";
 
 export function ServiceBenefits({ title, subtitle, benefits, imageSrc, imageAlt }) {
-  const smoothEase = [0.22, 1, 0.36, 1];
-
   return (
     <section className="py-24 md:py-32 px-4 md:px-8 relative z-10 bg-[#050505] overflow-hidden">
       
@@ -16,13 +13,7 @@ export function ServiceBenefits({ title, subtitle, benefits, imageSrc, imageAlt 
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
           
           {/* Text Content */}
-          <motion.div 
-            initial={{ opacity: 0, x: -40 }} 
-            whileInView={{ opacity: 1, x: 0 }} 
-            viewport={{ once: true, margin: "-100px" }} 
-            transition={{ duration: 0.8, ease: smoothEase }}
-            className="lg:w-1/2"
-          >
+          <FadeInX className="lg:w-1/2" delay={0}>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-[#0a0a0c] mb-8">
               <span className="w-2 h-2 rounded-full bg-brand-lime animate-pulse-slow" />
               <span className="text-xs font-bold uppercase tracking-widest text-white/80">
@@ -47,30 +38,26 @@ export function ServiceBenefits({ title, subtitle, benefits, imageSrc, imageAlt 
                 </div>
               ))}
             </div>
-          </motion.div>
+          </FadeInX>
 
           {/* Image/Visual Content */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }} 
-            whileInView={{ opacity: 1, scale: 1 }} 
-            viewport={{ once: true }} 
-            transition={{ duration: 0.8, delay: 0.2, ease: smoothEase }}
-            className="lg:w-1/2 w-full relative"
-          >
+          <FadeInScale className="lg:w-1/2 w-full relative" delay={0.2}>
             {/* Structural offset borders for a premium editorial look */}
             <div className="absolute -inset-4 border border-white/10 rounded-[40px] z-0 hidden md:block" />
             <div className="absolute -inset-8 border border-white/5 rounded-[48px] z-0 hidden lg:block" />
 
             <div className="relative rounded-[32px] overflow-hidden aspect-[4/5] bg-white/5 border border-white/10 group z-10 shadow-2xl">
-              <img 
+              <Image 
                 src={imageSrc} 
-                alt={imageAlt}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out mix-blend-luminosity opacity-80 group-hover:opacity-100"
+                alt={imageAlt || "Benefits image"}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-1000 ease-out mix-blend-luminosity opacity-80 group-hover:opacity-100"
               />
               {/* Premium dark gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80" />
             </div>
-          </motion.div>
+          </FadeInScale>
 
         </div>
       </div>

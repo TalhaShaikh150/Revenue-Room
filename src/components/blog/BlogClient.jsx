@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import { ArrowRight, Clock, Calendar, User } from "lucide-react";
 import { blogPosts, getCategoryColor } from "@/data/blog-posts";
@@ -91,10 +91,10 @@ function BlogCard({ post, featured = false }) {
 export function BlogClient() {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const featured = blogPosts.find((p) => p.featured);
-  const filtered = blogPosts
+  const featured = useMemo(() => blogPosts.find((p) => p.featured), []);
+  const filtered = useMemo(() => blogPosts
     .filter((p) => !p.featured)
-    .filter((p) => activeCategory === "All" || p.category === activeCategory);
+    .filter((p) => activeCategory === "All" || p.category === activeCategory), [activeCategory]);
 
   return (
     <div className="pt-32 pb-24 px-4 max-w-7xl mx-auto">

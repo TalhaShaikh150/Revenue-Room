@@ -1,8 +1,9 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { Volume2, VolumeX, Pause, Play, Star } from "lucide-react";
+import Image from "next/image";
 import { CourseTrainingPopup } from "./CourseTrainingPopup";
 
 const reviews = [
@@ -35,16 +36,6 @@ export function CourseVideoSection() {
   const [isMuted, setIsMuted] = useState(true);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  // Parallax effect using Framer Motion
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-
-  // Moves the video container slightly for the parallax feel
-  const y = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.95, 1, 0.95]);
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -83,8 +74,7 @@ export function CourseVideoSection() {
 
       {/* Video Container */}
       <div ref={containerRef} className="w-full aspect-video max-w-[900px] flex items-center justify-center mb-12">
-        <motion.div 
-          style={{ y, scale }}
+        <div 
           className="relative w-full h-full rounded-[24px] md:rounded-[40px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 bg-[#1a1a1c]"
         >
           {/* Video element */}
@@ -94,6 +84,7 @@ export function CourseVideoSection() {
             muted 
             loop 
             playsInline 
+            preload="none"
             className="absolute inset-0 w-full h-full object-cover opacity-80"
           >
             <source src="/hero2.mp4" type="video/mp4" />
@@ -126,7 +117,7 @@ export function CourseVideoSection() {
               )}
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* CTA Button */}
@@ -160,7 +151,9 @@ export function CourseVideoSection() {
             </div>
             <p className="text-white/80 font-medium italic mb-6">"{review.text}"</p>
             <div className="flex items-center gap-3 mt-auto">
-              <img src={review.image} alt={review.name} className="w-12 h-12 rounded-full border-2 border-brand-lime object-cover" />
+              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-brand-lime">
+                <Image src={review.image} alt={review.name} fill sizes="48px" className="object-cover" />
+              </div>
               <div className="text-left">
                 <h4 className="text-white font-bold">{review.name}</h4>
                 <p className="text-white/50 text-sm">{review.role}</p>

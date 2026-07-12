@@ -30,6 +30,32 @@ const LinkedinIcon = ({ className }) => (
   </svg>
 );
 
+const navItems = [
+  {
+    label: "Services",
+    href: "/services",
+    hasDropdown: true,
+    subItems: [
+      { label: "SEO & Search Ads", href: "/services/seo-google-ai-search-advertising" },
+      { label: "Paid Social Scaling", href: "/services/paid-social-media-advertising" },
+      { label: "Web Dev & Landing Pages", href: "/services/web-development-landing-pages" },
+      { label: "Organic Management", href: "/services/organic-social-media-management" },
+      { label: "Video Production", href: "/services/video-editing-production" },
+    ],
+  },
+  { label: "Courses", href: "/courses" },
+  { label: "Consulting", href: "/consulting" },
+  { label: "Blogs", href: "/blogs" },
+  { label: "Who We Are", href: "/about" },
+  { label: "Case Studies", href: "/case-studies" },
+];
+
+const socialLinks = [
+  { name: "LinkedIn", icon: <LinkedinIcon className="w-4 h-4" />, href: "#" },
+  { name: "X (Twitter)", icon: <XTwitterIcon className="w-4 h-4" />, href: "#" },
+  { name: "Instagram", icon: <InstagramIcon className="w-4 h-4" />, href: "#" },
+];
+
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -68,31 +94,6 @@ export function Navbar() {
   const isActive = (href) => pathname === href || (href !== "/" && pathname.startsWith(href));
   const isParentActive = (item) => item.hasDropdown && item.subItems?.some((sub) => isActive(sub.href));
 
-  const navItems = [
-    {
-      label: "Services",
-      href: "/services",
-      hasDropdown: true,
-      subItems: [
-        { label: "SEO & Search Ads", href: "/services/seo-google-ai-search-advertising" },
-        { label: "Paid Social Scaling", href: "/services/paid-social-media-advertising" },
-        { label: "Web Dev & Landing Pages", href: "/services/web-development-landing-pages" },
-        { label: "Organic Management", href: "/services/organic-social-media-management" },
-        { label: "Video Production", href: "/services/video-editing-production" },
-      ],
-    },
-    { label: "Courses", href: "/courses" },
-    { label: "Consulting", href: "/consulting" },
-    { label: "Blogs", href: "/blogs" },
-    { label: "Who We Are", href: "/about" },
-    { label: "Case Studies", href: "/case-studies" },
-  ];
-
-  const socialLinks = [
-    { name: "LinkedIn", icon: <LinkedinIcon className="w-4 h-4" />, href: "#" },
-    { name: "X (Twitter)", icon: <XTwitterIcon className="w-4 h-4" />, href: "#" },
-    { name: "Instagram", icon: <InstagramIcon className="w-4 h-4" />, href: "#" },
-  ];
 
   return (
     <>

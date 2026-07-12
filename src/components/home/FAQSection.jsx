@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 
@@ -30,9 +30,9 @@ const faqs = [
 export function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleFaq = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+  const toggleFaq = useCallback((index) => {
+    setOpenIndex(prev => prev === index ? null : index);
+  }, []);
 
   return (
     <section className="py-24 md:py-32 px-4 md:px-8 bg-brand-bg relative z-10">

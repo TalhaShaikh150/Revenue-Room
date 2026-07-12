@@ -25,12 +25,6 @@ export function StatsDashboard() {
     },
   };
 
-  // Hardware acceleration styles for mobile perfection
-  const hardwareLayer = {
-    WebkitBackfaceVisibility: "hidden",
-    WebkitTransform: "translate3d(0, 0, 0)",
-    willChange: "transform, opacity",
-  };
 
   return (
     <section className="relative z-20 w-full max-w-[1200px] mx-auto px-2 md:px-6 pt-16">
@@ -44,7 +38,6 @@ export function StatsDashboard() {
         {/* PANEL 1: THE LIQUID AREA CHART (Spans 8 columns) */}
         <motion.div
           variants={cardVariants}
-          style={hardwareLayer}
           className="lg:col-span-8 bg-[#0e0e10] border border-white/5 rounded-[32px] p-6 md:p-10 relative overflow-hidden group min-h-[280px] md:min-h-[320px]"
         >
           <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-20">
@@ -80,7 +73,6 @@ export function StatsDashboard() {
             whileInView={{ scaleY: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, ease: smoothEase, delay: 0.1 }}
-            style={{ willChange: "transform, opacity" }}
           >
             <svg
               viewBox="0 0 1000 300"
@@ -138,7 +130,6 @@ export function StatsDashboard() {
                 whileInView={{ pathLength: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.5, ease: smoothEase, delay: 0.3 }}
-                style={{ willChange: "stroke-dashoffset" }}
               />
             </svg>
           </div>
@@ -149,7 +140,6 @@ export function StatsDashboard() {
           {/* PANEL 2: RADIAL ROAS DIAL */}
           <motion.div
             variants={cardVariants}
-            style={hardwareLayer}
             className="flex-1 bg-[#0e0e10] border border-white/5 rounded-[32px] p-6 md:p-8 flex items-center justify-between relative overflow-hidden"
           >
             <div className="relative z-10 flex flex-col h-full justify-center">
@@ -184,7 +174,6 @@ export function StatsDashboard() {
                   whileInView={{ strokeDashoffset: 251.2 * 0.25 }}
                   viewport={{ once: true }}
                   transition={{ duration: 1.5, ease: smoothEase, delay: 0.2 }}
-                  style={{ willChange: "stroke-dashoffset" }}
                 />
               </svg>
               <div className="absolute inset-0 flex items-center justify-center">
@@ -196,7 +185,6 @@ export function StatsDashboard() {
           {/* PANEL 3: ACTIVE NODE MATRIX */}
           <motion.div
             variants={cardVariants}
-            style={hardwareLayer}
             className="flex-1 bg-[#0e0e10] border border-white/5 rounded-[32px] p-6 md:p-8 flex flex-col justify-between relative overflow-hidden group"
           >
             <div className="relative z-10">
@@ -225,7 +213,6 @@ export function StatsDashboard() {
                             animation:
                               "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
                             animationDelay: `${i * 0.15}s`,
-                            willChange: "opacity",
                           }
                         : undefined
                     }
@@ -239,7 +226,6 @@ export function StatsDashboard() {
               style={{
                 background:
                   "radial-gradient(circle, rgba(216,252,77,0.15) 0%, rgba(216,252,77,0) 70%)",
-                willChange: "opacity",
               }}
             />
           </motion.div>

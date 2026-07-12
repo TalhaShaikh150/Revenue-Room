@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, Suspense, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 
 // Master map: service value → { label, plans[] }
@@ -91,7 +91,7 @@ function ContactFormContent() {
     }));
   }, [serviceParam, planParam]);
 
-  const handleChange = (e) => {
+  const handleChange = useCallback((e) => {
     const { name, value } = e.target;
     // When the service changes, reset the plan selection
     if (name === "service") {
@@ -99,9 +99,9 @@ function ContactFormContent() {
     } else {
       setFormData((prev) => ({ ...prev, [name]: value }));
     }
-  };
+  }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = useCallback((e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
     alert("Thank you! We have received your inquiry and will be in touch shortly.");
@@ -114,7 +114,7 @@ function ContactFormContent() {
       plan: "",
       message: "",
     });
-  };
+  }, [formData]);
 
   const availablePlans = SERVICE_PLANS[formData.service]?.plans ?? [];
   const hasPlans = availablePlans.length > 0;

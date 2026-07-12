@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Activity, TrendingUp, Clock } from "lucide-react";
+import { ArrowRight, Activity, TrendingUp } from "lucide-react";
+import Image from "next/image";
 
 export function AboutSection() {
   const smoothEase = [0.22, 1, 0.36, 1];
@@ -52,10 +53,12 @@ export function AboutSection() {
             transition={{ duration: 0.8, ease: smoothEase }}
             className="md:col-span-8 relative rounded-[24px] lg:rounded-[32px] overflow-hidden h-[300px] md:h-[450px] bg-[#0a0a0c] border border-white/10 group flex flex-col"
           >
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
               alt="Data Analytics"
-              className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700 ease-out mix-blend-luminosity"
+              fill
+              sizes="(max-width: 768px) 100vw, 66vw"
+              className="object-cover opacity-40 group-hover:scale-105 transition-transform duration-700 ease-out mix-blend-luminosity"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-[#0a0a0c]/50 to-transparent" />
             
