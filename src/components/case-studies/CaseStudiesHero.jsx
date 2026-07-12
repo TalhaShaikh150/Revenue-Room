@@ -3,39 +3,56 @@
 import { motion } from "framer-motion";
 
 export function CaseStudiesHero() {
-  const smoothEase = [0.22, 1, 0.36, 1];
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15, delayChildren: 0.2 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+  };
 
   return (
-    <section className="relative w-full pt-32 pb-16 md:pt-48 md:pb-24 px-4 md:px-8 bg-brand-bg flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative min-h-[80vh] w-full flex flex-col items-center justify-center overflow-hidden bg-brand-bg px-4 md:px-6 pt-32 pb-24 z-0 border-b border-white/5">
       
-      {/* Background Subtle Glows & Texture */}
-      <div className="absolute inset-0 z-0 opacity-[0.15] bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2564')] bg-cover bg-center mix-blend-overlay pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-bg/90 via-brand-bg to-brand-bg pointer-events-none z-0" />
-      <div className="absolute top-1/4 left-1/4 w-[40vw] h-[40vw] bg-brand-lime/10 rounded-full blur-[120px] pointer-events-none z-0" />
-      <div className="absolute bottom-0 right-1/4 w-[30vw] h-[30vw] bg-white/5 rounded-full blur-[100px] pointer-events-none z-0" />
-
-      <div className="max-w-[1000px] mx-auto text-center relative z-10 pt-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: smoothEase }}
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(216,252,77,0.08)_0%,_transparent_60%)] pointer-events-none" />
+      
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        animate="show"
+        className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center text-center"
+      >
+        <motion.span 
+          variants={itemVariants}
+          className="inline-block py-1.5 px-4 border border-brand-lime/20 rounded-full bg-brand-lime/5 text-brand-lime text-xs font-bold uppercase tracking-[0.2em] mb-6"
         >
-          <span className="inline-flex items-center gap-2 py-1.5 px-4 border border-brand-lime/30 rounded-full bg-brand-lime/5 text-brand-lime text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-8 shadow-[0_0_20px_rgba(202,255,4,0.15)]">
-            <span className="w-2 h-2 rounded-full bg-brand-lime animate-pulse" />
-            Proven Results
+          Proven Results
+        </motion.span>
+        
+        <motion.h1 
+          variants={itemVariants} 
+          className="text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-black leading-[1] tracking-tighter mb-8 text-white uppercase"
+        >
+          We don't sell ideas.<br/>
+          <span className="text-transparent bg-clip-text bg-gradient-to-b from-brand-lime to-[#8ba800]">
+            We engineer growth.
           </span>
-          <h1 className="text-white text-5xl md:text-7xl lg:text-[80px] font-black uppercase tracking-tighter leading-[1] mb-8">
-            We don't sell ideas. <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-lime to-white">
-              We engineer growth.
-            </span>
-          </h1>
-          <p className="text-white/70 text-lg md:text-2xl font-medium max-w-3xl mx-auto leading-relaxed">
-            Take a look at how we've helped ambitious brands dominate their markets, scale their revenue, and crush their competitors.
-          </p>
-        </motion.div>
-      </div>
+        </motion.h1>
 
+        <motion.p 
+          variants={itemVariants} 
+          className="text-white/60 text-lg md:text-xl font-medium mb-12 max-w-3xl leading-relaxed"
+        >
+          Take a look at how we've helped ambitious brands dominate their markets, scale their revenue, and crush their competitors.
+        </motion.p>
+        
+      </motion.div>
     </section>
   );
 }

@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowDown } from "lucide-react";
 
-export function AboutHeroSection() {
+export function ConsultingHero() {
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -32,16 +33,16 @@ export function AboutHeroSection() {
           variants={itemVariants}
           className="inline-block py-1.5 px-4 border border-brand-lime/20 rounded-full bg-brand-lime/5 text-brand-lime text-xs font-bold uppercase tracking-[0.2em] mb-6"
         >
-          Who We Are
+          Consulting Services
         </motion.span>
         
         <motion.h1 
           variants={itemVariants} 
           className="text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-black leading-[1] tracking-tighter mb-8 text-white uppercase"
         >
-          The agency that<br/>
+          Stop Guessing.<br/>
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-brand-lime to-[#8ba800]">
-            never sleeps.
+            Start Scaling.
           </span>
         </motion.h1>
 
@@ -49,9 +50,20 @@ export function AboutHeroSection() {
           variants={itemVariants} 
           className="text-white/60 text-lg md:text-xl font-medium mb-12 max-w-3xl leading-relaxed"
         >
-          Revenue Room was built on a simple premise: your customers are active 24/7, so your marketing should be too. We blend data-driven strategy with relentless execution to scale brands globally.
+          We partner with brands and in-house teams to provide strategic
+          marketing consulting — from deep-dive audits and channel strategy to
+          ongoing advisory that helps you grow faster and spend smarter.
         </motion.p>
         
+        <motion.button 
+          variants={itemVariants}
+          onClick={() => {
+            document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-brand-lime hover:border-brand-lime/50 transition-colors"
+        >
+          <ArrowDown className="w-5 h-5 animate-bounce" />
+        </motion.button>
       </motion.div>
     </section>
   );

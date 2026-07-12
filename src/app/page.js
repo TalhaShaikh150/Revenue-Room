@@ -36,7 +36,7 @@ export default function Home() {
         </div>
 
         {/* The rest of the site flows normally underneath */}
-        <div className="flex flex-col gap-8 md:gap-16">
+        <div className="flex flex-col">
           <AboutSection />
           <OfferingSection />
           <CaseStudiesSection />

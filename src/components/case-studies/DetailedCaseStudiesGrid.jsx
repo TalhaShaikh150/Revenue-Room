@@ -69,7 +69,7 @@ export function DetailedCaseStudiesGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: 0.1 * (idx % 2), ease: smoothEase }}
-              className="bg-white/5 border border-white/10 rounded-[32px] p-8 md:p-10 hover:bg-white/10 transition-colors duration-500 group flex flex-col h-full"
+              className="bg-white/5 border border-white/10 rounded-[32px] p-8 md:p-10 hover:bg-white/10 transition-colors duration-500 group flex flex-col h-full cursor-pointer"
             >
               
               {/* Header: Logo & Info */}

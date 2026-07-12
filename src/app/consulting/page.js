@@ -1,5 +1,9 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ConsultingHero } from "@/components/consulting/ConsultingHero";
+import { ConsultingServices } from "@/components/consulting/ConsultingServices";
+import { ConsultingProcess } from "@/components/consulting/ConsultingProcess";
+import { CTABanner } from "@/components/home/CTABanner";
 
 export const metadata = {
   title: "Digital Marketing Consulting | Revenue Room Digital",
@@ -33,16 +37,10 @@ export default function ConsultingPage() {
   return (
     <main className="bg-brand-bg min-h-screen">
       <Navbar />
-      <div className="pt-32 pb-24 px-4 max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-          Digital Marketing Consulting
-        </h1>
-        <p className="text-lg text-gray-400 max-w-3xl">
-          We partner with brands and in-house teams to provide strategic
-          marketing consulting — from deep-dive audits and channel strategy to
-          ongoing advisory that helps you grow faster and spend smarter.
-        </p>
-      </div>
+      <ConsultingHero />
+      <ConsultingServices />
+      <ConsultingProcess />
+      <CTABanner />
       <Footer />
     </main>
   );

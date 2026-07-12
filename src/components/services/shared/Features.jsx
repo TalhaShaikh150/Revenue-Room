@@ -4,6 +4,15 @@ import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
+// Pre-defined premium Unsplash images to instantly upgrade all service pages
+const BENTO_IMAGES = [
+  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+  "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=800",
+  "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=800",
+  "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
+];
+
 export function ServiceFeatures({ 
   title, 
   subtitle, 
@@ -18,135 +27,115 @@ export function ServiceFeatures({
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
-    show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: smoothEase } },
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: smoothEase } },
   };
 
   return (
-    <section className="py-24 md:py-32 px-4 md:px-8 relative z-10 bg-brand-bg overflow-hidden border-b border-brand-border">
+    <section className="py-24 md:py-32 px-4 md:px-8 relative z-10 bg-[#050505] overflow-hidden">
       
-      {/* Structural Background Grid */}
-      <div 
-        className="absolute inset-0 pointer-events-none z-0 opacity-10"
-        style={{
-          backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-          backgroundSize: '80px 80px',
-          maskImage: 'radial-gradient(ellipse 60% 100% at 50% 50%, black 0%, transparent 100%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 60% 100% at 50% 50%, black 0%, transparent 100%)',
-        }}
-      />
-
-      <div className="max-w-[1200px] mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12">
+      <div className="max-w-[1300px] mx-auto relative z-10">
         
-        {/* LEFT COLUMN: The Persuasive Pitch (Sticky on Desktop) */}
-        <div className="lg:col-span-5">
-          <div className="lg:sticky lg:top-32">
-            <div className="inline-flex items-center gap-2 mb-6">
-              <div className="w-2 h-2 rounded-sm bg-accent animate-pulse-slow" />
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/60">
+        {/* Header Section */}
+        <div className="flex flex-col lg:flex-row gap-12 justify-between items-end mb-16 md:mb-24">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 mb-6">
+              <span className="text-xs font-bold uppercase tracking-widest text-brand-lime">
                 {subtitle}
               </span>
             </div>
             
-            <h2 className="text-[44px] md:text-[56px] lg:text-[72px] font-black tracking-tighter leading-[1.05] md:leading-[0.95] text-white mb-8">
+            <h2 className="text-[40px] md:text-[56px] lg:text-[64px] font-black tracking-tighter leading-[1.05] md:leading-[0.95] text-white mb-6 uppercase">
               {title}
             </h2>
             
-            <p className="text-white/60 text-lg font-medium leading-relaxed mb-10 max-w-md">
+            <p className="text-white/60 text-lg md:text-xl font-medium leading-relaxed">
               {description}
             </p>
+          </div>
 
-            {/* Micro-Trust Anchor */}
-            <div className="flex items-center gap-4 py-4 px-5 border border-white/10 bg-[#0a0a0c] max-w-sm">
-              <ShieldCheck className="w-8 h-8 text-accent shrink-0" />
-              <div>
-                <p className="text-white text-sm font-bold tracking-wide">The Revenue Room Standard</p>
-                <p className="text-white/50 text-xs mt-1">Data-backed execution. Zero guesswork.</p>
-              </div>
+          <div className="flex items-center gap-4 py-4 px-6 border border-white/10 bg-[#0a0a0c] rounded-2xl shrink-0">
+            <ShieldCheck className="w-8 h-8 text-brand-lime shrink-0" />
+            <div>
+              <p className="text-white text-sm font-bold tracking-wide">The Revenue Room Standard</p>
+              <p className="text-white/50 text-xs mt-1">Data-backed execution. Zero guesswork.</p>
             </div>
           </div>
         </div>
 
-        {/* RIGHT COLUMN: The Proven Process / Features */}
-        <div className="lg:col-span-7 relative">
-          
-          {/* Vertical Architectural Line (The "Process" Thread) */}
-          <div className="absolute top-0 bottom-0 left-[27px] md:left-[39px] w-[2px] bg-white/5 z-0" />
-          
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-100px" }}
-            className="flex flex-col relative z-10"
-          >
-            {features.map((feature, i) => (
+        {/* Bento Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6"
+        >
+          {features.map((feature, i) => {
+            // Make the first item span 2 columns if there are 3 items, or adjust dynamically
+            const isLarge = i === 0 && features.length % 2 !== 0;
+            const imgUrl = feature.image || BENTO_IMAGES[i % BENTO_IMAGES.length];
+
+            return (
               <motion.div 
                 key={i} 
                 variants={itemVariants}
-                className="group relative flex items-start pl-16 md:pl-24 py-12 border-b border-white/5 last:border-0"
+                className={`group relative flex flex-col justify-end p-8 md:p-10 min-h-[400px] rounded-[32px] overflow-hidden bg-[#0a0a0c] border border-white/10 cursor-pointer ${isLarge ? 'md:col-span-2 lg:col-span-2' : ''}`}
               >
-                {/* Timeline Node & Number */}
-                <div className="absolute left-0 top-12 flex items-center justify-center w-14 md:w-20 bg-brand-bg py-2">
-                  {/* Glowing Dot that activates on hover */}
-                  <div className="absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-2 border-brand-border bg-brand-bg group-hover:border-accent group-hover:bg-accent group-hover:shadow-[0_0_15px_rgba(216,252,77,0.8)] transition-all duration-500 z-10" />
-                  {/* Faint Number */}
-                  <span className="text-white/10 font-black text-4xl group-hover:text-white/30 transition-colors duration-500 relative -left-8 md:-left-12 top-1">
-                    0{i + 1}
-                  </span>
-                </div>
-
+                {/* Background Image */}
+                <img 
+                  src={imgUrl} 
+                  alt={feature.title} 
+                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700 mix-blend-luminosity"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent" />
+                
                 {/* Content */}
-                <div className="w-full">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 group-hover:bg-accent/10 group-hover:border-accent/30 group-hover:text-accent text-white/50 transition-all duration-500">
-                      {feature.icon}
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-white group-hover:text-accent transition-colors duration-500">
-                      {feature.title}
-                    </h3>
+                <div className="relative z-10 mt-auto pt-20">
+                  <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mb-6 text-white group-hover:bg-brand-lime group-hover:text-black transition-colors duration-500">
+                    {feature.icon}
                   </div>
                   
-                  <p className="text-white/60 leading-relaxed text-base md:text-lg mb-6 group-hover:text-white/80 transition-colors duration-500">
+                  <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-3 group-hover:text-brand-lime transition-colors duration-500">
+                    {feature.title}
+                  </h3>
+                  
+                  <p className="text-white/60 leading-relaxed text-sm md:text-base mb-6 group-hover:text-white/90 transition-colors duration-500 max-w-md">
                     {feature.description}
                   </p>
 
-                  {/* 
-                    NEW: The "Business Impact" Tag. 
-                    This answers the client's internal "So what?" question.
-                    (e.g., feature.impact = "Reduces CPA by an average of 22%") 
-                  */}
                   {feature.impact && (
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-white/10 bg-[#0a0a0c] text-xs font-medium text-white/70 group-hover:border-accent/30 group-hover:text-white transition-colors duration-500">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-white/20 bg-black/50 backdrop-blur-md rounded-full text-xs font-bold text-white group-hover:border-brand-lime/50 transition-colors duration-500">
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
                       Impact: {feature.impact}
                     </div>
                   )}
                 </div>
               </motion.div>
-            ))}
+            );
+          })}
+        </motion.div>
 
-            {/* THE CONVINCER BLOCK (Risk Reversal at the end of the list) */}
-            <motion.div 
-              variants={itemVariants}
-              className="mt-12 ml-16 md:ml-24 p-8 bg-gradient-to-br from-[#121215] to-[#0a0a0c] border border-white/10 rounded-2xl relative overflow-hidden group"
-            >
-              {/* Subtle hover sweep */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/5 to-transparent -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out" />
-              
-              <h4 className="text-xl font-bold text-white mb-3 tracking-tight">Ready to bypass the guesswork?</h4>
-              <p className="text-white/60 text-sm mb-6 max-w-sm leading-relaxed">
-                Stop paying for vanity metrics. We tie our deliverables directly to your bottom-line revenue.
-              </p>
-              
-              <Link href="/contact" className="inline-flex items-center gap-2 text-accent font-bold uppercase tracking-widest text-xs hover:text-white transition-colors">
-                Claim Your Free Audit
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </motion.div>
+        {/* CTA Block */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4, ease: smoothEase }}
+          className="mt-12 p-8 md:p-12 bg-brand-lime rounded-[32px] flex flex-col md:flex-row items-center justify-between gap-8 group cursor-pointer"
+        >
+          <div>
+            <h4 className="text-2xl md:text-3xl font-black text-black mb-3 tracking-tighter uppercase">Ready to bypass the guesswork?</h4>
+            <p className="text-black/70 font-medium max-w-md">
+              Stop paying for vanity metrics. We tie our deliverables directly to your bottom-line revenue.
+            </p>
+          </div>
+          
+          <Link href="/contact" className="shrink-0 flex items-center justify-center w-16 h-16 rounded-full bg-black text-brand-lime group-hover:scale-110 transition-transform duration-500">
+            <ArrowRight className="w-6 h-6 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+          </Link>
+        </motion.div>
 
-          </motion.div>
-        </div>
       </div>
     </section>
   );
