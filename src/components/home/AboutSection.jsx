@@ -17,7 +17,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.1, ease: smoothEase }}
-            className="mobile-no-animate lg:w-3/4"
+            className="lg:w-3/4"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-2 h-2 bg-brand-lime"></div>
@@ -51,7 +51,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: smoothEase }}
-            className="mobile-no-animate md:col-span-8 relative rounded-[24px] lg:rounded-[32px] overflow-hidden h-[300px] md:h-[450px] bg-[#0a0a0c] border border-white/10 group flex flex-col"
+            className="md:col-span-8 relative rounded-[24px] lg:rounded-[32px] overflow-hidden h-[300px] md:h-[450px] bg-[#0a0a0c] border border-white/10 group flex flex-col"
           >
             <Image
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
@@ -82,7 +82,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2, ease: smoothEase }}
-            className="mobile-no-animate md:col-span-4 rounded-[24px] lg:rounded-[32px] overflow-hidden h-[400px] md:h-[450px] bg-brand-lime text-black flex flex-col p-8 md:p-10 group shadow-[0_0_50px_rgba(216,252,77,0.15)] relative"
+            className="md:col-span-4 rounded-[24px] lg:rounded-[32px] overflow-hidden h-[400px] md:h-[450px] bg-brand-lime text-black flex flex-col p-8 md:p-10 group shadow-[0_0_50px_rgba(216,252,77,0.15)] relative"
           >
             {/* Ambient pattern */}
             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]" />

@@ -33,7 +33,7 @@ export function FadeIn({ children, className = "", delay = 0, y = 24, as: Tag = 
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.8, delay, ease: smoothEase }}
-      className={`mobile-no-animate ${className}`}
+      className={className}
     >
       {children}
     </MotionTag>
@@ -48,7 +48,7 @@ export function FadeInX({ children, className = "", delay = 0, x = -40 }) {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.8, delay, ease: smoothEase }}
-      className={`mobile-no-animate ${className}`}
+      className={className}
     >
       {children}
     </m.div>
@@ -63,7 +63,7 @@ export function FadeInScale({ children, className = "", delay = 0 }) {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.8, delay, ease: smoothEase }}
-      className={`mobile-no-animate ${className}`}
+      className={className}
     >
       {children}
     </m.div>
@@ -81,7 +81,7 @@ export function FadeInStagger({ children, className = "", stagger = 0.1 }) {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-60px" }}
-      className={`mobile-no-animate ${className}`}
+      className={className}
     >
       {children}
     </m.div>
@@ -96,7 +96,7 @@ export function FadeInItem({ children, className = "" }) {
         hidden: { opacity: 0, y: 24 },
         show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: smoothEase } },
       }}
-      className={`mobile-no-animate ${className}`}
+      className={className}
     >
       {children}
     </m.div>

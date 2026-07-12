@@ -53,12 +53,12 @@ export function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="show"
-        className="mobile-no-animate relative z-10 w-full max-w-[1400px] mx-auto flex flex-col items-center text-center mt-8 md:mt-16"
+        className="relative z-10 w-full max-w-[1400px] mx-auto flex flex-col items-center text-center mt-8 md:mt-16"
       >
          
           <m.h1 
             variants={itemVariants} 
-            className="mobile-no-animate text-[14vw] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[72px] 2xl:text-[88px] font-black leading-[1] lg:leading-[1.15] 2xl:leading-[1] tracking-tighter mb-8 md:mb-8 text-white drop-shadow-2xl w-full px-2 sm:px-4"
+            className="text-[14vw] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[72px] 2xl:text-[88px] font-black leading-[1] lg:leading-[1.15] 2xl:leading-[1] tracking-tighter mb-8 md:mb-8 text-white drop-shadow-2xl w-full px-2 sm:px-4"
           >
               Marketing Agency <br />
              
@@ -75,13 +75,13 @@ export function Hero() {
           {/* Elegant Subheadline */}
           <m.p 
             variants={itemVariants} 
-            className="mobile-no-animate text-white/70 text-[12px] sm:text-base md:text-lg font-medium mb-8 md:mb-12 max-w-3xl leading-relaxed drop-shadow-md px-4 sm:px-0"
+            className="text-white/70 text-[12px] sm:text-base md:text-lg font-medium mb-8 md:mb-12 max-w-3xl leading-relaxed drop-shadow-md px-4 sm:px-0"
           >
               <span className="text-white font-bold">Australia's first round the clock marketing agency.</span> While other agencies clock off, our team is still optimising your ads, chasing your leads, and cutting wasted spend <span className="text-white font-bold">day, night, and everything in between.</span>
           </m.p>
           
           {/* Email Capture Form */}
-          <m.div variants={itemVariants} className="mobile-no-animate w-full max-w-2xl mx-auto flex flex-col items-center gap-4 px-4 sm:px-0">
+          <m.div variants={itemVariants} className="w-full max-w-2xl mx-auto flex flex-col items-center gap-4 px-4 sm:px-0">
               
           {/* Email Capture Form - MOBILE (Visible only on small screens) */}
           <form className="w-full flex flex-col items-center gap-3 sm:hidden px-2">

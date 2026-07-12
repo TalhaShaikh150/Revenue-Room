@@ -43,7 +43,7 @@ export function StatsDashboard() {
           {/* PANEL 1: THE LIQUID AREA CHART (Spans 8 columns) */}
           <m.div
             variants={cardVariants}
-            className="lg:col-span-8 bg-[#0e0e10] border border-white/5 rounded-[32px] p-6 md:p-10 relative overflow-hidden group min-h-[280px] md:min-h-[320px]"
+            className="safari-fix lg:col-span-8 bg-[#0e0e10] border border-white/5 rounded-[32px] p-6 md:p-10 relative overflow-hidden group min-h-[280px] md:min-h-[320px]"
           >
             <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-20">
             <div>
@@ -145,7 +145,7 @@ export function StatsDashboard() {
           {/* PANEL 2: RADIAL ROAS DIAL */}
           <m.div
             variants={cardVariants}
-            className="flex-1 bg-[#0e0e10] border border-white/5 rounded-[32px] p-6 md:p-8 flex items-center justify-between relative overflow-hidden"
+            className="safari-fix flex-1 bg-[#0e0e10] border border-white/5 rounded-[32px] p-6 md:p-8 flex items-center justify-between relative overflow-hidden"
           >
             <div className="relative z-10 flex flex-col h-full justify-center">
               <p className="text-white/40 text-[10px] font-bold uppercase tracking-[0.2em] mb-2">
@@ -190,7 +190,7 @@ export function StatsDashboard() {
           {/* PANEL 3: ACTIVE NODE MATRIX */}
           <m.div
             variants={cardVariants}
-            className="flex-1 bg-[#0e0e10] border border-white/5 rounded-[32px] p-6 md:p-8 flex flex-col justify-between relative overflow-hidden group"
+            className="safari-fix flex-1 bg-[#0e0e10] border border-white/5 rounded-[32px] p-6 md:p-8 flex flex-col justify-between relative overflow-hidden group"
           >
             <div className="relative z-10">
               <p className="text-white/40 text-[10px] font-bold uppercase tracking-[0.2em] mb-2">

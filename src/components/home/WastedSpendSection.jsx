@@ -11,7 +11,7 @@ export function WastedSpendSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="mobile-no-animate bg-[#f4f4f2] rounded-[24px] md:rounded-[32px] p-8 md:p-14 lg:p-20 relative overflow-hidden shadow-2xl"
+          className="bg-[#f4f4f2] rounded-[24px] md:rounded-[32px] p-8 md:p-14 lg:p-20 relative overflow-hidden shadow-2xl"
         >
           {/* Subtle Accent Glows */}
           <div className="absolute top-[-50px] right-[-50px] w-48 h-48 bg-[#d8fc4d]/30 blur-[60px] rounded-full pointer-events-none mix-blend-multiply"></div>

@@ -6,8 +6,31 @@ import { CaseStudiesMethodology } from "@/components/case-studies/CaseStudiesMet
 import { CTABanner } from "@/components/home/CTABanner";
 
 export const metadata = {
-  title: "Case Studies | Revenue Room",
-  description: "See how we've helped ambitious brands dominate their markets and scale their revenue.",
+  title: "Case Studies | Revenue Room Digital",
+  description:
+    "See real results from real businesses. Explore Revenue Room Digital's case studies to discover how we've helped Australian brands scale their revenue through SEO, paid social, and performance marketing.",
+  keywords: [
+    "digital marketing case studies Australia",
+    "Revenue Room Digital results",
+    "paid ads case study",
+    "SEO case study Australia",
+    "marketing agency results",
+    "ecommerce marketing case study",
+    "client success stories",
+    "Revenue Room Digital",
+  ],
+  alternates: {
+    canonical: "https://revenueroomdigital.com.au/case-studies",
+  },
+  openGraph: {
+    title: "Case Studies | Revenue Room Digital",
+    description:
+      "Real results from real businesses — explore how Revenue Room Digital drives measurable growth.",
+    url: "https://revenueroomdigital.com.au/case-studies",
+    siteName: "Revenue Room Digital",
+    locale: "en_AU",
+    type: "website",
+  },
 };
 
 export default function CaseStudiesPage() {

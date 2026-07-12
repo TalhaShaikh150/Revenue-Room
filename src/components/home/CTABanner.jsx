@@ -30,7 +30,6 @@ export function CTABanner() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: smoothEase }}
-          className="mobile-no-animate"
         >
           <span className="inline-block py-1.5 px-4 border border-white/10 rounded-full bg-white/5 text-white/50 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             Next Steps
@@ -49,7 +48,7 @@ export function CTABanner() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: smoothEase, delay: 0.1 }}
-          className="mobile-no-animate w-full flex justify-center"
+          className="w-full flex justify-center"
         >
           <Link 
             href="/contact" 

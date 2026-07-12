@@ -46,7 +46,7 @@ export function OfferingSection() {
         <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
           {offerings.map((item, index) => (
             <FadeInItem key={index}>
-              <div className="relative p-6 md:p-8 lg:p-12 flex flex-col group bg-[#0e0e10] border border-white/5 rounded-[24px] lg:rounded-[32px] overflow-hidden transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+              <div className="safari-fix relative p-6 md:p-8 lg:p-12 flex flex-col group bg-[#0e0e10] border border-white/5 rounded-[24px] lg:rounded-[32px] overflow-hidden transition-transform duration-500 hover:-translate-y-2 cursor-pointer">
                 {/* Prominent SVG Glowing Curve Animation */}
                 <div className="absolute bottom-[-24px] left-0 w-full h-[120px] md:h-[150px] pointer-events-none overflow-hidden rounded-b-[24px] lg:rounded-b-[32px]">
                   <svg viewBox="0 0 300 100" preserveAspectRatio="none" className="w-full h-full overflow-visible">
@@ -63,19 +63,19 @@ export function OfferingSection() {
                       d="M 0,80 C 100,100 200,40 300,70"
                       fill="none"
                       stroke={`url(#card-glow-${index})`}
-                      strokeWidth="8"
+                      strokeWidth="12"
                       strokeLinecap="round"
                       vectorEffect="nonScalingStroke"
-                      className="blur-[10px] opacity-0 group-hover:opacity-60 transition-opacity duration-700"
+                      className="opacity-0 group-hover:opacity-20 transition-opacity duration-700"
                     />
                     <path
                       d="M 0,80 C 100,100 200,40 300,70"
                       fill="none"
                       stroke={`url(#card-glow-${index})`}
-                      strokeWidth="4"
+                      strokeWidth="6"
                       strokeLinecap="round"
                       vectorEffect="nonScalingStroke"
-                      className="blur-[4px] opacity-0 group-hover:opacity-80 transition-opacity duration-700"
+                      className="opacity-0 group-hover:opacity-50 transition-opacity duration-700"
                     />
                     <path
                       d="M 0,80 C 100,100 200,40 300,70"

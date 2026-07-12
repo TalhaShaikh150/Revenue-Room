@@ -102,12 +102,17 @@ body {
   animation-play-state: paused !important;
 }
 
-/* Disable complex entrance animations on mobile to save CPU and remove lag */
+/* Speed up animations on mobile instead of disabling them */
 @media (max-width: 767px) {
-  .mobile-no-animate {
-    transform: none !important;
-    opacity: 1 !important;
-    transition: none !important;
-    animation: none !important;
+  .mobile-fast-animate {
+    transition-duration: 0.3s !important;
+    animation-duration: 0.3s !important;
   }
+}
+
+/* Fix for WebKit/Safari screen tearing when using overflow-hidden + border-radius + SVG animations */
+.safari-fix {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  transform: translateZ(0);
+  isolation: isolate;
 }

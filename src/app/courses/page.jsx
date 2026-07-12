@@ -4,8 +4,31 @@ import { CourseVideoSection } from "@/components/courses/CourseVideoSection";
 import { CourseLogosSection } from "@/components/courses/CourseLogosSection";
 
 export const metadata = {
-  title: "Free Training | Revenue Room",
-  description: "Get our exclusive free training and bonuses to scale your revenue.",
+  title: "Digital Marketing Courses | Revenue Room Digital",
+  description:
+    "Learn digital marketing from industry practitioners. Revenue Room Digital offers hands-on courses in paid advertising, SEO, social media, and more — built for Australian marketers and business owners.",
+  keywords: [
+    "digital marketing courses Australia",
+    "online marketing courses",
+    "paid ads course",
+    "SEO course Australia",
+    "social media marketing course",
+    "learn digital marketing",
+    "marketing training Australia",
+    "Revenue Room Digital",
+  ],
+  alternates: {
+    canonical: "https://revenueroomdigital.com.au/courses",
+  },
+  openGraph: {
+    title: "Digital Marketing Courses | Revenue Room Digital",
+    description:
+      "Learn digital marketing from industry practitioners with hands-on courses built for results.",
+    url: "https://revenueroomdigital.com.au/courses",
+    siteName: "Revenue Room Digital",
+    locale: "en_AU",
+    type: "website",
+  },
 };
 
 export default function CoursesPage() {

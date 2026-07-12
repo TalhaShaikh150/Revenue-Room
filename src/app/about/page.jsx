@@ -6,8 +6,29 @@ import { TeamSection } from "@/components/about/TeamSection";
 import { CultureSection } from "@/components/about/CultureSection";
 
 export const metadata = {
-  title: "Who We Are | Revenue Room",
-  description: "Australia's first 24/7 marketing agency. We never sleep so your growth doesn't have to.",
+  title: "About Us | Revenue Room Digital",
+  description:
+    "Meet the team behind Revenue Room Digital — a performance-driven digital marketing agency helping Australian businesses grow through smart strategy, creative content, and data-backed campaigns.",
+  keywords: [
+    "about Revenue Room Digital",
+    "digital marketing agency Australia",
+    "who is Revenue Room Digital",
+    "Australian marketing agency team",
+    "performance marketing agency",
+    "Revenue Room Digital story",
+  ],
+  alternates: {
+    canonical: "https://revenueroomdigital.com.au/about",
+  },
+  openGraph: {
+    title: "About Us | Revenue Room Digital",
+    description:
+      "Meet the performance-driven team behind Revenue Room Digital — built to grow Australian businesses.",
+    url: "https://revenueroomdigital.com.au/about",
+    siteName: "Revenue Room Digital",
+    locale: "en_AU",
+    type: "website",
+  },
 };
 
 export default function AboutPage() {
