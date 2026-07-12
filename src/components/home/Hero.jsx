@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowRight, Moon } from "lucide-react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export function Hero() {
   // Stagger animation for the hero content loading in
@@ -49,16 +49,16 @@ export function Hero() {
 
       {/* 3. OPTICALLY CENTERED HERO CONTENT */}
       {/* We use -mt-12 to shift the content slightly up. Optically, this makes it look perfectly centered to the human eye. */}
-      <motion.main 
+      <m.main 
         variants={containerVariants}
         initial="hidden"
         animate="show"
-        className="relative z-10 w-full max-w-[1400px] mx-auto flex flex-col items-center text-center mt-8 md:mt-16"
+        className="mobile-no-animate relative z-10 w-full max-w-[1400px] mx-auto flex flex-col items-center text-center mt-8 md:mt-16"
       >
          
-          <motion.h1 
+          <m.h1 
             variants={itemVariants} 
-            className="text-[14vw] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[72px] 2xl:text-[88px] font-black leading-[1] lg:leading-[1.15] 2xl:leading-[1] tracking-tighter mb-8 md:mb-8 text-white drop-shadow-2xl w-full px-2 sm:px-4"
+            className="mobile-no-animate text-[14vw] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[72px] 2xl:text-[88px] font-black leading-[1] lg:leading-[1.15] 2xl:leading-[1] tracking-tighter mb-8 md:mb-8 text-white drop-shadow-2xl w-full px-2 sm:px-4"
           >
               Marketing Agency <br />
              
@@ -70,18 +70,18 @@ export function Hero() {
                   Sleeps.
                 </span>
               </span>
-          </motion.h1>
+          </m.h1>
 
           {/* Elegant Subheadline */}
-          <motion.p 
+          <m.p 
             variants={itemVariants} 
-            className="text-white/70 text-[12px] sm:text-base md:text-lg font-medium mb-8 md:mb-12 max-w-3xl leading-relaxed drop-shadow-md px-4 sm:px-0"
+            className="mobile-no-animate text-white/70 text-[12px] sm:text-base md:text-lg font-medium mb-8 md:mb-12 max-w-3xl leading-relaxed drop-shadow-md px-4 sm:px-0"
           >
               <span className="text-white font-bold">Australia's first round the clock marketing agency.</span> While other agencies clock off, our team is still optimising your ads, chasing your leads, and cutting wasted spend <span className="text-white font-bold">day, night, and everything in between.</span>
-          </motion.p>
+          </m.p>
           
           {/* Email Capture Form */}
-          <motion.div variants={itemVariants} className="w-full max-w-2xl mx-auto flex flex-col items-center gap-4 px-4 sm:px-0">
+          <m.div variants={itemVariants} className="mobile-no-animate w-full max-w-2xl mx-auto flex flex-col items-center gap-4 px-4 sm:px-0">
               
           {/* Email Capture Form - MOBILE (Visible only on small screens) */}
           <form className="w-full flex flex-col items-center gap-3 sm:hidden px-2">
@@ -125,8 +125,8 @@ export function Hero() {
                   <span>4.8 stars from 300+ businesses</span>
               </div>
 
-          </motion.div>
-      </motion.main>
+          </m.div>
+      </m.main>
       
     </section>
   );

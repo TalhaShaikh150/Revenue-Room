@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export function Footer() {
   // Ultra-smooth easing for the line drawing animation
@@ -178,7 +178,7 @@ export function Footer() {
             </defs>
 
             {/* Layer 1: Wide Ambient Bloom */}
-            <motion.path
+            <m.path
               d={curvePath}
               fill="none"
               stroke="url(#premium-glow-gradient)"
@@ -193,7 +193,7 @@ export function Footer() {
             />
 
             {/* Layer 2: Tight Core Glow */}
-            <motion.path
+            <m.path
               d={curvePath}
               fill="none"
               stroke="url(#premium-glow-gradient)"
@@ -208,7 +208,7 @@ export function Footer() {
             />
 
             {/* Layer 3: Sharp Neon Tube */}
-            <motion.path
+            <m.path
               d={curvePath}
               fill="none"
               stroke="url(#premium-glow-gradient)"

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowRight, Activity, TrendingUp } from "lucide-react";
 import Image from "next/image";
 
@@ -12,12 +12,12 @@ export function AboutSection() {
       <div className="max-w-[1300px] mx-auto w-full">
         {/* TOP TEXT AREA */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-16 sm:mb-24">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.1, ease: smoothEase }}
-            className="lg:w-3/4"
+            className="mobile-no-animate lg:w-3/4"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-2 h-2 bg-brand-lime"></div>
@@ -39,19 +39,19 @@ export function AboutSection() {
                 sits idle.
               </span>
             </h2>
-          </motion.div>
+          </m.div>
         </div>
 
         {/* IMAGES & CTA GRID - BENTO STYLE */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
           
           {/* Bento Item 1: Real-time Analytics Visual */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: smoothEase }}
-            className="md:col-span-8 relative rounded-[24px] lg:rounded-[32px] overflow-hidden h-[300px] md:h-[450px] bg-[#0a0a0c] border border-white/10 group flex flex-col"
+            className="mobile-no-animate md:col-span-8 relative rounded-[24px] lg:rounded-[32px] overflow-hidden h-[300px] md:h-[450px] bg-[#0a0a0c] border border-white/10 group flex flex-col"
           >
             <Image
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
@@ -74,15 +74,15 @@ export function AboutSection() {
               <h3 className="text-2xl md:text-4xl font-bold text-white mb-2">Data never sleeps.</h3>
               <p className="text-white/60 max-w-md">Real-time optimization ensures your ad spend is always pushing towards maximum profitability.</p>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Bento Item 2: Guarantee CTA */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2, ease: smoothEase }}
-            className="md:col-span-4 rounded-[24px] lg:rounded-[32px] overflow-hidden h-[400px] md:h-[450px] bg-brand-lime text-black flex flex-col p-8 md:p-10 group shadow-[0_0_50px_rgba(216,252,77,0.15)] relative"
+            className="mobile-no-animate md:col-span-4 rounded-[24px] lg:rounded-[32px] overflow-hidden h-[400px] md:h-[450px] bg-brand-lime text-black flex flex-col p-8 md:p-10 group shadow-[0_0_50px_rgba(216,252,77,0.15)] relative"
           >
             {/* Ambient pattern */}
             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]" />
@@ -104,7 +104,7 @@ export function AboutSection() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
-          </motion.div>
+          </m.div>
           
         </div>
       </div>

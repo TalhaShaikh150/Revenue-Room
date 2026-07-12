@@ -1,17 +1,17 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export function WastedSpendSection() {
   return (
     <section className="relative w-full py-8 md:py-12 bg-brand-bg px-4 md:px-8">
       <div className="max-w-[1000px] mx-auto">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="bg-[#f4f4f2] rounded-[24px] md:rounded-[32px] p-8 md:p-14 lg:p-20 relative overflow-hidden shadow-2xl"
+          className="mobile-no-animate bg-[#f4f4f2] rounded-[24px] md:rounded-[32px] p-8 md:p-14 lg:p-20 relative overflow-hidden shadow-2xl"
         >
           {/* Subtle Accent Glows */}
           <div className="absolute top-[-50px] right-[-50px] w-48 h-48 bg-[#d8fc4d]/30 blur-[60px] rounded-full pointer-events-none mix-blend-multiply"></div>
@@ -30,7 +30,7 @@ export function WastedSpendSection() {
               fine print games, no "technically it was 25 hours."
             </p>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
+import { MotionProvider } from "@/components/ui/Motion";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -48,8 +49,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={plusJakarta.variable}>
       <body className="min-h-screen relative overflow-x-hidden flex flex-col font-sans bg-brand-bg text-white">
-        
-        <SmoothScroll>{children}</SmoothScroll>
+        <MotionProvider>
+          <SmoothScroll>{children}</SmoothScroll>
+        </MotionProvider>
       </body>
     </html>
   );

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, ArrowRight, ArrowUpRight } from "lucide-react";
 
 // --- CUSTOM SVG SOCIAL ICONS ---
@@ -99,7 +99,7 @@ export function Navbar() {
     <>
       {/* NORMAL STICKY NAVBAR */}
       <div className="fixed top-6 inset-x-0 w-full px-4 md:px-8 lg:px-12 z-[100] pointer-events-none flex">
-        <motion.nav
+        <m.nav
           layout
           initial={false}
           animate={{ maxWidth: scrolled ? 60 : 1200 }}
@@ -110,7 +110,7 @@ export function Navbar() {
         >
           <AnimatePresence mode="wait">
             {!scrolled && (
-              <motion.div
+              <m.div
                 key="full-nav"
                 initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0.4, delay: 0.2 } }} exit={{ opacity: 0, transition: { duration: 0.1 } }}
                 className="absolute inset-0 flex items-center justify-between px-4 md:px-6 min-w-[280px] md:min-w-[800px] w-full h-full"
@@ -139,7 +139,7 @@ export function Navbar() {
                           {item.label}
                           {item.hasDropdown && <ChevronDown className="w-3 h-3 opacity-70 group-hover:opacity-100 transition-opacity" />}
                           {hoveredIndex === index && (
-                            <motion.div layoutId="nav-hover-pill" className="absolute inset-0 bg-white/10 rounded-full -z-10" transition={{ type: "spring", stiffness: 400, damping: 30 }} />
+                            <m.div layoutId="nav-hover-pill" className="absolute inset-0 bg-white/10 rounded-full -z-10" transition={{ type: "spring", stiffness: 400, damping: 30 }} />
                           )}
                         </Link>
                         
@@ -174,27 +174,27 @@ export function Navbar() {
                     <Menu className="w-4 h-4 text-white" />
                   </button>
                 </div>
-              </motion.div>
+              </m.div>
             )}
 
             {scrolled && (
-              <motion.button
+              <m.button
                 key="hamburger"
                 initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1, transition: { delay: 0.3 } }} exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.1 } }}
                 onClick={() => setMenuOpen(true)}
                 className="absolute inset-0 w-full h-full flex items-center justify-center hover:bg-white/10 transition-colors group"
               >
                 <Menu className="w-5 h-5 text-white group-hover:text-accent transition-colors" />
-              </motion.button>
+              </m.button>
             )}
           </AnimatePresence>
-        </motion.nav>
+        </m.nav>
       </div>
 
       {/* FULL-SCREEN OVERLAY MENU (STRICT 100DVH FIT) */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: "-5%" }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-5%" }}
@@ -224,7 +224,7 @@ export function Navbar() {
                   </div>
 
                   {/* RIGHT: Contact & Socials */}
-                  <motion.div 
+                  <m.div 
                     initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.6 }}
                     className="lg:col-span-4 lg:col-start-9 flex flex-col gap-8 lg:pl-12 lg:border-l border-white/10"
                   >
@@ -264,13 +264,13 @@ export function Navbar() {
                         ))}
                       </div>
                     </div>
-                  </motion.div>
+                  </m.div>
 
                 </div>
               </div>
             </div>
 
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </>
@@ -285,7 +285,7 @@ const MobileNavItem = ({ item, setMenuOpen, smoothEase, i, isActive, isParentAct
   const itemActive = isParentActive(item) || isActive(item.href);
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 15 }}
@@ -309,7 +309,7 @@ const MobileNavItem = ({ item, setMenuOpen, smoothEase, i, isActive, isParentAct
           
           <AnimatePresence>
             {isOpen && (
-              <motion.div 
+              <m.div 
                 initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.4, ease: smoothEase }}
               >
                 {/* Clean, space-saving link list */}
@@ -330,7 +330,7 @@ const MobileNavItem = ({ item, setMenuOpen, smoothEase, i, isActive, isParentAct
                      </Link>
                   )})}
                 </div>
-              </motion.div>
+              </m.div>
             )}
           </AnimatePresence>
         </div>
@@ -348,6 +348,6 @@ const MobileNavItem = ({ item, setMenuOpen, smoothEase, i, isActive, isParentAct
           </div>
         </Link>
       )}
-    </motion.div>
+    </m.div>
   );
 };

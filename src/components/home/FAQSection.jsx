@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 
 const faqs = [
@@ -40,7 +40,7 @@ export function FAQSection() {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -49,8 +49,8 @@ export function FAQSection() {
             <span className="inline-flex items-center justify-center bg-white/5 border border-white/10 text-brand-lime text-[11px] font-bold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full">
               Got Questions?
             </span>
-          </motion.div>
-          <motion.h2 
+          </m.div>
+          <m.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -59,7 +59,7 @@ export function FAQSection() {
           >
             Frequently Asked <br/>
             <span className="text-brand-lime">Questions</span>
-          </motion.h2>
+          </m.h2>
         </div>
 
         {/* Accordion Container */}
@@ -68,7 +68,7 @@ export function FAQSection() {
             const isOpen = openIndex === idx;
             
             return (
-              <motion.div
+              <m.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +90,7 @@ export function FAQSection() {
                 
                 <AnimatePresence>
                   {isOpen && (
-                    <motion.div
+                    <m.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
@@ -102,10 +102,10 @@ export function FAQSection() {
                           {faq.answer}
                         </p>
                       </div>
-                    </motion.div>
+                    </m.div>
                   )}
                 </AnimatePresence>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>

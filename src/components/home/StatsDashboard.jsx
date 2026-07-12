@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { m, useInView } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 // FIX: Removed 'default' to match your named imports in page.js
@@ -25,22 +26,26 @@ export function StatsDashboard() {
     },
   };
 
+  const ref = useRef(null);
+  // Trigger loading when within 400px of viewport
+  const isInView = useInView(ref, { once: true, margin: "400px" });
 
   return (
-    <section className="relative z-20 w-full max-w-[1200px] mx-auto px-2 md:px-6 pt-16">
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-50px" }}
-        className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6"
-      >
-        {/* PANEL 1: THE LIQUID AREA CHART (Spans 8 columns) */}
-        <motion.div
-          variants={cardVariants}
-          className="lg:col-span-8 bg-[#0e0e10] border border-white/5 rounded-[32px] p-6 md:p-10 relative overflow-hidden group min-h-[280px] md:min-h-[320px]"
+    <section ref={ref} className="relative z-20 w-full max-w-[1200px] mx-auto px-2 md:px-6 pt-16 min-h-[500px]">
+      {isInView && (
+        <m.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6"
         >
-          <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-20">
+          {/* PANEL 1: THE LIQUID AREA CHART (Spans 8 columns) */}
+          <m.div
+            variants={cardVariants}
+            className="lg:col-span-8 bg-[#0e0e10] border border-white/5 rounded-[32px] p-6 md:p-10 relative overflow-hidden group min-h-[280px] md:min-h-[320px]"
+          >
+            <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-20">
             <div>
               <p className="text-white/40 text-[11px] font-bold uppercase tracking-[0.2em] mb-3">
                 Average Client Trajectory
@@ -67,7 +72,7 @@ export function StatsDashboard() {
             </div>
           </div>
 
-          <motion.div
+          <m.div
             className="absolute bottom-0 left-0 w-full h-[180px] md:h-[220px] origin-bottom pointer-events-none"
             initial={{ scaleY: 0, opacity: 0 }}
             whileInView={{ scaleY: 1, opacity: 1 }}
@@ -106,7 +111,7 @@ export function StatsDashboard() {
                 fill="url(#liquid-gradient)"
               />
             </svg>
-          </motion.div>
+          </m.div>
 
           <div className="absolute bottom-0 left-0 w-full h-[180px] md:h-[220px] pointer-events-none">
             <svg
@@ -121,7 +126,7 @@ export function StatsDashboard() {
                   <stop offset="100%" stopColor="#fff" />
                 </linearGradient>
               </defs>
-              <motion.path
+              <m.path
                 d="M0,250 C150,250 250,180 400,220 C550,260 650,100 800,120 C900,130 950,40 1000,20"
                 fill="none"
                 stroke="url(#line-gradient)"
@@ -133,12 +138,12 @@ export function StatsDashboard() {
               />
             </svg>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* RIGHT COLUMN */}
         <div className="lg:col-span-4 flex flex-col gap-4 md:gap-6">
           {/* PANEL 2: RADIAL ROAS DIAL */}
-          <motion.div
+          <m.div
             variants={cardVariants}
             className="flex-1 bg-[#0e0e10] border border-white/5 rounded-[32px] p-6 md:p-8 flex items-center justify-between relative overflow-hidden"
           >
@@ -161,7 +166,7 @@ export function StatsDashboard() {
                   stroke="rgba(255,255,255,0.03)"
                   strokeWidth="8"
                 />
-                <motion.circle
+                <m.circle
                   cx="50"
                   cy="50"
                   r="40"
@@ -180,10 +185,10 @@ export function StatsDashboard() {
                 <ArrowUpRight className="w-6 h-6 text-white" />
               </div>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* PANEL 3: ACTIVE NODE MATRIX */}
-          <motion.div
+          <m.div
             variants={cardVariants}
             className="flex-1 bg-[#0e0e10] border border-white/5 rounded-[32px] p-6 md:p-8 flex flex-col justify-between relative overflow-hidden group"
           >
@@ -228,9 +233,10 @@ export function StatsDashboard() {
                   "radial-gradient(circle, rgba(216,252,77,0.15) 0%, rgba(216,252,77,0) 70%)",
               }}
             />
-          </motion.div>
+          </m.div>
         </div>
-      </motion.div>
+      </m.div>
+      )}
     </section>
   );
 }

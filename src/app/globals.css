@@ -101,3 +101,13 @@ body {
 .hover-pause-children:hover > * {
   animation-play-state: paused !important;
 }
+
+/* Disable complex entrance animations on mobile to save CPU and remove lag */
+@media (max-width: 767px) {
+  .mobile-no-animate {
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

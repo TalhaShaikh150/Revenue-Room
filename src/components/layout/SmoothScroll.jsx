@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { useAnimationFrame } from "framer-motion";
 import Lenis from "lenis";
 
 export function SmoothScroll({ children }) {
@@ -28,17 +27,19 @@ export function SmoothScroll({ children }) {
 
     lenisRef.current = lenis;
 
+    let rafId;
+    function raf(time) {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    }
+    rafId = requestAnimationFrame(raf);
+
     return () => {
+      cancelAnimationFrame(rafId);
       lenis.destroy();
       lenisRef.current = null;
     };
   }, []);
-
-  useAnimationFrame((time) => {
-    if (lenisRef.current) {
-      lenisRef.current.raf(time);
-    }
-  });
 
   // On every route change: instantly jump to top BEFORE Lenis animates anything
   useEffect(() => {

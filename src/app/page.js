@@ -4,15 +4,13 @@ import { VideoSection } from "@/components/home/VideoSection";
 import { AboutSection } from "@/components/home/AboutSection";
 import { OfferingSection } from "@/components/home/OfferingSection";
 import { CaseStudiesSection } from "@/components/home/CaseStudiesSection";
-import dynamic from "next/dynamic";
-
-const WhyMattersSection = dynamic(() => import("@/components/home/WhyMattersSection").then(mod => mod.WhyMattersSection));
-const WastedSpendSection = dynamic(() => import("@/components/home/WastedSpendSection").then(mod => mod.WastedSpendSection));
-const ServicesGrid = dynamic(() => import("@/components/home/ServicesGrid").then(mod => mod.ServicesGrid));
-const FAQSection = dynamic(() => import("@/components/home/FAQSection").then(mod => mod.FAQSection));
-const CTABanner = dynamic(() => import("@/components/home/CTABanner").then(mod => mod.CTABanner));
-const StatsDashboard = dynamic(() => import("@/components/home/StatsDashboard").then(mod => mod.StatsDashboard));
-const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mod.Footer));
+import { WhyMattersSection } from "@/components/home/WhyMattersSection";
+import { WastedSpendSection } from "@/components/home/WastedSpendSection";
+import { ServicesGrid } from "@/components/home/ServicesGrid";
+import { FAQSection } from "@/components/home/FAQSection";
+import { CTABanner } from "@/components/home/CTABanner";
+import { StatsDashboard } from "@/components/home/StatsDashboard";
+import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (

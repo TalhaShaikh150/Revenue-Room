@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -25,11 +25,12 @@ export function CTABanner() {
       <div className="container mx-auto max-w-[800px] text-center relative z-10">
 
         {/* Clean, Stark Headline */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: smoothEase }}
+          className="mobile-no-animate"
         >
           <span className="inline-block py-1.5 px-4 border border-white/10 rounded-full bg-white/5 text-white/50 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             Next Steps
@@ -40,15 +41,15 @@ export function CTABanner() {
           <p className="text-lg md:text-2xl text-white/50 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
             Stop wasting time with generic agencies. Partner with a team that treats your revenue like their own.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Cleaner CTA Button linking to Contact */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: smoothEase, delay: 0.1 }}
-          className="w-full flex justify-center"
+          className="mobile-no-animate w-full flex justify-center"
         >
           <Link 
             href="/contact" 
@@ -57,7 +58,7 @@ export function CTABanner() {
             Let's Talk Growth
             <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
           </Link>
-        </motion.div>
+        </m.div>
 
       </div>
     </section>
