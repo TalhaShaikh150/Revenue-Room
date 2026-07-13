@@ -187,7 +187,7 @@ export function CourseTrainingPopup({ isOpen, onClose }) {
                         ) : (
                             <>
                                 <span className="font-black uppercase text-2xl md:text-3xl leading-none">Get Access Now!</span>
-                                <span className="text-[10px] uppercase font-medium mt-1 tracking-tight opacity-80">Check ya phone as we'll text you the training immediately</span>
+                                <span className="text-[10px] uppercase font-medium mt-1 tracking-tight opacity-80">Check ya phone as we&apos;ll text you the training immediately</span>
                             </>
                         )}
                     </button>

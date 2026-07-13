@@ -1,12 +1,7 @@
 import { FadeIn, FadeInStagger, FadeInItem } from "@/components/ui/Motion";
-import Image from "next/image";
 
-const PROCESS_IMAGES = [
-  "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
-];
+
+
 
 export function ServiceProcess({ title, subtitle, steps }) {
   return (
@@ -32,22 +27,11 @@ export function ServiceProcess({ title, subtitle, steps }) {
         {/* Process Steps */}
         <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {steps.map((step, index) => {
-            const imgUrl = PROCESS_IMAGES[index % PROCESS_IMAGES.length];
+
             return (
               <FadeInItem key={index}>
                 <div className="group relative flex flex-col h-[450px] md:h-[500px] rounded-[32px] overflow-hidden bg-[#0a0a0c] border border-white/10 cursor-pointer">
-                  {/* Background Image Layer */}
-                  <div className="absolute inset-0 w-full h-full">
-                    <Image 
-                      src={imgUrl}
-                      alt={step.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      className="object-cover opacity-20 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 mix-blend-luminosity"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-[#0a0a0c]/80 to-transparent" />
-                    <div className="absolute inset-0 bg-[#0a0a0c]/20 group-hover:bg-transparent transition-colors duration-500" />
-                  </div>
+
 
                   {/* Number indicator */}
                   <div className="absolute top-6 right-8 text-brand-lime/20 font-black text-6xl md:text-8xl leading-none group-hover:text-brand-lime transition-colors duration-500">

@@ -47,7 +47,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div>
                 <h3 className="text-white font-bold text-xl mb-2">General Inquiries</h3>
-                <p className="text-gray-400">hello@revenueroomdigital.com.au</p>
+                <p className="text-gray-400">revenueroomdigital@gmail.com</p>
               </div>
               <div>
                 <h3 className="text-white font-bold text-xl mb-2">Office Hours</h3>

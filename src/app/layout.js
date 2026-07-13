@@ -34,6 +34,13 @@ export const metadata = {
     siteName: "Revenue Room Digital",
     locale: "en_AU",
     type: "website",
+    images: [{ url: "https://revenueroomdigital.com.au/og-image.svg", width: 1200, height: 630, alt: "Revenue Room Digital" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Revenue Room Digital | Performance Marketing Agency Australia",
+    description: "Fueling the next generation of Australian brands with data-driven digital marketing.",
+    images: ["https://revenueroomdigital.com.au/og-image.svg"],
   },
   robots: {
     index: true,
@@ -45,9 +52,43 @@ export const metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://revenueroomdigital.com.au/#organization",
+      "name": "Revenue Room Digital",
+      "url": "https://revenueroomdigital.com.au",
+      "logo": "https://revenueroomdigital.com.au/og-image.svg",
+      "telephone": "+61438365241",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+61438365241",
+        "contactType": "customer service"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://revenueroomdigital.com.au/#website",
+      "url": "https://revenueroomdigital.com.au",
+      "name": "Revenue Room Digital",
+      "publisher": {
+        "@id": "https://revenueroomdigital.com.au/#organization"
+      }
+    }
+  ]
+};
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={plusJakarta.variable}>
+    <html lang="en-AU" className={plusJakarta.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-screen relative overflow-x-hidden flex flex-col font-sans bg-brand-bg text-white">
         <MotionProvider>
           <SmoothScroll>{children}</SmoothScroll>

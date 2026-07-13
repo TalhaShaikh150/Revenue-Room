@@ -61,10 +61,10 @@ export function WhyMattersSection() {
           {/* CTA Row */}
           <div className="grid grid-cols-1 lg:grid-cols-12 bg-white/[0.01]">
             <div className="lg:col-span-8 p-6 md:p-10 lg:p-12 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/10">
-              <h2 className="text-white text-2xl sm:text-3xl md:text-[40px] font-black tracking-tight mb-3 md:mb-4 leading-tight">
-                Marketing doesn't stop at 5pm.
+              <h3 className="text-white text-2xl sm:text-3xl md:text-[40px] font-black tracking-tight mb-3 md:mb-4 leading-tight">
+                Marketing doesn&apos;t stop at 5pm.
                 <br className="hidden sm:block" /> Neither do we.
-              </h2>
+              </h3>
               <p className="text-white/60 text-base md:text-lg font-medium max-w-xl">
                 Talk to a team that's already awake, already watching, and already working on your results.
               </p>

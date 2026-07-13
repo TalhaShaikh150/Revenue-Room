@@ -56,18 +56,35 @@ const FEATURES = [
     description:
       "We rebuild your organic foundation so Google naturally prioritises your site. From site speed to high-intent content clusters, we drive traffic that converts.",
     icon: <LineChart className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Google Ads (PPC)",
     description:
       "Laser-targeted campaigns on Search, Display, and YouTube. We cut wasted spend and focus entirely on cost-per-acquisition (CPA) and ROI.",
     icon: <MousePointerClick className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "AI Search Placements",
     description:
       "Get ahead of the curve. We optimise your brand for generative AI search engines (like ChatGPT and Google's AI Overviews) to capture future-ready demand.",
     icon: <Bot className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    title: "Conversion Rate Optimisation",
+    description:
+      "Traffic is useless if it doesn't convert. We continuously A/B test and refine your landing pages, forms, and funnels to maximize your conversion rates and lower CPA.",
+    icon: <Target className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    title: "Local SEO & Map Pack",
+    description:
+      "Dominate your local area. We optimise your Google Business Profile and local citations to ensure you capture high-intent, location-based searches.",
+    icon: <Zap className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=800",
   },
 ];
 
@@ -203,8 +220,38 @@ const PRICING_PLANS = [
 ];
 
 export default function SeoGoogleAiSearchPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "SEO, Google & AI Search Advertising",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Revenue Room Digital"
+        },
+        "description": "Drive more revenue with data-driven SEO, Google Ads, and AI-powered search advertising."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": FAQS.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <main className="bg-brand-bg min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       <ServiceHero
@@ -227,6 +274,7 @@ export default function SeoGoogleAiSearchPage() {
           "AI Search Overviews (SGE)",
           "Data-Driven Conversion"
         ]}
+        imageSrc="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1200"
       />
 
 
@@ -248,7 +296,7 @@ export default function SeoGoogleAiSearchPage() {
         subtitle="The Advantage"
         title="Why our search campaigns win."
         benefits={BENEFITS}
-        imageSrc="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
+        imageSrc="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&q=80&w=1200"
         imageAlt="Data analytics and search marketing dashboards"
       />
       
@@ -258,7 +306,12 @@ export default function SeoGoogleAiSearchPage() {
         steps={PROCESS_STEPS}
       />
 
-      <ServicePricing plans={PRICING_PLANS} serviceId="seo" />
+      <ServicePricing 
+        plans={PRICING_PLANS} 
+        serviceId="seo" 
+        title="SEO & Google Ads Pricing" 
+        subtitle="Investment Plans"
+      />
 
       <ServiceFAQ faqs={FAQS} />
 

@@ -56,36 +56,42 @@ const FEATURES = [
     description:
       "We build full-funnel Meta campaigns — from broad awareness to retargeting warm audiences. Every dollar is tracked against real revenue outcomes, not vanity metrics.",
     icon: <BarChart2 className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "TikTok Advertising",
     description:
       "Short-form video ads that stop the scroll. We craft native-feeling creatives and pair them with precision targeting to generate explosive reach and measurable conversions.",
     icon: <PlayCircle className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1611605698323-b1e99cfd37ea?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "LinkedIn B2B Campaigns",
     description:
       "Reach decision-makers at scale. Our LinkedIn campaigns target by industry, seniority, and company size to drive qualified pipeline for high-ticket B2B offers.",
     icon: <Users className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Audience & Retargeting Strategy",
     description:
       "We build sophisticated audience stacks — from lookalikes to behavioural cohorts — ensuring your ads reach the right people at the right stage of the buying journey.",
     icon: <Target className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Creative Testing & Iteration",
     description:
       "Creative is the #1 lever in paid social. We run structured A/B tests on hooks, formats, and CTAs to find your highest-performing assets and scale them aggressively.",
     icon: <Layers className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Performance Reporting & Scaling",
     description:
       "Full-funnel attribution dashboards so you always know exactly which campaigns are driving revenue. We scale winners fast and cut losers even faster.",
     icon: <TrendingUp className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
   },
 ];
 
@@ -211,8 +217,38 @@ const PRICING_PLANS = [
 ];
 
 export default function PaidSocialMediaAdvertisingPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Paid Social Media Advertising",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Revenue Room Digital"
+        },
+        "description": "Stop guessing with your ad budget. We run high-converting Meta Ads, TikTok Ads, and LinkedIn campaigns that drive measurable ROI."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": FAQS.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <main className="bg-brand-bg min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       <ServiceHero
@@ -233,8 +269,9 @@ export default function PaidSocialMediaAdvertisingPage() {
           "Meta (Facebook & Instagram) Ads",
           "TikTok Advertising",
           "LinkedIn B2B Campaigns",
-          "Creative Strategy & Production",
+          "Full Creative & Copywriting",
         ]}
+        imageSrc="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200"
       />
 
 
@@ -256,7 +293,7 @@ export default function PaidSocialMediaAdvertisingPage() {
         subtitle="The Advantage"
         title="Why our social campaigns convert."
         benefits={BENEFITS}
-        imageSrc="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1200"
+        imageSrc="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200"
         imageAlt="Social media advertising dashboards and performance analytics"
       />
 
@@ -266,7 +303,12 @@ export default function PaidSocialMediaAdvertisingPage() {
         steps={PROCESS_STEPS}
       />
 
-      <ServicePricing plans={PRICING_PLANS} serviceId="ppc" />
+      <ServicePricing 
+        plans={PRICING_PLANS} 
+        serviceId="ppc" 
+        title="Paid Social Pricing" 
+        subtitle="Ad Management Plans"
+      />
 
       <ServiceFAQ faqs={FAQS} />
 

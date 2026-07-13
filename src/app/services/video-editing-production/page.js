@@ -54,36 +54,42 @@ const FEATURES = [
     description:
       "Punchy, platform-native edits for TikTok, Instagram Reels, and YouTube Shorts. We cut for retention — strong hooks, rapid pacing, and compelling CTAs that drive action.",
     icon: <Scissors className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Long-Form YouTube Production",
     description:
       "Professional full-length YouTube video production with colour grading, motion graphics, chapter cards, and B-roll — built to maximise watch time and subscriber growth.",
     icon: <PlayCircle className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1664355049229-746d2de57547?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fExvbmctRm9ybSUyMHZpZGVvfGVufDB8fDB8fHww",
   },
   {
     title: "Ad Creative Production",
     description:
       "We craft high-converting video ad creatives for Meta, TikTok, and YouTube — engineered with proven direct-response frameworks that stop the scroll and drive clicks.",
     icon: <Zap className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Captions & Subtitles",
     description:
       "Accurate, on-brand captions added to every video. 85% of social media video is watched without sound — subtitles are non-negotiable for maximum reach and accessibility.",
     icon: <Subtitles className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Motion Graphics & Animation",
     description:
       "Custom animated lower thirds, logo reveals, text animations, and kinetic typography that elevate your brand and make your content look polished and premium.",
     icon: <Sparkles className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Raw Footage Repurposing",
     description:
       "Already have a library of footage? We repurpose your existing raw recordings — podcasts, interviews, events, long-form videos — into a full month of short-form content.",
     icon: <Film className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1696332415657-9fbe802a8875?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8UmF3JTIwRm9vdGFnZXxlbnwwfHwwfHx8MA%3D%3D",
   },
 ];
 
@@ -214,8 +220,38 @@ const PRICING_PLANS = [
 ];
 
 export default function VideoEditingProductionPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Video Editing & Content Production",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Revenue Room Digital"
+        },
+        "description": "Capture attention with premium video content. We create high-converting ad creatives, UGC, and brand videos that sell."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": FAQS.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <main className="bg-brand-bg min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       <ServiceHero
@@ -233,11 +269,12 @@ export default function VideoEditingProductionPage() {
         }
         description="From raw footage to polished, platform-ready video — we edit short-form, long-form, and ad creatives that capture attention, build your brand, and drive real business results."
         highlights={[
-          "Short-Form Reels & TikToks",
-          "Long-Form YouTube Production",
-          "Ad Creative Video Editing",
-          "Captions, Graphics & Repurposing",
+          "Short-Form Social Video (Reels/TikToks)",
+          "High-Production Ad Creatives",
+          "Brand Documentaries & VSLs",
+          "Post-Production & Motion Graphics",
         ]}
+        imageSrc="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=1200"
       />
 
       <ServiceFeatures
@@ -268,7 +305,12 @@ export default function VideoEditingProductionPage() {
         steps={PROCESS_STEPS}
       />
 
-      <ServicePricing plans={PRICING_PLANS} serviceId="video-editing" />
+      <ServicePricing 
+        plans={PRICING_PLANS} 
+        serviceId="video-editing" 
+        title="Video Production Pricing" 
+        subtitle="Creative Packages"
+      />
 
       <ServiceFAQ faqs={FAQS} />
 

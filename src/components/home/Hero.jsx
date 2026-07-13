@@ -77,7 +77,7 @@ export function Hero() {
             variants={itemVariants} 
             className="text-white/70 text-[12px] sm:text-base md:text-lg font-medium mb-8 md:mb-12 max-w-3xl leading-relaxed drop-shadow-md px-4 sm:px-0"
           >
-              <span className="text-white font-bold">Australia's first round the clock marketing agency.</span> While other agencies clock off, our team is still optimising your ads, chasing your leads, and cutting wasted spend <span className="text-white font-bold">day, night, and everything in between.</span>
+              <span className="text-white font-bold">Australia&apos;s first round the clock marketing agency.</span> While other agencies clock off, our team is still optimising your ads, chasing your leads, and cutting wasted spend <span className="text-white font-bold">day, night, and everything in between.</span>
           </m.p>
           
           {/* Email Capture Form */}
@@ -113,7 +113,7 @@ export function Hero() {
                   className="flex-1 bg-transparent border-none outline-none text-black placeholder:text-black/50 text-[15px] font-medium w-full truncate"
               />
               <button type="submit" aria-label="Submit email" className="shrink-0 bg-brand-lime text-black px-8 py-3.5 rounded-full text-[15px] font-bold hover:scale-[1.02] transition-all duration-300 flex items-center ">
-                  Let's go 
+                  Let&apos;s go 
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
           </form>

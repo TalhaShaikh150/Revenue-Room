@@ -12,6 +12,19 @@ import { CTABanner } from "@/components/home/CTABanner";
 import { StatsDashboard } from "@/components/home/StatsDashboard";
 import { Footer } from "@/components/layout/Footer";
 
+export const metadata = {
+  title: "Revenue Room Digital | Growth Marketing & Web Development Agency",
+  description: "Australia's 24/7 digital marketing agency. We scale businesses with elite SEO, Google Ads, Meta Ads, and high-converting Web Development.",
+  alternates: {
+    canonical: "https://revenueroomdigital.com.au",
+  },
+  openGraph: {
+    title: "Revenue Room Digital | Growth Marketing Agency",
+    description: "Australia's 24/7 digital marketing agency. We scale businesses with elite SEO, Google Ads, Meta Ads, and high-converting Web Development.",
+    url: "https://revenueroomdigital.com.au",
+  },
+};
+
 export default function Home() {
   return (
     <main className="bg-brand-bg min-h-screen">

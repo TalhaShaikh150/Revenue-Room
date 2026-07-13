@@ -12,13 +12,13 @@ export function ServiceHero({
   ctaLink = "/contact",
   highlights = [
     "Data-Driven Strategy",
-    "Omnichannel Execution",
-    "Transparent ROI Reporting"
+    "Full-Service Execution",
+    "Clear Monthly Reporting"
   ],
   imageSrc = "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200" // Premium default
 }) {
   return (
-    <section className="relative min-h-[70vh] w-full flex items-center bg-[#050505] pt-24 pb-16 lg:pt-28 lg:pb-16 overflow-hidden border-b border-white/5">
+    <section className="relative w-full flex items-center bg-[#050505] pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden border-b border-white/5">
       
       {/* Very subtle background ambient light */}
       <div className="absolute top-0 right-0 w-1/2 h-[500px] bg-brand-lime/5 blur-[150px] pointer-events-none rounded-full" />

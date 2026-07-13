@@ -22,11 +22,11 @@ export function WastedSpendSection() {
             </h2>
 
             <p className="text-[#1a1a1c]/80 text-base md:text-xl lg:text-[22px] leading-relaxed font-medium">
-              Most agencies check your campaigns once a week, if you're lucky.
+              Most agencies check your campaigns once a week, if you&apos;re lucky.
               We watch them every hour of every day. If an underperforming ad
               slips past our team for more than 24 hours without action, we
               cover the wasted spend ourselves. This applies to active campaigns
-              we're managing where spend and targets are agreed in advance. No
+              we&apos;re managing where spend and targets are agreed in advance. No
               fine print games, no "technically it was 25 hours."
             </p>
           </div>

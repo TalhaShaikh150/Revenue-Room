@@ -42,7 +42,7 @@ export function CaseStudiesSection() {
             className="text-[40px] sm:text-[48px] md:text-[64px] lg:text-[80px] font-black leading-[0.95] tracking-tighter text-white text-center max-w-4xl"
             as="h2"
           >
-            Real Brands. <br className="hidden md:block" /> Real Growth. <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white">Zero Downtime.</span>
+            Real Brands. <br className="hidden md:block" /> Real Growth. <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white">Measurable Results.</span>
           </FadeIn>
         </div>
       </div>
@@ -69,7 +69,7 @@ export function CaseStudiesSection() {
             >
               <Image 
                 src={study.image} 
-                alt="Brand Partner" 
+                alt="Revenue Room Digital client logo" 
                 fill
                 sizes="(max-width: 768px) 120px, 200px"
                 className="object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 pr-8 md:pr-16" 
@@ -87,7 +87,7 @@ export function CaseStudiesSection() {
             >
               <Image 
                 src={study.image} 
-                alt="Brand Partner" 
+                alt="Revenue Room Digital client logo" 
                 fill
                 sizes="(max-width: 768px) 120px, 200px"
                 className="object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 pr-8 md:pr-16" 

@@ -54,36 +54,48 @@ const FEATURES = [
     description:
       "Single-purpose pages engineered to convert. Built with proven direct-response frameworks — strong above-the-fold hooks, social proof, objection handling, and crystal-clear CTAs.",
     icon: <ArrowUpRight className="w-6 h-6" aria-hidden="true" />,
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Full Website Design & Development",
     description:
       "Beautiful, brand-defining websites built on Next.js or WordPress. Fast, SEO-ready, and fully responsive — designed to impress and perform across every device.",
     icon: <LayoutDashboard className="w-6 h-6" aria-hidden="true" />,
+    image:
+      "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Performance & Core Web Vitals",
     description:
       "A slow website kills conversions. We obsess over load speed, LCP, and Core Web Vitals — delivering sites that score 95+ on PageSpeed to protect your SEO and user experience.",
     icon: <Gauge className="w-6 h-6" aria-hidden="true" />,
+    image:
+      "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyZm9ybWFuY2UlMjBzdGF0c3xlbnwwfHwwfHx8MA%3D%3D",
   },
   {
     title: "E-commerce Development",
     description:
       "Custom Shopify and WooCommerce stores built to maximise average order value and reduce abandonment. From product pages to checkout flows — every detail is optimised for revenue.",
     icon: <ShoppingCart className="w-6 h-6" aria-hidden="true" />,
+    image:
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Custom Integrations & Development",
     description:
       "Need something bespoke? We build custom web applications, CRM integrations, API connections, and automation workflows that make your business operate at a higher level.",
     icon: <Code2 className="w-6 h-6" aria-hidden="true" />,
+    image:
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Mobile-First Design",
     description:
       "Over 70% of your traffic is on mobile. Every project we deliver is built mobile-first with pixel-perfect responsive layouts that look flawless on every screen size.",
     icon: <Smartphone className="w-6 h-6" aria-hidden="true" />,
+    image:
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800",
   },
 ];
 
@@ -159,7 +171,8 @@ const FAQS = [
 const PRICING_PLANS = [
   {
     name: "Landing Page",
-    description: "A single, high-converting page for campaigns or lead generation.",
+    description:
+      "A single, high-converting page for campaigns or lead generation.",
     price: "$3,000",
     period: "one-time",
     isPopular: false,
@@ -204,8 +217,39 @@ const PRICING_PLANS = [
 ];
 
 export default function WebDevelopmentLandingPagesPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        name: "Web Development & Landing Pages",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "Revenue Room Digital",
+        },
+        description:
+          "Stop losing traffic to poor design. We build lightning-fast, high-converting websites and landing pages optimized for revenue.",
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: FAQS.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+    ],
+  };
+
   return (
     <main className="bg-brand-bg min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       <ServiceHero
@@ -228,6 +272,7 @@ export default function WebDevelopmentLandingPagesPage() {
           "E-commerce & Shopify Stores",
           "Performance & Core Web Vitals",
         ]}
+        imageSrc="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200"
       />
 
       <ServiceFeatures
@@ -258,7 +303,12 @@ export default function WebDevelopmentLandingPagesPage() {
         steps={PROCESS_STEPS}
       />
 
-      <ServicePricing plans={PRICING_PLANS} serviceId="web-design" />
+      <ServicePricing
+        plans={PRICING_PLANS}
+        serviceId="web-design"
+        title="Web Development Pricing"
+        subtitle="Build Packages"
+      />
 
       <ServiceFAQ faqs={FAQS} />
 

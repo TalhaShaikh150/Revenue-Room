@@ -34,8 +34,8 @@ export function CTABanner() {
           <span className="inline-block py-1.5 px-4 border border-white/10 rounded-full bg-white/5 text-white/50 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             Next Steps
           </span>
-          <h2 className="text-5xl md:text-7xl lg:text-[80px] font-black tracking-tighter leading-[1] text-white mb-6 uppercase">
-            Ready to <span className="text-transparent bg-clip-text bg-gradient-to-b from-brand-lime to-[#8ba800]">Scale?</span>
+          <h2 className="text-3xl md:text-5xl lg:text-[64px] font-black tracking-tighter leading-[1.05] text-white">
+            Let&apos;s Talk Growth
           </h2>
           <p className="text-lg md:text-2xl text-white/50 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
             Stop wasting time with generic agencies. Partner with a team that treats your revenue like their own.

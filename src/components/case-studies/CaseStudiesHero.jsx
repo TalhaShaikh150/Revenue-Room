@@ -39,7 +39,7 @@ export function CaseStudiesHero() {
           variants={itemVariants} 
           className="text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-black leading-[1] tracking-tighter mb-8 text-white uppercase"
         >
-          We don't sell ideas.<br/>
+          We don&apos;t sell ideas.<br/>
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-brand-lime to-[#8ba800]">
             We engineer growth.
           </span>
@@ -49,7 +49,7 @@ export function CaseStudiesHero() {
           variants={itemVariants} 
           className="text-white/60 text-lg md:text-xl font-medium mb-12 max-w-3xl leading-relaxed"
         >
-          Take a look at how we've helped ambitious brands dominate their markets, scale their revenue, and crush their competitors.
+          Take a look at how we&apos;ve helped ambitious brands dominate their markets, scale their revenue, and crush their competitors.
         </motion.p>
         
       </motion.div>

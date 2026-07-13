@@ -36,7 +36,7 @@ export function TeamSection() {
               Meet the <span className="text-brand-lime">Machine</span>
             </h2>
             <p className="text-white/50 text-lg md:text-xl font-medium max-w-2xl mx-auto">
-              We don't hire employees, we build a roster of killers. Every person on this team is obsessed with one thing: your ROI.
+              We don&apos;t hire employees, we build a roster of killers. Every person on this team is obsessed with one thing: your ROI.
             </p>
           </FadeIn>
         </div>

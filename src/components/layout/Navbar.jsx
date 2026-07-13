@@ -131,7 +131,7 @@ export function Navbar() {
                         onMouseLeave={() => setHoveredIndex(null)}
                       >
                         <Link
-                          href={item.hasDropdown ? "#" : item.href}
+                          href={item.href}
                           className={`relative px-3 lg:px-4 py-2 text-[12px] font-bold tracking-wide uppercase transition-colors flex items-center gap-1 ${
                             active ? "text-accent" : "text-white/70 hover:text-white"
                           }`}
@@ -230,9 +230,9 @@ export function Navbar() {
                   >
                     <div>
                       <h4 className="text-accent text-[11px] font-bold uppercase tracking-[0.2em] mb-3">Start a project</h4>
-                      <a href="mailto:hello@revenueroomdigital.com.au" className="group flex flex-col">
+                      <a href="mailto:revenueroomdigital@gmail.com" className="group flex flex-col">
                         <span className="text-white text-lg md:text-xl font-bold tracking-tight group-hover:text-accent transition-colors break-words">
-                          hello@revenueroom<br className="hidden lg:block"/>digital.com.au
+                          revenueroomdigital@<br className="hidden lg:block"/>gmail.com
                         </span>
                         <div className="h-[1px] w-full bg-white/20 mt-3 group-hover:bg-accent transition-colors" />
                       </a>
@@ -241,7 +241,7 @@ export function Navbar() {
                     <div>
                       <h4 className="text-accent text-[11px] font-bold uppercase tracking-[0.2em] mb-3">Headquarters</h4>
                       <p className="text-white/70 text-base font-medium">
-                        Sydney, Australia <br/>
+                        Melbourne, Australia <br/>
                         <span className="text-white/40 text-sm">Available Worldwide 24/7</span>
                       </p>
                     </div>

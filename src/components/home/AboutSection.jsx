@@ -27,15 +27,15 @@ export function AboutSection() {
               </span>
             </div>
             <h2 className="text-[28px] md:text-[clamp(40px,4.5vw,56px)] font-medium leading-[1.1] tracking-tight">
-              Most agencies clock off at 5pm. We believe growth shouldn't have
+              Most agencies clock off at 5pm. We believe growth shouldn&apos;t have
               to wait.
               <br className="hidden md:block" />
               <br className="hidden md:block" />
               <div className="md:hidden h-6"></div>
               <span className="text-white/40 text-[18px] md:text-[clamp(24px,2.5vw,32px)] leading-[1.4] md:leading-[1.3] block mt-6">
-                We're Australia's first 24/7 marketing agency. A team that never
+                We&apos;re Australia&apos;s first 24/7 marketing agency. A team that never
                 stops watching, testing, and improving your campaigns. While
-                other agencies are asleep, we're already fixing what's not
+                other agencies are asleep, we&apos;re already fixing what&apos;s not
                 working, chasing your leads, and making sure your budget never
                 sits idle.
               </span>
@@ -55,8 +55,8 @@ export function AboutSection() {
             className="md:col-span-8 relative rounded-[24px] lg:rounded-[32px] overflow-hidden h-[300px] md:h-[450px] bg-[#0a0a0c] border border-white/10 group flex flex-col"
           >
             <Image
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
-              alt="Data Analytics"
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200"
+              alt="Revenue Room Digital real-time marketing analytics dashboard"
               fill
               sizes="(max-width: 768px) 100vw, 66vw"
               className="object-cover opacity-40 group-hover:scale-105 transition-transform duration-700 ease-out mix-blend-luminosity"

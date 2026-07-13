@@ -47,7 +47,7 @@ export function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-12 md:gap-16">
             <div>
               <p className="text-white font-bold mb-6 tracking-tight">
-                Capabilities
+                Services
               </p>
               <ul className="space-y-3 text-sm font-medium">
                 <li>
@@ -105,7 +105,7 @@ export function Footer() {
                     href="/courses"
                     className="hover:text-accent transition-colors"
                   >
-                    Academy
+                    Courses
                   </Link>
                 </li>
                 <li>

@@ -1,13 +1,18 @@
 import Link from "next/link";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
-export function ServicePricing({ plans, serviceId = "general" }) {
+export function ServicePricing({ plans, serviceId = "general", title = "Transparent Pricing", subtitle = "Pricing Plans" }) {
   return (
     <section className="py-24 bg-brand-bg relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 mb-6">
+            <span className="text-xs font-bold uppercase tracking-widest text-brand-lime">
+              {subtitle}
+            </span>
+          </div>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Transparent Pricing
+            {title}
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Choose the level of growth that fits your current business stage. No hidden fees, just predictable ROI.
@@ -82,7 +87,7 @@ export function ServicePricing({ plans, serviceId = "general" }) {
               Need a Custom Enterprise Solution?
             </h3>
             <p className="text-white/60 text-base md:text-lg">
-              For large-scale operations, we engineer custom growth strategies and deployments. Let's build the perfect plan for your business.
+              For large-scale operations, we engineer custom growth strategies and deployments. Let&apos;s build the perfect plan for your business.
             </p>
           </div>
           <Link

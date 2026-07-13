@@ -54,36 +54,42 @@ const FEATURES = [
     description:
       "We build a data-led content strategy tailored to your brand voice and audience behaviour — then plan it all into a structured, consistent monthly content calendar.",
     icon: <CalendarCheck className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Content Creation & Design",
     description:
       "From scroll-stopping graphics to Reels and TikToks, our creative team produces platform-native content that builds brand equity and drives real engagement.",
     icon: <LayoutGrid className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Community Management",
     description:
       "We handle your DMs, comments, and community interactions daily — turning passive followers into engaged brand advocates and loyal repeat customers.",
     icon: <MessageCircle className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Growth & Hashtag Strategy",
     description:
       "We implement proven organic growth tactics — from hashtag stacking and collaboration outreach to trend hijacking — to consistently grow your reach without ad spend.",
     icon: <TrendingUp className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Brand Voice & Tone",
     description:
       "We develop and protect a consistent brand voice across every post and every platform, so your audience knows exactly who you are and what you stand for.",
     icon: <Megaphone className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Monthly Analytics & Reporting",
     description:
       "Full monthly performance reports covering reach, engagement rate, follower growth, and profile conversions — with clear, actionable recommendations each month.",
     icon: <BarChart2 className="w-6 h-6" aria-hidden="true" />,
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
   },
 ];
 
@@ -201,8 +207,38 @@ const PRICING_PLANS = [
 ];
 
 export default function OrganicSocialMediaManagementPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Organic Social Media Management",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Revenue Room Digital"
+        },
+        "description": "Build a loyal audience and turn followers into customers with our strategic organic social media management services."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": FAQS.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <main className="bg-brand-bg min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       <ServiceHero
@@ -220,11 +256,12 @@ export default function OrganicSocialMediaManagementPage() {
         }
         description="We manage your brand's organic social presence end-to-end — strategy, content creation, posting, and community management — turning followers into a loyal, revenue-generating audience."
         highlights={[
-          "Content Strategy & Calendar",
-          "Reels, TikToks & Graphics",
+          "End-to-End Content Strategy",
+          "High-Quality Content Production",
           "Community Management",
-          "Monthly Analytics Reports",
+          "Data & Engagement Reporting",
         ]}
+        imageSrc="https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&q=80&w=1200"
       />
 
       <ServiceFeatures
@@ -245,7 +282,7 @@ export default function OrganicSocialMediaManagementPage() {
         subtitle="The Advantage"
         title="Why brands trust us with their social presence."
         benefits={BENEFITS}
-        imageSrc="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&q=80&w=1200"
+        imageSrc="https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&q=80&w=1200"
         imageAlt="Social media content creation and brand management"
       />
 
@@ -255,7 +292,12 @@ export default function OrganicSocialMediaManagementPage() {
         steps={PROCESS_STEPS}
       />
 
-      <ServicePricing plans={PRICING_PLANS} serviceId="social-media" />
+      <ServicePricing 
+        plans={PRICING_PLANS} 
+        serviceId="social-media" 
+        title="Organic Social Pricing" 
+        subtitle="Management Plans"
+      />
 
       <ServiceFAQ faqs={FAQS} />
 

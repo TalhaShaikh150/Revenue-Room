@@ -5,17 +5,17 @@ import Link from "next/link";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 
 const BENTO_IMAGES = [
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
+  "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800",
+  "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800",
+  "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800",
+  "https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&q=80&w=800",
+  "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800",
 ];
 
 export function ServiceFeatures({ 
   title, 
   subtitle, 
-  description = "We don't just execute tasks. We deploy proven architectural frameworks designed to capture market share, reduce wasted spend, and scale your revenue predictably.",
+  description = "We build clear digital marketing strategies that grow your revenue — no guesswork, no bloated reports.",
   features 
 }) {
   return (
@@ -96,7 +96,7 @@ export function ServiceFeatures({
         {/* CTA Block */}
         <FadeIn delay={0.4} className="mt-12 p-8 md:p-12 bg-brand-lime rounded-[32px] flex flex-col md:flex-row items-center justify-between gap-8 group cursor-pointer">
           <div>
-            <h4 className="text-2xl md:text-3xl font-black text-black mb-3 tracking-tighter uppercase">Ready to bypass the guesswork?</h4>
+            <h4 className="text-2xl md:text-3xl font-black text-black mb-3 tracking-tighter uppercase">Ready to Start Growing?</h4>
             <p className="text-black/70 font-medium max-w-md">
               Stop paying for vanity metrics. We tie our deliverables directly to your bottom-line revenue.
             </p>

@@ -5,49 +5,49 @@ import { FadeIn, FadeInStagger, FadeInItem } from "@/components/ui/Motion";
 import Link from "next/link";
 
 const SERVICES = [
-  { 
-    title: "SEO Architecture", 
-    desc: "Dominate organic search results with data-driven content and technical precision.", 
+  {
+    title: "SEO & Google Ads",
+    desc: "Dominate organic search results with data-driven content and technical precision.",
     Icon: null,
-    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&q=80&w=800"
   },
-  { 
-    title: "Paid Social", 
-    desc: "Meta, TikTok, and LinkedIn scaling designed to maximize ROAS.", 
+  {
+    title: "Paid Social",
+    desc: "Meta, TikTok, and LinkedIn scaling designed to maximize ROAS.",
     Icon: null,
     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800"
   },
-  { 
-    title: "Google Search", 
-    desc: "Precision Google Ads & YouTube campaigns targeting high-intent buyers.", 
+  {
+    title: "Google Search",
+    desc: "Precision Google Ads & YouTube campaigns targeting high-intent buyers.",
     Icon: null,
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
   },
-  { 
-    title: "Web Development", 
-    desc: "High-performance marketing sites built for speed and conversions.", 
+  {
+    title: "Web Development",
+    desc: "High-performance marketing sites built for speed and conversions.",
     Icon: null,
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800"
   },
-  { 
-    title: "Landing Pages", 
-    desc: "High-converting standalone pages that turn clicks into customers.", 
+  {
+    title: "Video Production",
+    desc: "High-production ad creatives, short-form reels, and brand documentaries.",
     Icon: null,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=800"
   },
-  { 
-    title: "AI Advertising", 
-    desc: "Next-gen AI-driven discovery campaigns leveraging advanced machine learning.", 
+  {
+    title: "AI Search Ads",
+    desc: "Future-proof your brand with AI-powered search campaigns that put you in front of ready-to-buy customers.",
     Icon: null,
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
-  },
+  }
 ];
 
 // Import icons separately so component remains a server component
-import { Code2, LineChart, Megaphone, MousePointerClick, LayoutTemplate, Bot } from "lucide-react";
-const ICONS = [LineChart, Megaphone, MousePointerClick, Code2, LayoutTemplate, Bot];
+import { Code2, LineChart, Megaphone, MousePointerClick, Video, Bot } from "lucide-react";
+const ICONS = [LineChart, Megaphone, MousePointerClick, Code2, Video, Bot];
 
-export function ServicesGrid() {
+export function ServicesGrid({ showCTA = true }) {
   return (
     <section className="py-16 md:py-24 px-4 md:px-8 relative z-10 bg-brand-bg">
       <div className="max-w-[1300px] mx-auto">
@@ -55,10 +55,10 @@ export function ServicesGrid() {
         {/* Header */}
         <div className="text-center mb-16 md:mb-24 flex flex-col items-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[1] text-white mb-4 md:mb-6 uppercase">
-            Capabilities Matrix
+            Our Services
           </h2>
           <p className="text-white/60 text-base md:text-lg font-medium max-w-xl">
-            We don't just execute tasks. We build interconnected revenue systems using world-class strategies and technology.
+            We don&apos;t just execute tasks. We build interconnected revenue systems using world-class strategies and technology.
           </p>
         </div>
 
@@ -105,11 +105,13 @@ export function ServicesGrid() {
         </FadeInStagger>
 
         {/* CTA */}
-        <div className="mt-16 md:mt-20 flex justify-center">
-          <a href="#services" className="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-4 rounded-full text-white font-bold uppercase tracking-widest text-[11px] md:text-xs hover:bg-brand-lime hover:text-black hover:border-brand-lime transition-all duration-300">
-            Explore All Capabilities <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
+        {showCTA && (
+          <div className="mt-16 md:mt-20 flex justify-center">
+            <Link href="/services" className="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-4 rounded-full text-white font-bold uppercase tracking-widest text-[11px] md:text-xs hover:bg-brand-lime hover:text-black hover:border-brand-lime transition-all duration-300">
+              View All Services <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        )}
 
       </div>
     </section>

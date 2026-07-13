@@ -566,7 +566,7 @@ If you want a no-fluff budget recommendation specific to your business and marke
     date: "July 1, 2026",
     readTime: "7 min read",
     coverImage:
-      "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&q=80&w=1400",
+      "https://images.unsplash.com/photo-1611605698335-8b1569810432?auto=format&fit=crop&q=80&w=1400",
     featured: false,
     content: `
 ## The Platform War That Doesn't Need to Be a War
@@ -650,7 +650,7 @@ If you want a platform recommendation based on your specific product and audienc
     date: "June 15, 2026",
     readTime: "8 min read",
     coverImage:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1400",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1400",
     featured: false,
     content: `
 ## The Speed Problem Most Businesses Ignore

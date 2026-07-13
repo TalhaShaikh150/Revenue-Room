@@ -9,7 +9,7 @@ const offerings = [
     tag: "We do it for you",
     title: "Agency.",
     desc: "An elite, end-to-end growth engine. We completely take over your strategy, paid media, and creative pipelines to scale your revenue.",
-    href: "/services",
+    href: "/services/seo-google-ai-search-advertising",
   },
   {
     num: "02",
@@ -20,9 +20,9 @@ const offerings = [
   },
   {
     num: "03",
-    tag: "Implant us",
+    tag: "Embed With Us",
     title: "Advisory.",
-    desc: "Fractional C-suite leadership. We implant our top minds into your business to audit systems, restructure teams, and provide high-level direction.",
+    desc: "Fractional C-suite leadership. We embed our senior marketing leads directly into your business to audit systems, restructure teams, and provide high-level direction.",
     href: "/consulting",
   },
 ];
