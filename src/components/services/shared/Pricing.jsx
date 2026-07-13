@@ -13,8 +13,7 @@ export function ServicePricing({ plans, serviceId = "general" }) {
             Choose the level of growth that fits your current business stage. No hidden fees, just predictable ROI.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        <div className={`grid grid-cols-1 items-stretch gap-8 ${plans.length === 4 ? 'md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-3'}`}>
           {plans.map((plan, index) => (
             <div 
               key={index} 
@@ -25,7 +24,7 @@ export function ServicePricing({ plans, serviceId = "general" }) {
               } transition-transform hover:-translate-y-2 duration-300`}
             >
               {plan.isPopular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-lime text-black text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-lime text-black text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full whitespace-nowrap">
                   Most Popular
                 </div>
               )}
@@ -35,9 +34,21 @@ export function ServicePricing({ plans, serviceId = "general" }) {
                 <p className="text-gray-400 text-sm h-10">{plan.description}</p>
               </div>
 
-              <div className="mb-8 flex items-end gap-1">
-                <span className="text-4xl font-black text-white">{plan.price}</span>
-                {plan.period && <span className="text-gray-400 text-sm mb-1">{plan.period}</span>}
+              <div className="mb-8 flex flex-col gap-1">
+                <div className="flex items-end gap-2 flex-wrap">
+                  <span className={`${plan.price.length > 8 ? 'text-2xl md:text-3xl' : 'text-4xl'} font-black text-white`}>{plan.price}</span>
+                  {plan.period && <span className="text-gray-400 text-sm mb-1">{plan.period}</span>}
+                </div>
+                {plan.setupFee && (
+                  <span className="text-white font-bold text-xs mt-1">
+                    {plan.setupFee}
+                  </span>
+                )}
+                {plan.disclaimer && (
+                  <span className="text-gray-500 text-[10px]">
+                    {plan.disclaimer}
+                  </span>
+                )}
               </div>
 
               <ul className="space-y-4 mb-10 flex-grow">
@@ -62,6 +73,25 @@ export function ServicePricing({ plans, serviceId = "general" }) {
               </Link>
             </div>
           ))}
+        </div>
+
+        {/* Enterprise CTA Block */}
+        <div className="mt-16 md:mt-24 bg-[#0e0e10] border border-brand-lime/20 rounded-[24px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+          <div className="max-w-2xl">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+              Need a Custom Enterprise Solution?
+            </h3>
+            <p className="text-white/60 text-base md:text-lg">
+              For large-scale operations, we engineer custom growth strategies and deployments. Let's build the perfect plan for your business.
+            </p>
+          </div>
+          <Link
+            href={`/contact?service=${serviceId}&plan=enterprise`}
+            className="shrink-0 group flex items-center justify-center gap-2 px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-full hover:bg-brand-lime hover:text-black hover:border-brand-lime transition-all duration-300 uppercase tracking-widest text-[12px]"
+          >
+            Book Consultation
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </section>

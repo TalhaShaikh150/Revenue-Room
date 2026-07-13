@@ -1,6 +1,7 @@
 // SERVER COMPONENT — no "use client" needed
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { FadeInX } from "@/components/ui/Motion";
 
 export function CultureSection() {
@@ -33,10 +34,10 @@ export function CultureSection() {
               We don't do ping-pong tables and bean bags. We do high-performance workspaces, deep work, and relentless optimization. 
             </p>
 
-            <button className="flex items-center gap-3 text-sm md:text-base font-bold uppercase tracking-widest border border-white/20 px-8 py-4 rounded-full bg-white/5 text-white hover:bg-brand-lime hover:text-black hover:border-brand-lime transition-all duration-300 group">
+            <Link href="/contact" className="w-max flex items-center gap-3 text-sm md:text-base font-bold uppercase tracking-widest border border-white/20 px-8 py-4 rounded-full bg-white/5 text-white hover:bg-brand-lime hover:text-black hover:border-brand-lime transition-all duration-300 group">
               Join The Team
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
           </FadeInX>
 
         </div>

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { FadeIn } from "@/components/ui/Motion";
 import { ArrowUpRight, TrendingUp, Zap, Target } from "lucide-react";
+import Link from "next/link";
 
 const detailedCaseStudies = [
   {
@@ -92,9 +93,9 @@ export function DetailedCaseStudiesGrid() {
                   <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-1">{study.client}</h3>
                   <span className="text-brand-lime text-xs font-bold uppercase tracking-widest">{study.industry}</span>
                 </div>
-                <button className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-lime hover:text-black hover:border-brand-lime transition-all duration-300 self-start">
+                <Link href="/case-studies" className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-lime hover:text-black hover:border-brand-lime transition-all duration-300 self-start">
                   <ArrowUpRight className="w-5 h-5" />
-                </button>
+                </Link>
               </div>
 
               {/* Metrics Grid */}

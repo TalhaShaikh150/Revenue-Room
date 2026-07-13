@@ -1,6 +1,7 @@
 "use client";
 
 import { m } from "framer-motion";
+import Link from "next/link";
 
 export function Footer() {
   // Ultra-smooth easing for the line drawing animation
@@ -50,39 +51,39 @@ export function Footer() {
               </p>
               <ul className="space-y-3 text-sm font-medium">
                 <li>
-                  <a href="#" className="hover:text-accent transition-colors">
+                  <Link href="/services/web-development-landing-pages" className="hover:text-accent transition-colors">
                     Web Development
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-accent transition-colors">
+                  <Link href="/services/seo-google-ai-search-advertising" className="hover:text-accent transition-colors">
                     SEO
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-accent transition-colors">
+                  <Link href="/services/paid-social-media-advertising" className="hover:text-accent transition-colors">
                     Paid Social
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-accent transition-colors">
+                  <Link href="/services/seo-google-ai-search-advertising" className="hover:text-accent transition-colors">
                     Paid Search
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-accent transition-colors">
+                  <Link href="/services/web-development-landing-pages" className="hover:text-accent transition-colors">
                     Landing Pages
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-accent transition-colors">
+                  <Link href="/services/video-editing-production" className="hover:text-accent transition-colors">
                     Professional Content Shoots
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-accent transition-colors">
+                  <Link href="/services/video-editing-production" className="hover:text-accent transition-colors">
                     Video Editing
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -92,28 +93,28 @@ export function Footer() {
               </p>
               <ul className="space-y-3 text-sm font-medium">
                 <li>
-                  <a
-                    href="/agency"
+                  <Link
+                    href="/services"
                     className="hover:text-accent transition-colors"
                   >
                     Agency
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/academy"
+                  <Link
+                    href="/courses"
                     className="hover:text-accent transition-colors"
                   >
                     Academy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/consultancy"
+                  <Link
+                    href="/consulting"
                     className="hover:text-accent transition-colors"
                   >
                     Consultancy
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -123,28 +124,28 @@ export function Footer() {
               </p>
               <ul className="space-y-3 text-sm font-medium">
                 <li>
-                  <a
-                    href="#about"
+                  <Link
+                    href="/about"
                     className="hover:text-accent transition-colors"
                   >
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#works"
+                  <Link
+                    href="/case-studies"
                     className="hover:text-accent transition-colors"
                   >
                     Case Studies
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#contact"
+                  <Link
+                    href="/contact"
                     className="hover:text-accent transition-colors"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -228,12 +229,12 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center text-xs font-medium relative z-10 pt-4">
           <p>© {new Date().getFullYear()} Revenue Room. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">
+            <Link href="/privacy" className="hover:text-white transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="/terms" className="hover:text-white transition-colors">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

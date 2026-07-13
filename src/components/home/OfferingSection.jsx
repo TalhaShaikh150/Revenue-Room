@@ -1,6 +1,7 @@
 // SERVER COMPONENT — no "use client" needed
 import { ArrowRight } from "lucide-react";
 import { FadeIn, FadeInStagger, FadeInItem } from "@/components/ui/Motion";
+import Link from "next/link";
 
 const offerings = [
   {
@@ -8,19 +9,21 @@ const offerings = [
     tag: "We do it for you",
     title: "Agency.",
     desc: "An elite, end-to-end growth engine. We completely take over your strategy, paid media, and creative pipelines to scale your revenue.",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
+    href: "/services",
   },
   {
     num: "02",
     tag: "We teach you",
     title: "Courses.",
     desc: "Get the exact frameworks and SOPs we use in our agency. Build, train, and manage your own internal marketing team.",
+    href: "/courses",
   },
   {
     num: "03",
     tag: "Implant us",
     title: "Advisory.",
     desc: "Fractional C-suite leadership. We implant our top minds into your business to audit systems, restructure teams, and provide high-level direction.",
+    href: "/consulting",
   },
 ];
 
@@ -108,10 +111,10 @@ export function OfferingSection() {
                 </p>
 
                 {/* Button */}
-                <button className="relative z-10 flex items-center gap-2 md:gap-3 text-white text-[11px] md:text-[12px] font-bold uppercase tracking-widest w-max mt-auto bg-white/5 border border-white/10 px-5 py-3 md:px-6 md:py-3.5 rounded-full group-hover:bg-brand-lime group-hover:text-black group-hover:border-brand-lime transition-all duration-300">
+                <Link href={item.href} className="relative z-10 flex items-center gap-2 md:gap-3 text-white text-[11px] md:text-[12px] font-bold uppercase tracking-widest w-max mt-auto bg-white/5 border border-white/10 px-5 py-3 md:px-6 md:py-3.5 rounded-full group-hover:bg-brand-lime group-hover:text-black group-hover:border-brand-lime transition-all duration-300">
                   Get Started <span className="hidden sm:inline">Now</span>
                   <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+                </Link>
               </div>
             </FadeInItem>
           ))}

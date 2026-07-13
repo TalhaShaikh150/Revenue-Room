@@ -160,7 +160,7 @@ const PRICING_PLANS = [
   {
     name: "Landing Page",
     description: "A single, high-converting page for campaigns or lead generation.",
-    price: "$2,500",
+    price: "$3,000",
     period: "one-time",
     isPopular: false,
     features: [
@@ -174,7 +174,7 @@ const PRICING_PLANS = [
   {
     name: "Business Website",
     description: "A full website that builds authority and converts visitors.",
-    price: "$6,500",
+    price: "$5,000",
     period: "one-time",
     isPopular: true,
     features: [
@@ -187,18 +187,18 @@ const PRICING_PLANS = [
     ],
   },
   {
-    name: "Enterprise",
-    description: "Custom web applications and e-commerce at scale.",
-    price: "Custom",
-    period: "",
+    name: "E-Commerce / Custom",
+    description: "Custom stores and platforms built to scale revenue.",
+    price: "$7,000",
+    period: "one-time",
     isPopular: false,
     features: [
-      "E-commerce / Custom Web App",
-      "Custom Integrations & API Development",
-      "Advanced Performance Engineering",
-      "Multi-Language & Multi-Region Support",
-      "Ongoing CRO & A/B Testing",
-      "Dedicated Project Manager",
+      "Shopify / WooCommerce Setup",
+      "Custom Product & Checkout Pages",
+      "Advanced Inventory Integrations",
+      "Payment Gateway Integrations",
+      "Conversion Rate Optimised",
+      "60-Day Post-Launch Support",
     ],
   },
 ];
@@ -241,6 +241,7 @@ export default function WebDevelopmentLandingPagesPage() {
         author="Priya Nair"
         role="Head of Growth"
         company="Nexus HR Solutions"
+        avatarSrc="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=256"
       />
 
       <ServiceBenefits

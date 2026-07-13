@@ -133,46 +133,71 @@ const FAQS = [
 
 const PRICING_PLANS = [
   {
-    name: "Growth",
-    description: "Perfect for local businesses looking to establish dominance.",
-    price: "$1,500",
-    period: "/ month",
+    name: "BASIC",
+    description: "Basic SEO for businesses looking to attract and convert new customers for 1 key service",
+    price: "$500",
+    period: "/week",
+    setupFee: "+$1,000 Setup",
+    disclaimer: "All Prices excluding GST",
     isPopular: false,
     features: [
-      "Technical SEO Audit & Fixes",
-      "Local SEO Optimization",
-      "Google Ads Management (Up to $5k spend)",
-      "Monthly Reporting & Strategy Call"
+      "Month to month",
+      "Website & Backlink Audit",
+      "Keyword Research & Strategy",
+      "On-Page Optimisation",
+      "Link Building",
+      "Google Analytic & Search Console Setup with Detailed Tracking",
+      "Schema Implementation",
+      "Detailed Monthly Reporting",
+      "Content Delivered Monthly",
+      "Guidance On Additional Copywriting"
     ]
   },
   {
-    name: "Scale",
-    description: "For aggressive brands ready to capture nationwide demand.",
-    price: "$3,500",
-    period: "/ month",
+    name: "GROWTH",
+    description: "Intermediate SEO for businesses looking to increase their online conversion",
+    price: "$800",
+    period: "/week",
+    setupFee: "+$1,600 Setup",
+    disclaimer: "All Prices excluding GST",
+    isPopular: false,
+    features: [
+      "Month to month",
+      "Website & Backlink Audit",
+      "Keyword Research & Strategy",
+      "On-Page Optimisation",
+      "Link Building",
+      "Google Analytic & Search Console Setup with Detailed Tracking",
+      "Schema Implementation",
+      "Detailed Monthly Reporting",
+      "Content Delivered Monthly",
+      "Guidance On Additional Copywriting",
+      "Google Business Profile Setup & Optimisation",
+      "Basic Website & Speed Optimisation"
+    ]
+  },
+  {
+    name: "ACCELERATE",
+    description: "Advanced SEO. Turning your SEO efforts into results",
+    price: "$1500",
+    period: "/week",
+    setupFee: "+$2000 Setup",
+    disclaimer: "All Prices excluding GST",
     isPopular: true,
     features: [
-      "Everything in Growth",
-      "Extensive Content Creation (4 Blogs/mo)",
-      "High-Authority Link Building",
-      "Google Ads Management (Up to $20k spend)",
-      "AI Search Placement Optimization",
-      "Bi-Weekly Strategy Calls"
-    ]
-  },
-  {
-    name: "Enterprise",
-    description: "Custom solutions for large-scale operations and e-commerce.",
-    price: "Custom",
-    period: "",
-    isPopular: false,
-    features: [
-      "Everything in Scale",
-      "Unlimited Content Scaling",
-      "Custom Data Integration pipelines",
-      "Multi-channel Ad Management",
-      "Dedicated Account Director",
-      "Slack Channel Access"
+      "Month to month",
+      "Website & Backlink Audit",
+      "Keyword Research & Strategy",
+      "On-Page Optimisation",
+      "Link Building",
+      "Google Analytic & Search Console Setup with Detailed Tracking",
+      "Schema Implementation",
+      "Detailed Monthly Reporting",
+      "Content Delivered Monthly",
+      "Guidance On Additional Copywriting",
+      "Google Business Profile Setup & Optimisation",
+      "Competitor Opportunity Analysis",
+      "Advanced Website & Speed Optimisation"
     ]
   }
 ];
@@ -213,9 +238,10 @@ export default function SeoGoogleAiSearchPage() {
 
       <ServiceTestimonial 
         quote="Revenue Room Digital completely transformed our search visibility. Within 6 months, our organic traffic tripled, and our Google Ads CPA dropped by 40%. They are a true growth partner."
-        author="Sarah Jenkins"
-        role="Marketing Director"
-        company="Fintech Solutions Australia"
+        author="Marcus Vance"
+        role="Chief Marketing Officer"
+        company="Vanguard Tech Solutions"
+        avatarSrc="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=256"
       />
 
       <ServiceBenefits

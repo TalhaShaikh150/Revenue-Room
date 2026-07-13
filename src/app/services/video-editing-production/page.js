@@ -158,47 +158,57 @@ const FAQS = [
 
 const PRICING_PLANS = [
   {
-    name: "Starter",
-    description: "For creators and small brands needing consistent video output.",
-    price: "$800",
-    period: "/ month",
+    name: "Social Shorts",
+    description: "2–4 short social videos",
+    price: "Upon Request",
+    period: "Est. $500–$1,500",
     isPopular: false,
     features: [
-      "Up to 8 Short-Form Edits/Month",
+      "Short-Form Reels & TikToks",
       "Captions & Subtitles Included",
       "2 Revisions Per Video",
-      "48hr Turnaround",
       "Export in All Aspect Ratios",
     ],
   },
   {
-    name: "Scale",
-    description: "For brands and agencies that need premium video at volume.",
-    price: "$1,800",
-    period: "/ month",
+    name: "Half-Day Shoot",
+    description: "Half-day filming + editing",
+    price: "Upon Request",
+    period: "Est. $1,000–$2,500",
     isPopular: true,
     features: [
-      "Up to 20 Short-Form Edits/Month",
-      "2 Long-Form YouTube Edits/Month",
-      "Custom Motion Graphics & Branding",
-      "Long-Form to Short-Form Repurposing",
-      "Captions, Thumbnails & Chapter Cards",
-      "Priority 24hr Turnaround",
+      "On-Location Filming (Half Day)",
+      "Professional Audio & Lighting",
+      "Short & Long-Form Edits",
+      "Custom Motion Graphics",
     ],
   },
   {
-    name: "Enterprise",
-    description: "Unlimited production for agencies and high-volume brands.",
-    price: "Custom",
-    period: "",
+    name: "Full-Day Shoot",
+    description: "Full-day filming + multiple edited videos",
+    price: "Upon Request",
+    period: "Est. $2,000–$5,000",
     isPopular: false,
     features: [
-      "Unlimited Short-Form Edits",
-      "Unlimited Long-Form Production",
-      "Dedicated Senior Editor",
-      "Custom Animated Intros & Outros",
-      "Ad Creative Production",
-      "Slack Channel Access",
+      "On-Location Filming (Full Day)",
+      "Multi-Camera Setup",
+      "Extensive B-Roll Collection",
+      "Comprehensive Editing Suite",
+      "Thumbnail & Chapter Cards",
+    ],
+  },
+  {
+    name: "Premium Agency",
+    description: "Premium agency content production",
+    price: "Upon Request",
+    period: "Est. $5,000–$10,000+",
+    isPopular: false,
+    features: [
+      "High-End Commercial Production",
+      "Creative Direction & Scripting",
+      "Talent & Location Sourcing",
+      "Advanced VFX & Animation",
+      "Full Ad Campaign Assets",
     ],
   },
 ];
@@ -238,9 +248,10 @@ export default function VideoEditingProductionPage() {
 
       <ServiceTestimonial
         quote="We went from posting once a week to publishing 5 pieces of content daily — all repurposed from our podcast. Revenue Room's video team completely transformed our content output and our reach."
-        author="Daniel Cho"
+        author="David Chen"
         role="Co-Founder"
         company="The Growth Founders Podcast"
+        avatarSrc="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=256"
       />
 
       <ServiceBenefits

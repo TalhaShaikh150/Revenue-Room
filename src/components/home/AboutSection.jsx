@@ -2,6 +2,7 @@
 
 import { m } from "framer-motion";
 import { ArrowRight, Activity, TrendingUp } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 
 export function AboutSection() {
@@ -99,10 +100,10 @@ export function AboutSection() {
                 </span>
               </h3>
               
-              <button className="w-full mt-auto h-14 bg-black text-white rounded-full text-[14px] font-bold tracking-wide hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center gap-3">
+              <Link href="/contact" className="w-full mt-auto h-14 bg-black text-white rounded-full text-[14px] font-bold tracking-wide hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center gap-3 group">
                 <span>Start Now</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
             </div>
           </m.div>
           

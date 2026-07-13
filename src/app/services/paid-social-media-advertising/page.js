@@ -160,10 +160,12 @@ const FAQS = [
 
 const PRICING_PLANS = [
   {
-    name: "Launch",
+    name: "BASIC",
     description: "For brands ready to test and validate their paid social strategy.",
-    price: "$1,200",
-    period: "/ month",
+    price: "$250",
+    period: "/week",
+    setupFee: "+$500 Setup",
+    disclaimer: "All Prices excluding GST",
     isPopular: false,
     features: [
       "1 Platform (Meta or TikTok)",
@@ -174,33 +176,36 @@ const PRICING_PLANS = [
     ],
   },
   {
-    name: "Scale",
-    description: "For growth-stage brands ready to dominate their social feeds.",
-    price: "$2,800",
-    period: "/ month",
-    isPopular: true,
+    name: "GROWTH",
+    description: "For brands looking to establish a consistent revenue stream.",
+    price: "$400",
+    period: "/week",
+    setupFee: "+$800 Setup",
+    disclaimer: "All Prices excluding GST",
+    isPopular: false,
     features: [
-      "Up to 2 Platforms (Meta + TikTok or LinkedIn)",
+      "2 Platforms (Meta + TikTok)",
       "Full Funnel Campaign Architecture",
-      "Up to $25k Monthly Ad Spend",
-      "Creative Strategy & Production (3 ads/mo)",
-      "Retargeting & Lookalike Audiences",
-      "Bi-Weekly Strategy Calls",
+      "Up to $15k Monthly Ad Spend",
+      "Creative Strategy (2 ads/mo)",
+      "Retargeting Setup",
     ],
   },
   {
-    name: "Enterprise",
-    description: "Custom, omni-channel social advertising at scale.",
-    price: "Custom",
-    period: "",
-    isPopular: false,
+    name: "ACCELERATE",
+    description: "For growth-stage brands ready to dominate their social feeds.",
+    price: "$750",
+    period: "/week",
+    setupFee: "+$1000 Setup",
+    disclaimer: "All Prices excluding GST",
+    isPopular: true,
     features: [
-      "All Platforms (Meta, TikTok, LinkedIn)",
-      "Unlimited Ad Spend Management",
-      "Weekly Creative Production & Testing",
-      "Custom Attribution Reporting Dashboard",
-      "Dedicated Account Director",
-      "Slack Channel Access",
+      "Up to 3 Platforms (Meta + TikTok + LinkedIn)",
+      "Advanced Funnel Architecture",
+      "Up to $35k Monthly Ad Spend",
+      "Creative Strategy & Production (4 ads/mo)",
+      "Advanced Lookalike Audiences",
+      "Bi-Weekly Strategy Calls",
     ],
   },
 ];
@@ -241,9 +246,10 @@ export default function PaidSocialMediaAdvertisingPage() {
 
       <ServiceTestimonial
         quote="Our ROAS went from 1.8x to 9.4x in just four months. Revenue Room Digital completely rebuilt our Meta strategy from the ground up — the creative testing process alone was worth the investment."
-        author="Marcus Webb"
-        role="Founder & CEO"
-        company="Elevate Supplements Co."
+        author="Elena Rossi"
+        role="E-Commerce Director"
+        company="Verde Botanicals"
+        avatarSrc="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=256"
       />
 
       <ServiceBenefits

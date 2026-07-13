@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 
 const steps = [
   {
@@ -44,10 +45,10 @@ export function CaseStudiesMethodology() {
               Great results aren't accidents. They are the byproduct of a ruthless, systematic approach to growth. We don't guess; we test, measure, and scale.
             </p>
             
-            <button className="flex items-center gap-3 text-sm md:text-base font-bold uppercase tracking-widest border border-black/20 px-8 py-4 rounded-full bg-black text-white hover:bg-brand-lime hover:text-black hover:border-brand-lime transition-all duration-300 group">
+            <Link href="/contact" className="w-max flex items-center gap-3 text-sm md:text-base font-bold uppercase tracking-widest border border-black/20 px-8 py-4 rounded-full bg-black text-white hover:bg-brand-lime hover:text-black hover:border-brand-lime transition-all duration-300 group">
               Start Your Growth
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
           </motion.div>
           
           <motion.div 

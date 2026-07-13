@@ -160,30 +160,27 @@ const PRICING_PLANS = [
   {
     name: "Launch",
     description: "For brands establishing their organic social presence.",
-    price: "$900",
-    period: "/ month",
+    price: "$200",
+    period: "/week",
     isPopular: false,
     features: [
-      "1 Platform",
-      "12 Posts / Month",
+      "3 Posts per week on all platforms",
       "Content Calendar & Strategy",
       "Basic Community Management",
       "Monthly Performance Report",
     ],
   },
   {
-    name: "Scale",
-    description: "For brands serious about building an engaged community.",
-    price: "$2,200",
-    period: "/ month",
+    name: "Growth",
+    description: "For brands looking to build an engaged following.",
+    price: "$300",
+    period: "/week",
     isPopular: true,
     features: [
-      "Up to 3 Platforms",
-      "20 Posts / Month (incl. Reels)",
-      "Full Content Strategy & Production",
-      "Daily Community Management",
-      "Hashtag & Growth Strategy",
-      "Bi-Weekly Strategy Calls",
+      "5 Posts per week on all platforms",
+      "Content Strategy & Scheduling",
+      "Proactive Community Management",
+      "Monthly Strategy Sync",
     ],
   },
   {
@@ -198,7 +195,7 @@ const PRICING_PLANS = [
       "Influencer & Collaboration Outreach",
       "Advanced Analytics Dashboard",
       "Dedicated Account Director",
-      "Slack Channel Access",
+      "Custom Reporting",
     ],
   },
 ];
@@ -241,6 +238,7 @@ export default function OrganicSocialMediaManagementPage() {
         author="Jess Thornton"
         role="Brand Manager"
         company="Lume Skincare"
+        avatarSrc="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=256"
       />
 
       <ServiceBenefits

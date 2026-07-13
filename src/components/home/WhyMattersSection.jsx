@@ -1,6 +1,7 @@
 // SERVER COMPONENT — no "use client" needed
 import { FadeIn } from "@/components/ui/Motion";
 import { Activity, Globe, DollarSign, Phone, ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const features = [
   {
@@ -70,10 +71,10 @@ export function WhyMattersSection() {
             </div>
 
             <div className="lg:col-span-4 flex flex-col items-center justify-center p-6 md:p-10 gap-3 md:gap-4 bg-accent/5">
-              <button className="w-full bg-accent text-black font-bold py-4 rounded-none text-base md:text-lg hover:bg-white transition-colors flex items-center justify-center gap-2 group">
+              <Link href="/contact" className="w-full bg-accent text-black font-bold py-4 rounded-none text-base md:text-lg hover:bg-white transition-colors flex items-center justify-center gap-2 group">
                 Book Consultation
                 <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </button>
+              </Link>
               <a
                 href="https://wa.me/61438365241"
                 target="_blank"

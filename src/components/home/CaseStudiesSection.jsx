@@ -1,6 +1,7 @@
 // SERVER COMPONENT — no "use client" needed
 import { FadeIn } from "@/components/ui/Motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 
 // Placeholder images - assuming these are transparent PNG logos
@@ -101,10 +102,10 @@ export function CaseStudiesSection() {
         delay={0.2}
         className="flex justify-center mt-16 md:mt-24 relative z-20"
       >
-        <button className="flex items-center gap-3 text-[11px] md:text-[13px] font-bold uppercase tracking-widest border border-white/10 px-8 py-4 rounded-full text-white bg-white/5 hover:bg-accent hover:border-accent hover:text-black transition-all duration-300 group">
+        <Link href="/case-studies" className="flex items-center gap-3 text-[11px] md:text-[13px] font-bold uppercase tracking-widest border border-white/10 px-8 py-4 rounded-full text-white bg-white/5 hover:bg-accent hover:border-accent hover:text-black transition-all duration-300 group">
           View All Case Studies
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </button>
+        </Link>
       </FadeIn>
 
     </section>
