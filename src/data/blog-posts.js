@@ -485,6 +485,251 @@ Forget vanity metrics. For revenue-driven video content, track:
 If you want help building a content strategy that actually drives revenue from your video content, [our video and social teams work together](/contact?service=video-editing) to make it happen.
     `,
   },
+  {
+    slug: "how-much-should-australian-businesses-spend-on-digital-marketing",
+    title: "How Much Should Australian Businesses Spend on Digital Marketing in 2026?",
+    excerpt:
+      "The question every business owner asks but rarely gets a straight answer to. Here's the real breakdown — by business size, industry, and growth stage.",
+    category: "SEO",
+    categoryColor: "lime",
+    author: "Alex Carter",
+    authorRole: "Head of Search",
+    date: "July 8, 2026",
+    readTime: "8 min read",
+    coverImage:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1400",
+    featured: false,
+    content: `
+## The Question Nobody Answers Honestly
+
+Every business owner eventually asks: "How much should I be spending on digital marketing?"
+
+Most agencies dodge it with vague answers like "it depends on your goals" or "typically 5–15% of revenue." Technically true. Practically useless.
+
+Here's the straight answer — broken down by where you actually are in your business.
+
+## The Industry Benchmarks
+
+The Australian Bureau of Statistics and multiple industry reports put the average marketing spend for Australian SMEs at around **8–12% of gross revenue**. But this average masks a huge range.
+
+| Business Stage | Recommended Digital Marketing Budget |
+|---|---|
+| Early-stage (under $500k revenue) | 15–25% of revenue |
+| Growth-stage ($500k–$5M revenue) | 10–15% of revenue |
+| Established ($5M+ revenue) | 6–10% of revenue |
+| Aggressive growth mode | Up to 20%+ |
+
+The reason early-stage businesses spend a higher percentage is simple: you're buying market share. You have no organic presence, no word of mouth, and no referral base. Marketing is the engine.
+
+## Breaking Down Where the Budget Goes
+
+If you're spending $10,000/month on digital marketing, here's how a well-run allocation typically looks:
+
+### Paid Advertising (40–50%)
+$4,000–$5,000 in actual ad spend across Google and Meta. This is the fastest lever for immediate revenue. Without sufficient ad spend, campaigns can't gather enough data to optimise properly.
+
+### Agency or Management Fees (20–30%)
+$2,000–$3,000 for the team managing your campaigns, creative, and strategy. Cheap agencies cost more in the long run — their mistakes come out of your ad budget.
+
+### Content & SEO (20–25%)
+$2,000–$2,500 for content creation, technical SEO, and link building. This is the long-term asset that compounds over time.
+
+### Website & Conversion (5–10%)
+$500–$1,000 for ongoing landing page tests, CRO improvements, and development. No point pouring traffic into a page that doesn't convert.
+
+## The Hidden Cost of Underspending
+
+The most common mistake we see from Australian SMEs is spending just enough to be in the market but not enough to win.
+
+**Example:** A local accounting firm allocating $1,500/month for Google Ads in a competitive Sydney market. Their competitors are spending $8,000–$15,000/month. They're generating impressions but winning almost no auctions. Their $1,500 is essentially a donation to Google.
+
+Marketing has a threshold below which it simply doesn't work. Finding and clearing that threshold is the real challenge.
+
+## What to Do Before You Spend Anything
+
+1. **Fix your website first.** If your site converts at 0.5%, no marketing budget will help. Get it to 2–3% before scaling spend.
+2. **Know your customer acquisition cost.** If you don't know what a new customer is worth to you over 12 months, you can't set a rational marketing budget.
+3. **Start with one channel.** Master Google Ads or Meta before adding more complexity.
+
+If you want a no-fluff budget recommendation specific to your business and market, [book a strategy call](/contact) — we'll run the numbers with you.
+    `,
+  },
+  {
+    slug: "tiktok-ads-vs-meta-ads-which-platform-for-australian-brands",
+    title: "TikTok Ads vs. Meta Ads: Which Is Right for Your Australian Brand?",
+    excerpt:
+      "Both platforms can drive serious revenue — but they work differently, attract different audiences, and require completely different creative strategies. Here's how to choose.",
+    category: "Paid Social",
+    categoryColor: "blue",
+    author: "Maya Singh",
+    authorRole: "Paid Social Director",
+    date: "July 1, 2026",
+    readTime: "7 min read",
+    coverImage:
+      "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&q=80&w=1400",
+    featured: false,
+    content: `
+## The Platform War That Doesn't Need to Be a War
+
+Every week we get asked some version of: "Should we be on TikTok or should we stick with Meta?"
+
+The truthful answer: for most brands with a budget above $3,000/month in ad spend, you should be on both. But the *how* is completely different, and getting that wrong is expensive.
+
+## Understanding Who's Actually There
+
+### Meta (Facebook + Instagram)
+Meta's combined user base in Australia sits at roughly **17 million active users** across Facebook and Instagram. The platform skews slightly older than TikTok — Instagram peaks around 25–34 year olds, Facebook around 35–54.
+
+For purchasing intent: Meta users are often in "research mode" — they see your ad, click through, read your site, and potentially convert over hours or days.
+
+### TikTok
+TikTok has crossed **8 million Australian monthly active users** and is the fastest-growing platform in the country by time-spent. The demographic is younger (18–34 heavily), but growing older fast.
+
+For purchasing intent: TikTok users make impulse decisions. The purchase cycle is compressed. They see the ad, they feel the pull, they buy — or they don't. Much less research behaviour.
+
+## Creative: The Biggest Difference
+
+This is where most brands get it wrong. They take the same creative and run it on both platforms. This doesn't work.
+
+### What Works on Meta
+- **Polished carousels** with product images and benefit bullets
+- **Video with captions** (80% of Facebook videos are watched without sound)
+- **Before/after formats** that tell a clear story
+- **Direct response copy** — offer, proof, CTA
+
+### What Works on TikTok
+- **Raw, authentic video** — shot on a phone, first-person, genuine
+- **Entertainment first** — make them laugh, surprise them, or teach them something
+- **Fast pacing** — cuts every 2–3 seconds, constant motion
+- **Sound-on design** — music, voice, trending audio all matter
+
+Running polished Meta-style ads on TikTok is one of the fastest ways to burn through budget with nothing to show for it.
+
+## Cost Comparison (Australian Market, 2026)
+
+| Metric | Meta | TikTok |
+|---|---|---|
+| Average CPM (cost per 1,000 impressions) | $8–15 | $5–10 |
+| Average CPC (cost per click) | $0.80–$2.50 | $0.30–$1.00 |
+| Average CPL (cost per lead, lead gen) | $15–60 | $20–80 |
+| Average CPA (cost per acquisition, e-com) | $18–50 | $15–45 |
+
+TikTok is generally cheaper to reach people, but conversion rates are often lower — meaning the eventual cost per sale can be similar. The real advantage of TikTok is volume and brand awareness at scale.
+
+## When to Choose One Over the Other
+
+**Start with Meta if:**
+- Your customer is 30+
+- You sell considered purchases (above $100–200)
+- You have polished product imagery or existing video assets
+- You need conversions within 30 days
+
+**Start with TikTok if:**
+- Your customer is under 35
+- You sell impulse-friendly products (beauty, fashion, food, gadgets)
+- You have authentic content capability (or budget to create it)
+- You want to build brand at scale before direct conversion
+
+**Run both if:**
+- Your monthly ad spend exceeds $5,000
+- You want to cross-retarget (TikTok awareness → Meta conversion is a powerful funnel)
+- You're in e-commerce
+
+If you want a platform recommendation based on your specific product and audience, [talk to our paid social team](/contact?service=paid-social) — we'll tell you exactly where your budget will work hardest.
+    `,
+  },
+  {
+    slug: "website-speed-core-web-vitals-guide-for-australian-businesses",
+    title: "Why Your Website Speed Is Quietly Killing Your Google Rankings",
+    excerpt:
+      "Google has officially made page speed a ranking factor. Here's what Core Web Vitals actually mean, what scores you need to hit, and how to fix the most common issues fast.",
+    category: "Web Design",
+    categoryColor: "purple",
+    author: "Tom Weston",
+    authorRole: "Head of Web",
+    date: "June 15, 2026",
+    readTime: "8 min read",
+    coverImage:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1400",
+    featured: false,
+    content: `
+## The Speed Problem Most Businesses Ignore
+
+Here's a statistic that should make every business owner uncomfortable: **53% of mobile users abandon a website that takes longer than 3 seconds to load.**
+
+Not 10 seconds. Not 5 seconds. Three.
+
+And yet the average Australian small business website loads in 6–9 seconds on a mobile connection. That means you're losing more than half your visitors before they see a single word of your sales copy.
+
+## What Are Core Web Vitals?
+
+In 2021, Google made page experience an official ranking factor through a set of metrics called Core Web Vitals. In 2026, these are heavily weighted in Google's ranking algorithm. Here's what they measure:
+
+### Largest Contentful Paint (LCP)
+The time it takes for the main content of a page to load and appear on screen.
+- **Good:** Under 2.5 seconds
+- **Needs Improvement:** 2.5–4 seconds
+- **Poor:** Over 4 seconds
+
+This is almost always the metric that kills Australian business websites — particularly those using WordPress with unoptimised images and slow hosting.
+
+### Interaction to Next Paint (INP)
+How responsive the page is when a user clicks or taps something.
+- **Good:** Under 200 milliseconds
+- **Needs Improvement:** 200–500ms
+- **Poor:** Over 500ms
+
+### Cumulative Layout Shift (CLS)
+How much the page "jumps around" as elements load. That experience where you try to click a button and the page shifts and you click the wrong thing — that's high CLS.
+- **Good:** Under 0.1
+- **Needs Improvement:** 0.1–0.25
+- **Poor:** Over 0.25
+
+## The 5 Most Common Speed Issues (and Fixes)
+
+### 1. Unoptimised Images
+The single biggest culprit. Most websites are serving 3–5MB JPEG images when they should be serving 200–400KB WebP files.
+
+**Fix:** Convert all images to WebP format. Compress before uploading. Use Next.js Image component (next/image) or an image CDN if on WordPress.
+
+### 2. Slow Hosting
+Budget hosting ($3–5/month shared servers) in the US will always be slow for Australian visitors. The physical distance adds latency on top of slow server response times.
+
+**Fix:** Use Australian-based hosting (SiteGround, WP Engine, or a CDN like Cloudflare) for dramatically faster server response times.
+
+### 3. Render-Blocking JavaScript and CSS
+Most WordPress themes load dozens of CSS and JavaScript files that block the browser from rendering your page until they've all downloaded.
+
+**Fix:** Minify and combine CSS/JS files. Defer non-critical JavaScript. Use a caching plugin like WP Rocket.
+
+### 4. No CDN (Content Delivery Network)
+A CDN stores copies of your website on servers around the world, serving content from the location closest to the visitor.
+
+**Fix:** Cloudflare's free tier dramatically improves load times for most websites. For business-critical sites, consider Cloudflare Pro.
+
+### 5. Too Many Plugins (WordPress)
+Each plugin adds more code, more database queries, and more load time. The average WordPress site has 20+ plugins; many of them doing things the site doesn't actually need.
+
+**Fix:** Audit your plugins. Remove anything not essential. Replace multiple plugins with a single well-coded one where possible.
+
+## How to Check Your Score Right Now
+
+1. Go to [PageSpeed Insights](https://pagespeed.web.dev)
+2. Enter your URL
+3. Check both the Mobile and Desktop scores
+4. Focus on **Mobile** — this is what Google primarily uses for ranking
+
+A score of 90+ on mobile is what we target for our clients. If you're below 60, you have a serious problem that's affecting both your Google rankings and your conversion rate.
+
+## The ROI of Speed
+
+For every 100ms improvement in page load time, e-commerce conversion rates improve by approximately 1%. For a site doing $50,000/month in revenue, a 500ms improvement could mean an extra $25,000/month.
+
+Speed isn't a technical nice-to-have. It's a revenue lever.
+
+If you want us to run a full technical audit of your website and fix the issues holding back your rankings, [get in touch with our web team](/contact?service=web-development).
+    `,
+  },
 ];
 
 export function getBlogPost(slug) {
