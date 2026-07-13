@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion } from "framer-motion";
 import { Volume2, VolumeX, Pause, Play } from "lucide-react";
 
 export function VideoSection() {

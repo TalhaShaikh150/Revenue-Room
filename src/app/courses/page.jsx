@@ -6,7 +6,7 @@ import { CourseLogosSection } from "@/components/courses/CourseLogosSection";
 export const metadata = {
   title: "Digital Marketing Courses | Revenue Room Digital",
   description:
-    "Learn digital marketing from industry practitioners. Revenue Room Digital offers hands-on courses in paid advertising, SEO, social media, and more — built for Australian marketers and business owners.",
+    "Learn digital marketing from industry practitioners. Revenue Room Digital offers hands-on courses in paid advertising, SEO, social media, and more, built for Australian marketers and business owners.",
   keywords: [
     "digital marketing courses Australia",
     "online marketing courses",

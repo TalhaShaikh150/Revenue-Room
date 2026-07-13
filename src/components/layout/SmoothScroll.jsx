@@ -10,7 +10,7 @@ export function SmoothScroll({ children }) {
 
   // Initialise Lenis once on mount
   useEffect(() => {
-    // Skip Lenis on mobile — native scroll is faster and smoother
+    // Skip Lenis on mobile, native scroll is faster and smoother
     if (typeof window !== "undefined" && window.innerWidth < 768) return;
 
     const lenis = new Lenis({

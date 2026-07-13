@@ -1,4 +1,4 @@
-// SERVER COMPONENT — no "use client" needed
+// SERVER COMPONENT ,  no "use client" needed
 import { FadeIn } from "@/components/ui/Motion";
 
 const steps = [
@@ -10,7 +10,7 @@ const steps = [
   {
     number: "02",
     title: "The Deep Dive",
-    description: "Our experts tear down your existing setup—analyzing ad accounts, tracking, creatives, and funnels to find the bottlenecks holding you back.",
+    description: "Our experts tear down your existing setup, analyzing ad accounts, tracking, creatives, and funnels to find the bottlenecks holding you back.",
   },
   {
     number: "03",

@@ -1,4 +1,4 @@
-// SERVER COMPONENT — no "use client" needed
+// SERVER COMPONENT, no "use client" needed
 import Image from "next/image";
 import { Quote } from "lucide-react";
 import { FadeIn, FadeInX, FadeInScale } from "@/components/ui/Motion";

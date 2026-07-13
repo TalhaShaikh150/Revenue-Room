@@ -8,7 +8,7 @@ import { CultureSection } from "@/components/about/CultureSection";
 export const metadata = {
   title: "About Us | Revenue Room Digital",
   description:
-    "Meet the team behind Revenue Room Digital — a performance-driven digital marketing agency helping Australian businesses grow through smart strategy, creative content, and data-backed campaigns.",
+    "Meet the team behind Revenue Room Digital, a performance-driven digital marketing agency helping Australian businesses grow through smart strategy, creative content, and data-backed campaigns.",
   keywords: [
     "about Revenue Room Digital",
     "digital marketing agency Australia",
@@ -23,7 +23,7 @@ export const metadata = {
   openGraph: {
     title: "About Us | Revenue Room Digital",
     description:
-      "Meet the performance-driven team behind Revenue Room Digital — built to grow Australian businesses.",
+      "Meet the performance-driven team behind Revenue Room Digital, built to grow Australian businesses.",
     url: "https://revenueroomdigital.com.au/about",
     siteName: "Revenue Room Digital",
     locale: "en_AU",

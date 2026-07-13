@@ -1,4 +1,4 @@
-// SERVER COMPONENT — no "use client" needed
+// SERVER COMPONENT, no "use client" needed
 import { ArrowRight } from "lucide-react";
 import { FadeIn, FadeInStagger, FadeInItem } from "@/components/ui/Motion";
 import Link from "next/link";
@@ -61,7 +61,7 @@ export function OfferingSection() {
                         <stop offset="100%" stopColor="#ffffff" />
                       </linearGradient>
                     </defs>
-                    {/* Static neon curve — hover reveals it via opacity transition */}
+                    {/* Static neon curve, hover reveals it via opacity transition */}
                     <path
                       d="M 0,80 C 100,100 200,40 300,70"
                       fill="none"

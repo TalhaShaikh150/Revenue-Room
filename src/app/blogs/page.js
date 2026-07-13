@@ -5,7 +5,7 @@ import { BlogClient } from "@/components/blog/BlogClient";
 export const metadata = {
   title: "Digital Marketing Blog | Revenue Room Digital",
   description:
-    "No-fluff digital marketing insights from the Revenue Room Digital team. Learn how to grow your business with SEO, Google Ads, paid social, web design, and video content — written by the people doing it every day.",
+    "No-fluff digital marketing insights from the Revenue Room Digital team. Learn how to grow your business with SEO, Google Ads, paid social, web design, and video content, written by the people doing it every day.",
   keywords: [
     "digital marketing blog Australia",
     "SEO tips Australia",

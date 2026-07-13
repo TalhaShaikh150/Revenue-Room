@@ -1,4 +1,4 @@
-// SERVER COMPONENT — no "use client" needed
+// SERVER COMPONENT, no "use client" needed
 import { FadeIn } from "@/components/ui/Motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";

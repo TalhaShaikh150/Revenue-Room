@@ -22,7 +22,7 @@ import {
 export const metadata = {
   title: "Organic Social Media Management | Revenue Room Digital",
   description:
-    "Build an audience that actually buys. Revenue Room Digital manages your organic social media presence across Instagram, TikTok, LinkedIn, and more — turning followers into loyal customers.",
+    "Build an audience that actually buys. Revenue Room Digital manages your organic social media presence across Instagram, TikTok, LinkedIn, and more, turning followers into loyal customers.",
   keywords: [
     "organic social media management Australia",
     "social media management agency",
@@ -52,7 +52,7 @@ const FEATURES = [
   {
     title: "Content Strategy & Calendar",
     description:
-      "We build a data-led content strategy tailored to your brand voice and audience behaviour — then plan it all into a structured, consistent monthly content calendar.",
+      "We build a data-led content strategy tailored to your brand voice and audience behaviour, then plan it all into a structured, consistent monthly content calendar.",
     icon: <CalendarCheck className="w-6 h-6" aria-hidden="true" />,
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800",
   },
@@ -66,14 +66,14 @@ const FEATURES = [
   {
     title: "Community Management",
     description:
-      "We handle your DMs, comments, and community interactions daily — turning passive followers into engaged brand advocates and loyal repeat customers.",
+      "We handle your DMs, comments, and community interactions daily, turning passive followers into engaged brand advocates and loyal repeat customers.",
     icon: <MessageCircle className="w-6 h-6" aria-hidden="true" />,
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Growth & Hashtag Strategy",
     description:
-      "We implement proven organic growth tactics — from hashtag stacking and collaboration outreach to trend hijacking — to consistently grow your reach without ad spend.",
+      "We implement proven organic growth tactics, from hashtag stacking and collaboration outreach to trend hijacking, to consistently grow your reach without ad spend.",
     icon: <TrendingUp className="w-6 h-6" aria-hidden="true" />,
     image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=800",
   },
@@ -87,7 +87,7 @@ const FEATURES = [
   {
     title: "Monthly Analytics & Reporting",
     description:
-      "Full monthly performance reports covering reach, engagement rate, follower growth, and profile conversions — with clear, actionable recommendations each month.",
+      "Full monthly performance reports covering reach, engagement rate, follower growth, and profile conversions, with clear, actionable recommendations each month.",
     icon: <BarChart2 className="w-6 h-6" aria-hidden="true" />,
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
   },
@@ -120,7 +120,7 @@ const BENEFITS = [
   {
     title: "Consistent Brand Presence",
     description:
-      "Never go quiet again. We ensure your brand shows up consistently across every platform, every week — building trust and top-of-mind awareness with your audience.",
+      "Never go quiet again. We ensure your brand shows up consistently across every platform, every week, building trust and top-of-mind awareness with your audience.",
   },
   {
     title: "Content That Converts",
@@ -153,7 +153,7 @@ const FAQS = [
   {
     question: "Can you grow my follower count?",
     answer:
-      "We implement organic growth strategies that attract genuine, relevant followers — not bots. Growth rates vary by industry and platform, but our clients typically see 15–30% follower growth in the first 90 days.",
+      "We implement organic growth strategies that attract genuine, relevant followers, not bots. Growth rates vary by industry and platform, but our clients typically see 15–30% follower growth in the first 90 days.",
   },
   {
     question: "Are there long-term contracts?",
@@ -254,7 +254,7 @@ export default function OrganicSocialMediaManagementPage() {
             </span>
           </>
         }
-        description="We manage your brand's organic social presence end-to-end — strategy, content creation, posting, and community management — turning followers into a loyal, revenue-generating audience."
+        description="We manage your brand's organic social presence end-to-end, strategy, content creation, posting, and community management, turning followers into a loyal, revenue-generating audience."
         highlights={[
           "End-to-End Content Strategy",
           "High-Quality Content Production",
@@ -265,7 +265,7 @@ export default function OrganicSocialMediaManagementPage() {
       />
 
       <ServiceFeatures
-        subtitle="Our Capabilities"
+        subtitle="Our Core Services"
         title="Everything Your Brand Needs to Win Organically"
         features={FEATURES}
       />

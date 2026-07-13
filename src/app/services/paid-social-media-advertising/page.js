@@ -23,7 +23,7 @@ import {
 export const metadata = {
   title: "Paid Social Media Advertising | Revenue Room Digital",
   description:
-    "Turn social feeds into revenue machines. Revenue Room Digital runs high-converting paid social campaigns across Meta, TikTok, LinkedIn and more — built to scale your brand profitably.",
+    "Turn social feeds into revenue machines. Revenue Room Digital runs high-converting paid social campaigns across Meta, TikTok, LinkedIn and more, built to scale your brand profitably.",
   keywords: [
     "paid social media advertising Australia",
     "Facebook Ads agency",
@@ -54,7 +54,7 @@ const FEATURES = [
   {
     title: "Meta (Facebook & Instagram) Ads",
     description:
-      "We build full-funnel Meta campaigns — from broad awareness to retargeting warm audiences. Every dollar is tracked against real revenue outcomes, not vanity metrics.",
+      "We build full-funnel Meta campaigns, from broad awareness to retargeting warm audiences. Every dollar is tracked against real revenue outcomes, not vanity metrics.",
     icon: <BarChart2 className="w-6 h-6" aria-hidden="true" />,
     image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&q=80&w=800",
   },
@@ -75,7 +75,7 @@ const FEATURES = [
   {
     title: "Audience & Retargeting Strategy",
     description:
-      "We build sophisticated audience stacks — from lookalikes to behavioural cohorts — ensuring your ads reach the right people at the right stage of the buying journey.",
+      "We build sophisticated audience stacks, from lookalikes to behavioural cohorts, ensuring your ads reach the right people at the right stage of the buying journey.",
     icon: <Target className="w-6 h-6" aria-hidden="true" />,
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
   },
@@ -104,7 +104,7 @@ const PROCESS_STEPS = [
   {
     title: "Creative Strategy & Production",
     description:
-      "Great ads start with great creative. We develop a content framework built around your brand voice — scripts, hooks, formats, and visuals proven to stop the scroll.",
+      "Great ads start with great creative. We develop a content framework built around your brand voice, scripts, hooks, formats, and visuals proven to stop the scroll.",
   },
   {
     title: "Campaign Build & Launch",
@@ -127,12 +127,12 @@ const BENEFITS = [
   {
     title: "Platform-Native Creative",
     description:
-      "Ads that feel native to each platform perform dramatically better. We craft platform-specific creatives for Meta, TikTok, and LinkedIn — not one-size-fits-all content.",
+      "Ads that feel native to each platform perform dramatically better. We craft platform-specific creatives for Meta, TikTok, and LinkedIn, not one-size-fits-all content.",
   },
   {
     title: "Full Funnel Coverage",
     description:
-      "From cold audiences seeing your brand for the first time to hot retargeting of cart abandoners — we engineer every stage of your social funnel.",
+      "From cold audiences seeing your brand for the first time to hot retargeting of cart abandoners, we engineer every stage of your social funnel.",
   },
 ];
 
@@ -150,7 +150,7 @@ const FAQS = [
   {
     question: "Do you create the ad creative, or do I need to supply it?",
     answer:
-      "Both options are available. On our Scale and Enterprise plans, creative strategy and production is included — we handle scripts, design, and video editing. On our Growth plan, we provide a detailed creative brief for you to produce, and we handle all the strategy, targeting, and management.",
+      "Both options are available. On our Scale and Enterprise plans, creative strategy and production is included, we handle scripts, design, and video editing. On our Growth plan, we provide a detailed creative brief for you to produce, and we handle all the strategy, targeting, and management.",
   },
   {
     question: "How quickly will I see results from paid social?",
@@ -264,7 +264,7 @@ export default function PaidSocialMediaAdvertisingPage() {
             </span>
           </>
         }
-        description="We run high-converting paid social campaigns across Meta, TikTok, and LinkedIn that transform your ad budget into predictable, scalable revenue. No fluff — just ROI."
+        description="We run high-converting paid social campaigns across Meta, TikTok, and LinkedIn that transform your ad budget into predictable, scalable revenue. No fluff, just ROI."
         highlights={[
           "Meta (Facebook & Instagram) Ads",
           "TikTok Advertising",
@@ -282,7 +282,7 @@ export default function PaidSocialMediaAdvertisingPage() {
       />
 
       <ServiceTestimonial
-        quote="Our ROAS went from 1.8x to 9.4x in just four months. Revenue Room Digital completely rebuilt our Meta strategy from the ground up — the creative testing process alone was worth the investment."
+        quote="Our ROAS went from 1.8x to 9.4x in just four months. Revenue Room Digital completely rebuilt our Meta strategy from the ground up, the creative testing process alone was worth the investment."
         author="Elena Rossi"
         role="E-Commerce Director"
         company="Verde Botanicals"

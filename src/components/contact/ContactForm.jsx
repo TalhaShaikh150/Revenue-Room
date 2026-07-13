@@ -12,41 +12,41 @@ const SERVICE_PLANS = {
   seo: {
     label: "SEO & AI Search Advertising",
     plans: [
-      { value: "growth", label: "Growth — $1,500/mo" },
-      { value: "scale", label: "Scale — $3,500/mo" },
-      { value: "enterprise", label: "Enterprise — Custom" },
+      { value: "growth", label: "Growth - $1,500/mo" },
+      { value: "scale", label: "Scale - $3,500/mo" },
+      { value: "enterprise", label: "Enterprise - Custom" },
     ],
   },
   ppc: {
     label: "Paid Social Media Advertising",
     plans: [
-      { value: "launch", label: "Launch — $1,200/mo" },
-      { value: "scale", label: "Scale — $2,800/mo" },
-      { value: "enterprise", label: "Enterprise — Custom" },
+      { value: "launch", label: "Launch - $1,200/mo" },
+      { value: "scale", label: "Scale - $2,800/mo" },
+      { value: "enterprise", label: "Enterprise - Custom" },
     ],
   },
   "social-media": {
     label: "Organic Social Media Management",
     plans: [
-      { value: "launch", label: "Launch — $900/mo" },
-      { value: "scale", label: "Scale — $2,200/mo" },
-      { value: "enterprise", label: "Enterprise — Custom" },
+      { value: "launch", label: "Launch - $900/mo" },
+      { value: "scale", label: "Scale - $2,200/mo" },
+      { value: "enterprise", label: "Enterprise - Custom" },
     ],
   },
   "web-design": {
     label: "Web Development & Landing Pages",
     plans: [
-      { value: "landing page", label: "Landing Page — $2,500" },
-      { value: "business website", label: "Business Website — $6,500" },
-      { value: "enterprise", label: "Enterprise — Custom" },
+      { value: "landing page", label: "Landing Page - $2,500" },
+      { value: "business website", label: "Business Website - $6,500" },
+      { value: "enterprise", label: "Enterprise - Custom" },
     ],
   },
   "video-editing": {
     label: "Video Editing & Production",
     plans: [
-      { value: "starter", label: "Starter — $800/mo" },
-      { value: "scale", label: "Scale — $1,800/mo" },
-      { value: "enterprise", label: "Enterprise — Custom" },
+      { value: "starter", label: "Starter - $800/mo" },
+      { value: "scale", label: "Scale - $1,800/mo" },
+      { value: "enterprise", label: "Enterprise - Custom" },
     ],
   },
   consulting: {
@@ -213,7 +213,7 @@ function ContactFormContent() {
         </select>
       </div>
 
-      {/* Plan Selection — only visible when a service with plans is selected */}
+      {/* Plan Selection - only visible when a service with plans is selected */}
       {hasPlans && (
         <div>
           <label htmlFor="plan" className={labelClass}>
@@ -227,7 +227,7 @@ function ContactFormContent() {
             onChange={handleChange}
             className={`${inputClass} [&>option]:bg-[#0b0c0c]`}
           >
-            <option value="">— Select a plan —</option>
+            <option value="">- Select a plan -</option>
             {availablePlans.map((p) => (
               <option key={p.value} value={p.value}>
                 {p.label}

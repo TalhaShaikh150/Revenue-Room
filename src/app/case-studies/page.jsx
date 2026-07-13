@@ -25,7 +25,7 @@ export const metadata = {
   openGraph: {
     title: "Case Studies | Revenue Room Digital",
     description:
-      "Real results from real businesses — explore how Revenue Room Digital drives measurable growth.",
+      "Real results from real businesses, explore how Revenue Room Digital drives measurable growth.",
     url: "https://revenueroomdigital.com.au/case-studies",
     siteName: "Revenue Room Digital",
     locale: "en_AU",

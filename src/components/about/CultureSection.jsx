@@ -1,4 +1,4 @@
-// SERVER COMPONENT — no "use client" needed
+// SERVER COMPONENT, no "use client" needed
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";

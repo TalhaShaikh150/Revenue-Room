@@ -51,7 +51,7 @@ export function ConsultingHero() {
           className="text-white/60 text-lg md:text-xl font-medium mb-12 max-w-3xl leading-relaxed"
         >
           We partner with brands and in-house teams to provide strategic
-          marketing consulting — from deep-dive audits and channel strategy to
+          marketing consulting, from deep-dive audits and channel strategy to
           ongoing advisory that helps you grow faster and spend smarter.
         </motion.p>
         

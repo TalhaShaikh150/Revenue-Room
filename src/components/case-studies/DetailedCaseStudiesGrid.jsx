@@ -1,4 +1,4 @@
-// SERVER COMPONENT — no "use client" needed
+// SERVER COMPONENT, no "use client" needed
 import Image from "next/image";
 import { FadeIn } from "@/components/ui/Motion";
 import { ArrowUpRight, TrendingUp, Zap, Target } from "lucide-react";

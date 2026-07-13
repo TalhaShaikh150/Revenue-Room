@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     question: "How fast can we expect to see results?",
-    answer: "Because we optimize and adjust bids daily—not weekly—most of our clients see a significant improvement in ROAS and lead quality within the first 14 to 30 days of partnering with us."
+    answer: "Because we optimize and adjust bids daily, not weekly, most of our clients see a significant improvement in ROAS and lead quality within the first 14 to 30 days of partnering with us."
   },
   {
     question: "Do you guarantee results?",

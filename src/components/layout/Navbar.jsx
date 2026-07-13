@@ -208,7 +208,7 @@ export function Navbar() {
               <X className="w-5 h-5 text-white group-hover:text-accent transition-transform duration-300 group-hover:rotate-90" />
             </button>
 
-            {/* BODY — allows scrolling when dropdowns push content off-screen */}
+            {/* BODY, allows scrolling when dropdowns push content off-screen */}
             <div className="flex-1 w-full overflow-y-auto min-h-0">
               <div className="max-w-[1300px] mx-auto min-h-full flex items-center px-6 md:px-12 py-12 md:py-24">
                 

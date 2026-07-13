@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <section className="relative h-[100dvh] w-full flex flex-col items-center justify-center overflow-hidden bg-brand-bg px-4 md:px-6 z-0">
       
-      {/* 1. CINEMATIC VIDEO BACKGROUND — hidden on mobile (native image is faster) */}
+      {/* 1. CINEMATIC VIDEO BACKGROUND, hidden on mobile (native image is faster) */}
       <video 
         autoPlay 
         muted 
@@ -92,7 +92,7 @@ export function Hero() {
                   <input 
                       type="email" 
                       required
-                      placeholder="Enter your email to start growth — tonight" 
+                      placeholder="Enter your email to start growth, tonight" 
                       className="flex-1 bg-transparent border-none outline-none text-black placeholder:text-black/50 text-[13px] font-medium w-full truncate pr-4"
                   />
               </div>
@@ -109,7 +109,7 @@ export function Hero() {
               <input 
                   type="email" 
                   required
-                  placeholder="Enter your email and we'll start working on your growth — tonight" 
+                  placeholder="Enter your email and we'll start working on your growth, tonight" 
                   className="flex-1 bg-transparent border-none outline-none text-black placeholder:text-black/50 text-[15px] font-medium w-full truncate"
               />
               <button type="submit" aria-label="Submit email" className="shrink-0 bg-brand-lime text-black px-8 py-3.5 rounded-full text-[15px] font-bold hover:scale-[1.02] transition-all duration-300 flex items-center ">

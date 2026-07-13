@@ -1,16 +1,11 @@
-"use client";
-
-import { m } from "framer-motion";
+import { FadeIn } from "@/components/ui/Motion";
 
 export function WastedSpendSection() {
   return (
     <section className="relative w-full py-8 md:py-12 bg-brand-bg px-4 md:px-8">
       <div className="max-w-[1000px] mx-auto">
-        <m.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        <FadeIn
+          y={30}
           className="bg-[#f4f4f2] rounded-[24px] md:rounded-[32px] p-8 md:p-14 lg:p-20 relative overflow-hidden shadow-2xl"
         >
           {/* Subtle Accent Glows */}
@@ -30,7 +25,7 @@ export function WastedSpendSection() {
               fine print games, no "technically it was 25 hours."
             </p>
           </div>
-        </m.div>
+        </FadeIn>
       </div>
     </section>
   );

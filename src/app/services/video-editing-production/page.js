@@ -52,28 +52,28 @@ const FEATURES = [
   {
     title: "Short-Form Video Editing",
     description:
-      "Punchy, platform-native edits for TikTok, Instagram Reels, and YouTube Shorts. We cut for retention — strong hooks, rapid pacing, and compelling CTAs that drive action.",
+      "Punchy, platform-native edits for TikTok, Instagram Reels, and YouTube Shorts. We cut for retention, strong hooks, rapid pacing, and compelling CTAs that drive action.",
     icon: <Scissors className="w-6 h-6" aria-hidden="true" />,
     image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Long-Form YouTube Production",
     description:
-      "Professional full-length YouTube video production with colour grading, motion graphics, chapter cards, and B-roll — built to maximise watch time and subscriber growth.",
+      "Professional full-length YouTube video production with colour grading, motion graphics, chapter cards, and B-roll, built to maximise watch time and subscriber growth.",
     icon: <PlayCircle className="w-6 h-6" aria-hidden="true" />,
     image: "https://images.unsplash.com/photo-1664355049229-746d2de57547?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fExvbmctRm9ybSUyMHZpZGVvfGVufDB8fDB8fHww",
   },
   {
     title: "Ad Creative Production",
     description:
-      "We craft high-converting video ad creatives for Meta, TikTok, and YouTube — engineered with proven direct-response frameworks that stop the scroll and drive clicks.",
+      "We craft high-converting video ad creatives for Meta, TikTok, and YouTube, engineered with proven direct-response frameworks that stop the scroll and drive clicks.",
     icon: <Zap className="w-6 h-6" aria-hidden="true" />,
     image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Captions & Subtitles",
     description:
-      "Accurate, on-brand captions added to every video. 85% of social media video is watched without sound — subtitles are non-negotiable for maximum reach and accessibility.",
+      "Accurate, on-brand captions added to every video. 85% of social media video is watched without sound, subtitles are non-negotiable for maximum reach and accessibility.",
     icon: <Subtitles className="w-6 h-6" aria-hidden="true" />,
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
   },
@@ -87,7 +87,7 @@ const FEATURES = [
   {
     title: "Raw Footage Repurposing",
     description:
-      "Already have a library of footage? We repurpose your existing raw recordings — podcasts, interviews, events, long-form videos — into a full month of short-form content.",
+      "Already have a library of footage? We repurpose your existing raw recordings, podcasts, interviews, events, long-form videos, into a full month of short-form content.",
     icon: <Film className="w-6 h-6" aria-hidden="true" />,
     image: "https://images.unsplash.com/photo-1696332415657-9fbe802a8875?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8UmF3JTIwRm9vdGFnZXxlbnwwfHwwfHx8MA%3D%3D",
   },
@@ -97,12 +97,12 @@ const PROCESS_STEPS = [
   {
     title: "Creative Brief & Onboarding",
     description:
-      "We start by understanding your brand aesthetic, target platforms, content goals, and reference styles — so every edit is perfectly on-brand from day one.",
+      "We start by understanding your brand aesthetic, target platforms, content goals, and reference styles, so every edit is perfectly on-brand from day one.",
   },
   {
     title: "Footage Submission",
     description:
-      "You upload your raw footage to our shared workspace. We accept files from any camera system, smartphone, or screen recording — no format restrictions.",
+      "You upload your raw footage to our shared workspace. We accept files from any camera system, smartphone, or screen recording, no format restrictions.",
   },
   {
     title: "Edit, Review & Revise",
@@ -120,17 +120,17 @@ const BENEFITS = [
   {
     title: "Fast, Reliable Turnarounds",
     description:
-      "We operate on guaranteed turnaround times — most edits delivered within 48–72 hours. No more waiting weeks on a freelancer who goes quiet.",
+      "We operate on guaranteed turnaround times, most edits delivered within 48–72 hours. No more waiting weeks on a freelancer who goes quiet.",
   },
   {
     title: "Consistent Quality at Scale",
     description:
-      "Whether you need 4 or 40 videos per month, our production team maintains the same premium quality at any volume — ideal for agencies and content-heavy brands.",
+      "Whether you need 4 or 40 videos per month, our production team maintains the same premium quality at any volume, ideal for agencies and content-heavy brands.",
   },
   {
     title: "Built for Conversion",
     description:
-      "Every edit is made with one goal in mind: results. Whether it's watch time, shares, or click-throughs on an ad — we edit with your business objectives front and centre.",
+      "Every edit is made with one goal in mind: results. Whether it's watch time, shares, or click-throughs on an ad, we edit with your business objectives front and centre.",
   },
 ];
 
@@ -158,7 +158,7 @@ const FAQS = [
   {
     question: "Can you repurpose my podcast into short clips?",
     answer:
-      "Absolutely — this is one of our most popular services. We take your long-form podcast or interview, identify the most engaging moments, and cut them into platform-optimised short clips with captions.",
+      "Absolutely, this is one of our most popular services. We take your long-form podcast or interview, identify the most engaging moments, and cut them into platform-optimised short clips with captions.",
   },
 ];
 
@@ -267,7 +267,7 @@ export default function VideoEditingProductionPage() {
             </span>
           </>
         }
-        description="From raw footage to polished, platform-ready video — we edit short-form, long-form, and ad creatives that capture attention, build your brand, and drive real business results."
+        description="From raw footage to polished, platform-ready video, we edit short-form, long-form, and ad creatives that capture attention, build your brand, and drive real business results."
         highlights={[
           "Short-Form Social Video (Reels/TikToks)",
           "High-Production Ad Creatives",
@@ -278,13 +278,13 @@ export default function VideoEditingProductionPage() {
       />
 
       <ServiceFeatures
-        subtitle="Our Capabilities"
+        subtitle="Our Core Services"
         title="Video Production That Moves the Needle"
         features={FEATURES}
       />
 
       <ServiceTestimonial
-        quote="We went from posting once a week to publishing 5 pieces of content daily — all repurposed from our podcast. Revenue Room's video team completely transformed our content output and our reach."
+        quote="We went from posting once a week to publishing 5 pieces of content daily, all repurposed from our podcast. Revenue Room's video team completely transformed our content output and our reach."
         author="David Chen"
         role="Co-Founder"
         company="The Growth Founders Podcast"

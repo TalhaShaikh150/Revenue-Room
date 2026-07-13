@@ -52,7 +52,7 @@ const FEATURES = [
   {
     title: "Conversion-Focused Landing Pages",
     description:
-      "Single-purpose pages engineered to convert. Built with proven direct-response frameworks — strong above-the-fold hooks, social proof, objection handling, and crystal-clear CTAs.",
+      "Single-purpose pages engineered to convert. Built with proven direct-response frameworks, strong above-the-fold hooks, social proof, objection handling, and crystal-clear CTAs.",
     icon: <ArrowUpRight className="w-6 h-6" aria-hidden="true" />,
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
@@ -60,7 +60,7 @@ const FEATURES = [
   {
     title: "Full Website Design & Development",
     description:
-      "Beautiful, brand-defining websites built on Next.js or WordPress. Fast, SEO-ready, and fully responsive — designed to impress and perform across every device.",
+      "Beautiful, brand-defining websites built on Next.js or WordPress. Fast, SEO-ready, and fully responsive, designed to impress and perform across every device.",
     icon: <LayoutDashboard className="w-6 h-6" aria-hidden="true" />,
     image:
       "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=800",
@@ -68,7 +68,7 @@ const FEATURES = [
   {
     title: "Performance & Core Web Vitals",
     description:
-      "A slow website kills conversions. We obsess over load speed, LCP, and Core Web Vitals — delivering sites that score 95+ on PageSpeed to protect your SEO and user experience.",
+      "A slow website kills conversions. We obsess over load speed, LCP, and Core Web Vitals, delivering sites that score 95+ on PageSpeed to protect your SEO and user experience.",
     icon: <Gauge className="w-6 h-6" aria-hidden="true" />,
     image:
       "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyZm9ybWFuY2UlMjBzdGF0c3xlbnwwfHwwfHx8MA%3D%3D",
@@ -76,7 +76,7 @@ const FEATURES = [
   {
     title: "E-commerce Development",
     description:
-      "Custom Shopify and WooCommerce stores built to maximise average order value and reduce abandonment. From product pages to checkout flows — every detail is optimised for revenue.",
+      "Custom Shopify and WooCommerce stores built to maximise average order value and reduce abandonment. From product pages to checkout flows, every detail is optimised for revenue.",
     icon: <ShoppingCart className="w-6 h-6" aria-hidden="true" />,
     image:
       "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=800",
@@ -103,7 +103,7 @@ const PROCESS_STEPS = [
   {
     title: "Discovery & Scope",
     description:
-      "We start with a structured discovery session to map your goals, audience, brand identity, and technical requirements — then produce a detailed project scope and timeline.",
+      "We start with a structured discovery session to map your goals, audience, brand identity, and technical requirements, then produce a detailed project scope and timeline.",
   },
   {
     title: "Design & Prototype",
@@ -113,12 +113,12 @@ const PROCESS_STEPS = [
   {
     title: "Development & QA",
     description:
-      "We build your site with clean, scalable code. Every page goes through rigorous cross-browser and cross-device QA testing before launch — zero bugs, guaranteed.",
+      "We build your site with clean, scalable code. Every page goes through rigorous cross-browser and cross-device QA testing before launch, zero bugs, guaranteed.",
   },
   {
     title: "Launch & Optimise",
     description:
-      "We handle the full launch process — DNS configuration, performance optimisation, analytics setup, and a post-launch CRO review in the first 30 days.",
+      "We handle the full launch process, DNS configuration, performance optimisation, analytics setup, and a post-launch CRO review in the first 30 days.",
   },
 ];
 
@@ -126,12 +126,12 @@ const BENEFITS = [
   {
     title: "Your Website Works While You Sleep",
     description:
-      "A high-converting website is your best-performing sales rep — available 24/7, never calls in sick, and scales infinitely. We build digital assets that generate revenue around the clock.",
+      "A high-converting website is your best-performing sales rep, available 24/7, never calls in sick, and scales infinitely. We build digital assets that generate revenue around the clock.",
   },
   {
     title: "Built for SEO from Day One",
     description:
-      "Every site we build is technically SEO-optimised out of the box — clean code structure, fast load times, proper schema markup, and a solid foundation for your SEO campaigns.",
+      "Every site we build is technically SEO-optimised out of the box, clean code structure, fast load times, proper schema markup, and a solid foundation for your SEO campaigns.",
   },
   {
     title: "Ownable, Not Rented",
@@ -159,7 +159,7 @@ const FAQS = [
   {
     question: "Can you redesign my existing website?",
     answer:
-      "Absolutely. Website redesigns are one of our most common projects. We conduct a full conversion audit of your existing site to identify exactly what's losing you money before we redesign — not just aesthetics, but performance.",
+      "Absolutely. Website redesigns are one of our most common projects. We conduct a full conversion audit of your existing site to identify exactly what's losing you money before we redesign, not just aesthetics, but performance.",
   },
   {
     question: "Will I be able to edit the website myself?",
@@ -265,7 +265,7 @@ export default function WebDevelopmentLandingPagesPage() {
             </span>
           </>
         }
-        description="We design and develop fast, beautiful, and conversion-optimised websites and landing pages that turn your traffic into revenue — built to perform from day one."
+        description="We design and develop fast, beautiful, and conversion-optimised websites and landing pages that turn your traffic into revenue, built to perform from day one."
         highlights={[
           "High-Converting Landing Pages",
           "Full Website Design & Development",
@@ -276,7 +276,7 @@ export default function WebDevelopmentLandingPagesPage() {
       />
 
       <ServiceFeatures
-        subtitle="Our Capabilities"
+        subtitle="Our Core Services"
         title="Web Experiences Built to Drive Revenue"
         features={FEATURES}
       />

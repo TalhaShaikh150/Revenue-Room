@@ -1,4 +1,4 @@
-// SERVER COMPONENT — no "use client" needed
+// SERVER COMPONENT, no "use client" needed
 import Image from "next/image";
 import { FadeIn, FadeInX, FadeInScale } from "@/components/ui/Motion";
 import Link from "next/link";
@@ -15,7 +15,7 @@ const BENTO_IMAGES = [
 export function ServiceFeatures({ 
   title, 
   subtitle, 
-  description = "We build clear digital marketing strategies that grow your revenue — no guesswork, no bloated reports.",
+  description = "We build clear digital marketing strategies that grow your revenue, no guesswork, no bloated reports.",
   features 
 }) {
   return (

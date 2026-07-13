@@ -3,7 +3,7 @@ export const blogPosts = [
     slug: "seo-vs-google-ads-which-should-you-invest-in-first",
     title: "SEO vs. Google Ads: Which Should You Invest In First?",
     excerpt:
-      "Both SEO and Google Ads can drive serious revenue — but choosing the wrong one at the wrong stage can burn your budget. Here's how to decide.",
+      "Both SEO and Google Ads can drive serious revenue, but choosing the wrong one at the wrong stage can burn your budget. Here's how to decide.",
     category: "SEO",
     categoryColor: "lime",
     author: "Alex Carter",
@@ -16,7 +16,7 @@ export const blogPosts = [
     content: `
 ## The Short Answer
 
-If you need revenue in the next 30 days, start with Google Ads. If you're building a business meant to last, invest in SEO from day one. If you can afford both — do both.
+If you need revenue in the next 30 days, start with Google Ads. If you're building a business meant to last, invest in SEO from day one. If you can afford both, do both.
 
 But let's go deeper, because the real answer depends entirely on your situation.
 
@@ -32,23 +32,23 @@ Both are expensive mistakes.
 
 Choose Google Ads first if:
 
-- **You have a product or service with proven demand** — people are already searching for what you sell
-- **You need revenue within 90 days** — ads can drive clicks and conversions within 24 hours
-- **You have budget to test** — at least $3,000–$5,000/month in ad spend plus management fees
-- **Your website already converts** — ads amplify what's already working; they don't fix a broken funnel
+- **You have a product or service with proven demand**, people are already searching for what you sell
+- **You need revenue within 90 days**, ads can drive clicks and conversions within 24 hours
+- **You have budget to test**, at least $3,000–$5,000/month in ad spend plus management fees
+- **Your website already converts**, ads amplify what's already working; they don't fix a broken funnel
 
-Google Ads is essentially renting visibility. The moment you stop paying, the traffic stops. But when managed correctly, the ROI can be extraordinary — especially for high-ticket services and e-commerce.
+Google Ads is essentially renting visibility. The moment you stop paying, the traffic stops. But when managed correctly, the ROI can be extraordinary, especially for high-ticket services and e-commerce.
 
 ## When to Start With SEO
 
 Choose SEO first if:
 
-- **You have a 6–12 month runway** — SEO compounds over time, but it takes time to compound
-- **Your margins allow for patience** — typically service businesses rather than razor-thin e-commerce
-- **You're in an industry with high search volume** — check this in Google Keyword Planner before committing
-- **You want a long-term asset** — unlike ad spend, SEO rankings are something you own
+- **You have a 6–12 month runway**, SEO compounds over time, but it takes time to compound
+- **Your margins allow for patience**, typically service businesses rather than razor-thin e-commerce
+- **You're in an industry with high search volume**, check this in Google Keyword Planner before committing
+- **You want a long-term asset**, unlike ad spend, SEO rankings are something you own
 
-The best analogy: Google Ads is renting a house. SEO is buying one. Over a 3-year period, the mortgage (SEO investment) almost always beats rent (ad spend) — but you need to be able to afford the deposit first.
+The best analogy: Google Ads is renting a house. SEO is buying one. Over a 3-year period, the mortgage (SEO investment) almost always beats rent (ad spend), but you need to be able to afford the deposit first.
 
 ## The Smartest Play: Both, in the Right Order
 
@@ -71,7 +71,7 @@ Based on our client data at Revenue Room Digital:
 
 ## Final Call
 
-Stop treating this as a competition. SEO and Google Ads are complementary tools that work better together than either does alone. The question isn't which one — it's which one *first*, and how fast you can afford to layer in the other.
+Stop treating this as a competition. SEO and Google Ads are complementary tools that work better together than either does alone. The question isn't which one, it's which one *first*, and how fast you can afford to layer in the other.
 
 If you're unsure where to start for your specific business, [book a free strategy session](/contact?service=seo) with our team and we'll tell you exactly what the data says.
     `,
@@ -93,7 +93,7 @@ If you're unsure where to start for your specific business, [book a free strateg
     content: `
 ## The Myth of Audience Targeting
 
-When a Meta campaign underperforms, the first thing most marketers do is dive into Ads Manager and start fiddling with the audience — narrowing interests, adjusting age ranges, adding exclusions.
+When a Meta campaign underperforms, the first thing most marketers do is dive into Ads Manager and start fiddling with the audience, narrowing interests, adjusting age ranges, adding exclusions.
 
 This is almost always wrong.
 
@@ -105,7 +105,7 @@ This is the single most important mental model shift in modern paid social: **yo
 
 When you run a video ad with a hook like "If you're a Sydney-based tradie who hates doing paperwork..." you don't need to layer in 12 interest categories. The people who resonate with that message will self-select. Everyone else will scroll past.
 
-The algorithm watches who engages, clicks, and converts — and then finds more people exactly like them. But you have to give it a hook strong enough to generate that initial signal.
+The algorithm watches who engages, clicks, and converts, and then finds more people exactly like them. But you have to give it a hook strong enough to generate that initial signal.
 
 ## The 3 Creative Problems Killing Your Campaigns
 
@@ -117,7 +117,7 @@ On TikTok and Instagram Reels, users decide to keep watching or scroll within th
 
 ### 2. The Ad Looks Like an Ad
 
-Native content dramatically outperforms polished brand content on social platforms. This seems counterintuitive — shouldn't professional-looking content build more trust?
+Native content dramatically outperforms polished brand content on social platforms. This seems counterintuitive, shouldn't professional-looking content build more trust?
 
 No. Because it gets mentally categorised as an advertisement and scrolled past before the brain even registers what it's saying.
 
@@ -134,7 +134,7 @@ Many ads try to do too much. They want to educate, entertain, build brand awaren
 Our highest-performing Meta ad for an e-commerce skincare client in 2025:
 
 - **Format:** 15-second vertical video, shot on an iPhone
-- **Hook:** A woman saying "I've spent $800 on skincare this year and none of it worked — until this."
+- **Hook:** A woman saying "I've spent $800 on skincare this year and none of it worked, until this."
 - **Body:** 10 seconds of authentic product demonstration
 - **CTA:** "Try it for 30 days, full refund if it doesn't work"
 - **Result:** 9.4x ROAS over 90 days
@@ -150,7 +150,7 @@ Next time your Meta ads underperform, do this before changing a single targeting
 3. Watch your own ad cold, imagining you've never heard of your brand
 4. Ask yourself: "Would I stop scrolling for this?"
 
-If the honest answer to that last question is no — fix the creative.
+If the honest answer to that last question is no, fix the creative.
 
 [Talk to our paid social team](/contact?service=ppc) if you want us to audit your current creatives and tell you exactly what's costing you money.
     `,
@@ -174,7 +174,7 @@ If the honest answer to that last question is no — fix the creative.
 
 Most businesses have a traffic problem. Or so they think.
 
-In reality, most businesses have a *conversion* problem. They're paying for clicks that arrive at a page that convinces nobody, and the instinct is to blame the ads or the SEO — not the landing page itself.
+In reality, most businesses have a *conversion* problem. They're paying for clicks that arrive at a page that convinces nobody, and the instinct is to blame the ads or the SEO, not the landing page itself.
 
 Here's a brutal truth: doubling your conversion rate has the exact same revenue impact as doubling your traffic, but it costs a fraction of the price.
 
@@ -186,13 +186,13 @@ The most important real estate on any landing page is everything visible before 
 2. **Is this for me?** (relevance)
 3. **Why should I care?** (value)
 
-If your headline is your company name or a vague tagline like "Empowering businesses to reach their full potential" — you've already lost.
+If your headline is your company name or a vague tagline like "Empowering businesses to reach their full potential", you've already lost.
 
 **Better headline formula:** [Specific Outcome] for [Specific Audience] [Time Frame or Without Objection]
 
 Examples:
-- "More qualified leads for Sydney law firms — without increasing your ad budget"
-- "Lose 5kg in 8 weeks or your money back — for busy professionals over 40"
+- "More qualified leads for Sydney law firms, without increasing your ad budget"
+- "Lose 5kg in 8 weeks or your money back, for busy professionals over 40"
 - "Launch your e-commerce store in 14 days, fully SEO-optimised"
 
 Specific. Clear. Targeted. That's the standard.
@@ -207,7 +207,7 @@ Every element on the page should guide the visitor toward that single action.
 
 ### 2. Social Proof Above the Fold
 
-Trust is the primary conversion barrier, and it needs to be established *before* you ask for anything. This means logos of clients or press mentions, a star rating, or a testimonial — all visible without scrolling.
+Trust is the primary conversion barrier, and it needs to be established *before* you ask for anything. This means logos of clients or press mentions, a star rating, or a testimonial, all visible without scrolling.
 
 ### 3. An Objection-Handling Section
 
@@ -215,7 +215,7 @@ Every prospect has the same 3–5 objections. List them. Answer them directly. T
 
 ### 4. A Risk Reversal
 
-What's stopping someone from clicking your CTA? Usually it's risk — financial, reputational, or time. Remove it. A money-back guarantee, a free trial, a no-obligation consultation — any form of risk reversal dramatically increases conversion rates.
+What's stopping someone from clicking your CTA? Usually it's risk, financial, reputational, or time. Remove it. A money-back guarantee, a free trial, a no-obligation consultation, any form of risk reversal dramatically increases conversion rates.
 
 ### 5. Speed
 
@@ -257,7 +257,7 @@ That's the power of CRO.
 
 Ask most social media managers how their campaigns are performing and they'll tell you about follower growth, reach, and impressions. Ask a CFO if those numbers matter and watch their eyes glaze over.
 
-The disconnect between "social media metrics" and "business metrics" is one of the most frustrating problems in digital marketing — and it's almost entirely self-inflicted by the industry.
+The disconnect between "social media metrics" and "business metrics" is one of the most frustrating problems in digital marketing, and it's almost entirely self-inflicted by the industry.
 
 Here's how we measure organic social in a way that executives actually care about.
 
@@ -319,7 +319,7 @@ Based on our client portfolio across multiple industries:
 | Profile-to-Website CTR | <0.5% | 0.5–2% | >2% |
 | DM Inquiry Rate (of followers) | <0.1% | 0.1–0.5% | >0.5% |
 
-If you want help setting up proper attribution for your social channels, [get in touch](/contact?service=social-media) — it's one of the first things we do for every new client.
+If you want help setting up proper attribution for your social channels, [get in touch](/contact?service=social-media), it's one of the first things we do for every new client.
     `,
   },
   {
@@ -339,7 +339,7 @@ If you want help setting up proper attribution for your social channels, [get in
     content: `
 ## What Are AI Overviews?
 
-Since May 2024, Google has been rolling out AI-generated summaries at the top of search results — called AI Overviews. These summaries pull information from multiple sources and present a direct answer to the user's query, *before* they see any traditional blue links.
+Since May 2024, Google has been rolling out AI-generated summaries at the top of search results, called AI Overviews. These summaries pull information from multiple sources and present a direct answer to the user's query, *before* they see any traditional blue links.
 
 For many queries, this means the user gets their answer without ever clicking through to a website.
 
@@ -347,7 +347,7 @@ This is either terrifying or an opportunity, depending on how you respond.
 
 ## The Traffic Impact: What the Data Shows
 
-Early data (Search Engine Land, Q1 2026) shows that pages appearing in AI Overview citations are receiving **more** high-intent clicks, not fewer — while pages ranking #1–3 organically but NOT cited in the overview are seeing 15–25% traffic declines.
+Early data (Search Engine Land, Q1 2026) shows that pages appearing in AI Overview citations are receiving **more** high-intent clicks, not fewer, while pages ranking #1–3 organically but NOT cited in the overview are seeing 15–25% traffic declines.
 
 The implication is clear: being cited in AI Overviews is the new first page. It's the new position one.
 
@@ -355,12 +355,12 @@ The implication is clear: being cited in AI Overviews is the new first page. It'
 
 Google's AI Overviews tend to cite content that:
 
-1. **Directly answers the specific question** — not tangentially related content
-2. **Is structured clearly** — uses headings, lists, and tables that AI can easily parse
-3. **Has established authority** — domain authority, backlinks, and E-E-A-T signals still matter enormously
-4. **Is recent** — freshness signals are weighted heavily for AI citations
+1. **Directly answers the specific question**, not tangentially related content
+2. **Is structured clearly**, uses headings, lists, and tables that AI can easily parse
+3. **Has established authority**, domain authority, backlinks, and E-E-A-T signals still matter enormously
+4. **Is recent**, freshness signals are weighted heavily for AI citations
 
-The good news? These are the same factors that have always driven good SEO. AI Overviews reward the same things Google has always rewarded — they just make the rewards more valuable for the winners.
+The good news? These are the same factors that have always driven good SEO. AI Overviews reward the same things Google has always rewarded, they just make the rewards more valuable for the winners.
 
 ## What to Change in Your SEO Strategy
 
@@ -388,7 +388,7 @@ AI Overviews are triggered most often by question-based and conversational queri
 
 Here's the real edge: most businesses are panicking about AI Overviews and pulling back on SEO investment. This is exactly the wrong response.
 
-As competitors retreat, the brands that double down on high-quality, authoritative content right now will be the ones dominating AI citations in 12 months — and collecting the traffic that everyone else abandoned.
+As competitors retreat, the brands that double down on high-quality, authoritative content right now will be the ones dominating AI citations in 12 months, and collecting the traffic that everyone else abandoned.
 
 [Talk to our SEO team](/contact?service=seo) about how to position your brand for AI search dominance.
     `,
@@ -414,11 +414,11 @@ Most brands approach short-form video by asking: "What should we post this week?
 
 The brands that generate revenue from short-form video ask a completely different question: "What content moves someone from having never heard of us to becoming a paying customer?"
 
-These two questions lead to fundamentally different content strategies — and completely different results.
+These two questions lead to fundamentally different content strategies, and completely different results.
 
 ## The Revenue-Driven Content Framework
 
-Instead of creating random content and hoping it goes viral, we build what we call a content funnel — a deliberate sequence of video types designed to move viewers through the customer journey.
+Instead of creating random content and hoping it goes viral, we build what we call a content funnel, a deliberate sequence of video types designed to move viewers through the customer journey.
 
 ### Stage 1: Awareness Content (Cold Audiences)
 Goal: Stop the scroll, introduce the brand, create curiosity.
@@ -443,7 +443,7 @@ Formats that work:
 These videos should make the viewer think: "This brand actually knows what they're talking about."
 
 ### Stage 3: Conversion Content (Hot Audiences)
-Goal: Drive a specific action — purchase, lead, booking, DM.
+Goal: Drive a specific action, purchase, lead, booking, DM.
 
 Formats that work:
 - Direct product/service demonstrations
@@ -457,17 +457,17 @@ These are the only videos where a direct, unapologetic CTA belongs.
 
 In our experience managing content strategies for brands generating significant revenue from short-form video, the ratio typically looks like this:
 
-- **60% Awareness content** — most of what you post should be designed for cold audiences
-- **25% Consideration content** — trust-building, education, demonstrations
-- **15% Conversion content** — direct asks and offers
+- **60% Awareness content**, most of what you post should be designed for cold audiences
+- **25% Consideration content**, trust-building, education, demonstrations
+- **15% Conversion content**, direct asks and offers
 
-Most brands do this backwards — they post promotional content constantly and wonder why it doesn't perform.
+Most brands do this backwards, they post promotional content constantly and wonder why it doesn't perform.
 
 ## Production Quality vs. Authenticity
 
 Here's the uncomfortable truth about production quality in 2026: **authenticity beats polish almost every time** on organic platforms.
 
-The reason is algorithm alignment. TikTok and Instagram Reels reward content that feels native to the platform — meaning it doesn't immediately register as an advertisement.
+The reason is algorithm alignment. TikTok and Instagram Reels reward content that feels native to the platform, meaning it doesn't immediately register as an advertisement.
 
 Your iPhone shoots in 4K. A well-framed shot with natural lighting and a compelling hook will outperform a studio-shot video with a weak concept 9 times out of 10.
 
@@ -489,7 +489,7 @@ If you want help building a content strategy that actually drives revenue from y
     slug: "how-much-should-australian-businesses-spend-on-digital-marketing",
     title: "How Much Should Australian Businesses Spend on Digital Marketing in 2026?",
     excerpt:
-      "The question every business owner asks but rarely gets a straight answer to. Here's the real breakdown — by business size, industry, and growth stage.",
+      "The question every business owner asks but rarely gets a straight answer to. Here's the real breakdown, by business size, industry, and growth stage.",
     category: "SEO",
     categoryColor: "lime",
     author: "Alex Carter",
@@ -506,7 +506,7 @@ Every business owner eventually asks: "How much should I be spending on digital 
 
 Most agencies dodge it with vague answers like "it depends on your goals" or "typically 5–15% of revenue." Technically true. Practically useless.
 
-Here's the straight answer — broken down by where you actually are in your business.
+Here's the straight answer, broken down by where you actually are in your business.
 
 ## The Industry Benchmarks
 
@@ -529,7 +529,7 @@ If you're spending $10,000/month on digital marketing, here's how a well-run all
 $4,000–$5,000 in actual ad spend across Google and Meta. This is the fastest lever for immediate revenue. Without sufficient ad spend, campaigns can't gather enough data to optimise properly.
 
 ### Agency or Management Fees (20–30%)
-$2,000–$3,000 for the team managing your campaigns, creative, and strategy. Cheap agencies cost more in the long run — their mistakes come out of your ad budget.
+$2,000–$3,000 for the team managing your campaigns, creative, and strategy. Cheap agencies cost more in the long run, their mistakes come out of your ad budget.
 
 ### Content & SEO (20–25%)
 $2,000–$2,500 for content creation, technical SEO, and link building. This is the long-term asset that compounds over time.
@@ -551,14 +551,14 @@ Marketing has a threshold below which it simply doesn't work. Finding and cleari
 2. **Know your customer acquisition cost.** If you don't know what a new customer is worth to you over 12 months, you can't set a rational marketing budget.
 3. **Start with one channel.** Master Google Ads or Meta before adding more complexity.
 
-If you want a no-fluff budget recommendation specific to your business and market, [book a strategy call](/contact) — we'll run the numbers with you.
+If you want a no-fluff budget recommendation specific to your business and market, [book a strategy call](/contact), we'll run the numbers with you.
     `,
   },
   {
     slug: "tiktok-ads-vs-meta-ads-which-platform-for-australian-brands",
     title: "TikTok Ads vs. Meta Ads: Which Is Right for Your Australian Brand?",
     excerpt:
-      "Both platforms can drive serious revenue — but they work differently, attract different audiences, and require completely different creative strategies. Here's how to choose.",
+      "Both platforms can drive serious revenue, but they work differently, attract different audiences, and require completely different creative strategies. Here's how to choose.",
     category: "Paid Social",
     categoryColor: "blue",
     author: "Maya Singh",
@@ -578,14 +578,14 @@ The truthful answer: for most brands with a budget above $3,000/month in ad spen
 ## Understanding Who's Actually There
 
 ### Meta (Facebook + Instagram)
-Meta's combined user base in Australia sits at roughly **17 million active users** across Facebook and Instagram. The platform skews slightly older than TikTok — Instagram peaks around 25–34 year olds, Facebook around 35–54.
+Meta's combined user base in Australia sits at roughly **17 million active users** across Facebook and Instagram. The platform skews slightly older than TikTok, Instagram peaks around 25–34 year olds, Facebook around 35–54.
 
-For purchasing intent: Meta users are often in "research mode" — they see your ad, click through, read your site, and potentially convert over hours or days.
+For purchasing intent: Meta users are often in "research mode", they see your ad, click through, read your site, and potentially convert over hours or days.
 
 ### TikTok
 TikTok has crossed **8 million Australian monthly active users** and is the fastest-growing platform in the country by time-spent. The demographic is younger (18–34 heavily), but growing older fast.
 
-For purchasing intent: TikTok users make impulse decisions. The purchase cycle is compressed. They see the ad, they feel the pull, they buy — or they don't. Much less research behaviour.
+For purchasing intent: TikTok users make impulse decisions. The purchase cycle is compressed. They see the ad, they feel the pull, they buy, or they don't. Much less research behaviour.
 
 ## Creative: The Biggest Difference
 
@@ -595,13 +595,13 @@ This is where most brands get it wrong. They take the same creative and run it o
 - **Polished carousels** with product images and benefit bullets
 - **Video with captions** (80% of Facebook videos are watched without sound)
 - **Before/after formats** that tell a clear story
-- **Direct response copy** — offer, proof, CTA
+- **Direct response copy**, offer, proof, CTA
 
 ### What Works on TikTok
-- **Raw, authentic video** — shot on a phone, first-person, genuine
-- **Entertainment first** — make them laugh, surprise them, or teach them something
-- **Fast pacing** — cuts every 2–3 seconds, constant motion
-- **Sound-on design** — music, voice, trending audio all matter
+- **Raw, authentic video**, shot on a phone, first-person, genuine
+- **Entertainment first**, make them laugh, surprise them, or teach them something
+- **Fast pacing**, cuts every 2–3 seconds, constant motion
+- **Sound-on design**, music, voice, trending audio all matter
 
 Running polished Meta-style ads on TikTok is one of the fastest ways to burn through budget with nothing to show for it.
 
@@ -614,7 +614,7 @@ Running polished Meta-style ads on TikTok is one of the fastest ways to burn thr
 | Average CPL (cost per lead, lead gen) | $15–60 | $20–80 |
 | Average CPA (cost per acquisition, e-com) | $18–50 | $15–45 |
 
-TikTok is generally cheaper to reach people, but conversion rates are often lower — meaning the eventual cost per sale can be similar. The real advantage of TikTok is volume and brand awareness at scale.
+TikTok is generally cheaper to reach people, but conversion rates are often lower, meaning the eventual cost per sale can be similar. The real advantage of TikTok is volume and brand awareness at scale.
 
 ## When to Choose One Over the Other
 
@@ -635,7 +635,7 @@ TikTok is generally cheaper to reach people, but conversion rates are often lowe
 - You want to cross-retarget (TikTok awareness → Meta conversion is a powerful funnel)
 - You're in e-commerce
 
-If you want a platform recommendation based on your specific product and audience, [talk to our paid social team](/contact?service=paid-social) — we'll tell you exactly where your budget will work hardest.
+If you want a platform recommendation based on your specific product and audience, [talk to our paid social team](/contact?service=paid-social), we'll tell you exactly where your budget will work hardest.
     `,
   },
   {
@@ -671,7 +671,7 @@ The time it takes for the main content of a page to load and appear on screen.
 - **Needs Improvement:** 2.5–4 seconds
 - **Poor:** Over 4 seconds
 
-This is almost always the metric that kills Australian business websites — particularly those using WordPress with unoptimised images and slow hosting.
+This is almost always the metric that kills Australian business websites, particularly those using WordPress with unoptimised images and slow hosting.
 
 ### Interaction to Next Paint (INP)
 How responsive the page is when a user clicks or taps something.
@@ -680,7 +680,7 @@ How responsive the page is when a user clicks or taps something.
 - **Poor:** Over 500ms
 
 ### Cumulative Layout Shift (CLS)
-How much the page "jumps around" as elements load. That experience where you try to click a button and the page shifts and you click the wrong thing — that's high CLS.
+How much the page "jumps around" as elements load. That experience where you try to click a button and the page shifts and you click the wrong thing, that's high CLS.
 - **Good:** Under 0.1
 - **Needs Improvement:** 0.1–0.25
 - **Poor:** Over 0.25
@@ -717,7 +717,7 @@ Each plugin adds more code, more database queries, and more load time. The avera
 1. Go to [PageSpeed Insights](https://pagespeed.web.dev)
 2. Enter your URL
 3. Check both the Mobile and Desktop scores
-4. Focus on **Mobile** — this is what Google primarily uses for ranking
+4. Focus on **Mobile**, this is what Google primarily uses for ranking
 
 A score of 90+ on mobile is what we target for our clients. If you're below 60, you have a serious problem that's affecting both your Google rankings and your conversion rate.
 

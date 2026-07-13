@@ -13,7 +13,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata = {
   title: "Revenue Room Digital | Performance Marketing Agency Australia",
   description:
-    "Revenue Room Digital is Australia's performance marketing agency specialising in SEO, Google Ads, paid social, web development, and video production — built to grow your revenue.",
+    "Revenue Room Digital is Australia's performance marketing agency specialising in SEO, Google Ads, paid social, web development, and video production, built to grow your revenue.",
   keywords: [
     "digital marketing agency Australia",
     "performance marketing agency",

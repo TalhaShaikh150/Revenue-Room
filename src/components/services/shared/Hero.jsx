@@ -1,4 +1,4 @@
-// SERVER COMPONENT — no "use client" needed
+// SERVER COMPONENT, no "use client" needed
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
@@ -78,6 +78,7 @@ export function ServiceHero({
                   src={imageSrc} 
                   alt={typeof title === 'string' ? title : "Service Deliverables"} 
                   fill
+                  priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover mix-blend-luminosity opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 />
