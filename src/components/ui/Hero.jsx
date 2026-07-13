@@ -2,8 +2,37 @@
 
 import { ArrowRight, Moon } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export function Hero() {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+    setIsLoading(true);
+    
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ source: "hero_form", email }),
+      });
+
+      if (res.ok) {
+        alert("Thanks! We'll start working on your growth tonight.");
+        setEmail("");
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   // Stagger animation for the hero content loading in
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -84,7 +113,7 @@ export function Hero() {
           <motion.div variants={itemVariants} className="w-full max-w-2xl mx-auto flex flex-col items-center gap-4 px-4 sm:px-0">
               
           {/* Email Capture Form - MOBILE (Visible only on small screens) */}
-          <form className="w-full flex flex-col items-center gap-3 sm:hidden px-2">
+          <form onSubmit={handleSubmit} className="w-full flex flex-col items-center gap-3 sm:hidden px-2">
               <div className="relative w-full flex items-center bg-[#fcfcfc] rounded-full py-4 shadow-[0_10px_30px_rgba(216,252,77,0.15)]">
                   <div className="pl-5 pr-2 text-black/50">
                      <Moon className="w-5 h-5" />
@@ -92,29 +121,35 @@ export function Hero() {
                   <input 
                       type="email" 
                       required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email to start growth, tonight" 
                       className="flex-1 bg-transparent border-none outline-none text-black placeholder:text-black/50 text-[13px] font-medium w-full truncate pr-4"
+                      disabled={isLoading}
                   />
               </div>
-              <button type="submit" aria-label="Submit email" className="w-max bg-brand-lime text-black py-3 px-8 rounded-full text-[14px] font-bold flex items-center gap-2 shadow-[0_5px_20px_rgba(216,252,77,0.2)]">
-                  Submit
+              <button type="submit" disabled={isLoading} aria-label="Submit email" className="w-max bg-brand-lime text-black py-3 px-8 rounded-full text-[14px] font-bold flex items-center gap-2 shadow-[0_5px_20px_rgba(216,252,77,0.2)] disabled:opacity-50">
+                  {isLoading ? "Sending..." : "Submit"}
               </button>
           </form>
 
           {/* Email Capture Form - DESKTOP (Visible from sm     upwards) */}
-          <form className="relative w-full hidden sm:flex items-center bg-[#fcfcfc] rounded-full p-1.5 shadow-[0_0_40px_rgba(216,252,77,0.15)] group focus-within:shadow-[0_0_40px_rgba(216,252,77,0.3)] transition-shadow duration-500">
+          <form onSubmit={handleSubmit} className="relative w-full hidden sm:flex items-center bg-[#fcfcfc] rounded-full p-1.5 shadow-[0_0_40px_rgba(216,252,77,0.15)] group focus-within:shadow-[0_0_40px_rgba(216,252,77,0.3)] transition-shadow duration-500">
               <div className="pl-6 pr-3 text-black/50">
                  <Moon className="w-5 h-5" />
               </div>
               <input 
                   type="email" 
                   required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email and we'll start working on your growth, tonight" 
                   className="flex-1 bg-transparent border-none outline-none text-black placeholder:text-black/50 text-[15px] font-medium w-full truncate"
+                  disabled={isLoading}
               />
-              <button type="submit" aria-label="Submit email" className="shrink-0 bg-brand-lime text-black px-8 py-3.5 rounded-full text-[15px] font-bold hover:scale-[1.02] transition-all duration-300 flex items-center ">
-                  Let&apos;s go 
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <button type="submit" disabled={isLoading} aria-label="Submit email" className="shrink-0 bg-brand-lime text-black px-8 py-3.5 rounded-full text-[15px] font-bold hover:scale-[1.02] transition-all duration-300 flex items-center disabled:opacity-50 disabled:hover:scale-100">
+                  {isLoading ? "Sending..." : "Let's go"}
+                  {!isLoading && <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />}
               </button>
           </form>
 

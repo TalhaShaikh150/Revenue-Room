@@ -2,6 +2,9 @@
 
 import { useState, useEffect, Suspense, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
+import { ChevronDown, CheckCircle2 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { StatusPopup } from "@/components/ui/StatusPopup";
 
 // Master map: service value → { label, plans[] }
 const SERVICE_PLANS = {
@@ -74,6 +77,10 @@ function ContactFormContent() {
     plan: "",
     message: "",
   });
+  
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [popupState, setPopupState] = useState({ isOpen: false, status: "success", message: "" });
 
   // Auto-select service & plan from URL on load
   useEffect(() => {
@@ -101,30 +108,62 @@ function ContactFormContent() {
     }
   }, []);
 
-  const handleSubmit = useCallback((e) => {
+  const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you! We have received your inquiry and will be in touch shortly.");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      service: "general",
-      plan: "",
-      message: "",
-    });
+    setIsLoading(true);
+    
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, source: "contact_page" }),
+      });
+
+      if (res.ok) {
+        setIsSubmitted(true);
+      } else {
+        const errData = await res.json();
+        setPopupState({ isOpen: true, status: "error", message: `Error: ${errData.error || "Something went wrong"}` });
+      }
+    } catch (error) {
+      setPopupState({ isOpen: true, status: "error", message: "Network error. Please try again or email us directly." });
+    } finally {
+      setIsLoading(false);
+    }
   }, [formData]);
 
   const availablePlans = SERVICE_PLANS[formData.service]?.plans ?? [];
   const hasPlans = availablePlans.length > 0;
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-6 bg-white/[0.02] p-8 rounded-2xl border border-white/10 backdrop-blur-md"
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="bg-white/[0.02] p-8 sm:p-10 rounded-3xl border border-white/10 backdrop-blur-md relative overflow-hidden min-h-[500px] flex flex-col justify-center">
+      <AnimatePresence mode="wait">
+        {isSubmitted ? (
+          <motion.div
+            key="success"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="flex flex-col items-center justify-center text-center w-full"
+          >
+            <div className="w-20 h-20 bg-brand-lime/10 rounded-full flex items-center justify-center mb-6">
+              <CheckCircle2 className="w-10 h-10 text-brand-lime" />
+            </div>
+            <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4">Thank you!</h3>
+            <p className="text-white/70 text-lg max-w-md mx-auto leading-relaxed">
+              We have successfully received your details. One of our growth experts will review your inquiry and be in touch shortly.
+            </p>
+          </motion.div>
+        ) : (
+          <motion.form
+            key="form"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onSubmit={handleSubmit}
+            className="space-y-6 w-full"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Name */}
         <div>
           <label htmlFor="name" className={labelClass}>
@@ -265,11 +304,22 @@ function ContactFormContent() {
       {/* Submit Button */}
       <button
         type="submit"
-        className="w-full bg-brand-lime text-black font-bold py-4 px-8 rounded-lg hover:bg-white transition-all duration-300 transform hover:scale-[1.02]"
+        disabled={isLoading}
+        className="w-full bg-brand-lime text-black font-bold py-4 px-8 rounded-lg hover:bg-white transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100 disabled:hover:bg-brand-lime"
       >
-        Send Inquiry
+        {isLoading ? "Sending..." : "Send Inquiry"}
       </button>
-    </form>
+
+      <StatusPopup 
+        isOpen={popupState.isOpen} 
+        status={popupState.status} 
+        message={popupState.message} 
+        onClose={() => setPopupState(prev => ({ ...prev, isOpen: false }))} 
+      />
+          </motion.form>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
 
